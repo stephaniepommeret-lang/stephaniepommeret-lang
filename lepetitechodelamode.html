@@ -4,65 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Petit Echo de la Mode - Stéphanie Pommeret</title>
+    <title>Le Petit Echo de la Mode - Archives - Stéphanie Pommeret</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .quote {
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.2rem;
+            border-left: 4px solid #333;
+            padding-left: 20px;
+            margin: 2rem 0;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <div class="logo">
-            <h1><a href="index.html">Stéphanie Pommeret</a></h1>
-            <p>Plasticienne / Poètesse / Photographe</p>
-        </div>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li class="dropdown">
-                    <a href="#" class="active">Expositions</a>
-                    <div class="dropdown-content">
-                        <a href="huisclos.html">Huis Clos</a>
-                        <a href="lepetitechodelamode.html">Le Petit Echo de la Mode</a>
-                        <a href="paradise.html">Paradise</a>
-                        <a href="#">Collection de carte du monde</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Résidences</a>
-                    <div class="dropdown-content">
-                        <a href="#">Sao Tomé</a>
-                        <a href="#">Casablanca</a>
-                        <a href="#">Inde</a>
-                        <a href="#">Centre Bretagne</a>
-                        <a href="#">Maroc</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Séries photographies</a>
-                    <div class="dropdown-content">
-                        <a href="#">Tout.e.s migrant.e.s</a>
-                        <a href="#">Habiter la forêt</a>
-                        <a href="#">Confinement</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <!-- Content injected by menu.js -->
     </header>
 
     <main>
         <section class="intro">
-            <h2>Le Petit Echo de la Mode</h2>
-            <p>Archives du magazine Le Petit Echo de la Mode / Archives of Le Petit Écho de la Mode magazine</p>
+            <h2>Archives du magazine Le Petit Echo de la Mode</h2>
+            <p>Archives of Le Petit Écho de la Mode magazine</p>
         </section>
 
         <section class="page-content">
-            <div class="project-image-full">
-                <img src="images/petit-echo.jpg" alt="Le Petit Echo de la Mode">
+
+            <div class="project-image-full" style="max-width: 600px; margin: 0 auto;">
+                <img src="images/petitecho_1.jpg" alt="Installation Robes Petit Echo">
             </div>
 
             <div class="text-block">
@@ -72,16 +61,47 @@
                         target="_blank">Le Petit Echo de la Mode</a>, à Châtelaudren. Un lieu chargé d’histoires,
                     d’injonctions feutrées et de silences têtus. J’ai plongé dans ces pages jaunies où l’on parlait
                     d’amour, de cuisine, de couture… mais aussi, en filigrane, de devoirs conjugaux, de beauté
-                    réglementée et de vies de femmes confinées. À partir de ces fragments, des créations prennent forme
-                    dans l’espace du Petit Écho.
+                    réglementée et de vies de femmes confinées.
                 </p>
+                <p>
+                    À partir de ces fragments, des créations prennent forme dans l’espace du Petit Écho. Je ne veux pas
+                    tout dévoiler ici, car ces installations sont à vivre. À travers elles, j’essaie de faire entendre
+                    les chuchotements du passé, de les faire vibrer dans le présent. Un travail d’archéologie sensible,
+                    entre mémoire collective et émotions intimes.
+                </p>
+                <p>
+                    📍<a href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank">Site du Petit Echo de la
+                        Mode</a>
+                </p>
+
+                <br>
+
+                <div style="display: flex; justify-content: center; margin: 3rem 0;">
+                    <blockquote class="instagram-media" data-instgrm-captioned
+                        data-instgrm-permalink="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading"
+                        data-instgrm-version="14"
+                        style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+
+                <br>
                 <p class="en">
-                    Residency at Le Petit Écho de la Mode – Châtelaudren. Several weeks of residency in the former
-                    printing house of Le Petit Écho de la Mode magazine, in Châtelaudren. A place steeped in stories,
-                    soft-spoken injunctions, and stubborn silences. I delved into these yellowed pages filled with talk
-                    of love, cooking, and sewing... but also, between the lines, of marital duties, regulated beauty,
-                    and women's lives confined within carefully drawn roles.
+                    <strong>Residency at Le Petit Écho de la Mode – Châtelaudren</strong><br>
+                    Several weeks of residency in the former printing house of Le Petit Écho de la Mode magazine, in
+                    Châtelaudren. A place steeped in stories, soft-spoken injunctions, and stubborn silences.
+                    I delved into these yellowed pages filled with talk of love, cooking, and sewing... but also,
+                    between the lines, of marital duties, regulated beauty, and women's lives confined within carefully
+                    drawn roles.
+                    From these fragments, creations are taking shape within the space of Le Petit Écho.
+                    Through them, I try to make the whispers of the past heard, to let them resonate in the present. A
+                    work of sensitive archaeology, woven between collective memory and intimate emotion.
                 </p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/petitecho_poster.png" alt="Affiche Exposition">
+                <img src="images/petitecho_4.jpeg" alt="Détail Installation">
             </div>
 
             <div class="text-block">
@@ -91,19 +111,35 @@
                     l'action historique du MLF du 26 août 1970, quand neuf militantes tentèrent de déposer une gerbe à
                     "la femme du Soldat inconnu" à Paris pour honorer les femmes oubliées de l'Histoire.
                 </p>
+                <p>
+                    Chaque robe contient une poche au niveau du cœur avec fermeture éclair qui révèle des "courriers du
+                    cœur" - des archives personnelles extraites de magazines féminins vintage du Petit Écho de la Mode.
+                    L'artiste utilise la couture, geste domestique traditionnel, pour créer une poésie visuelle qui
+                    donne voix aux femmes réduites au silence.
+                </p>
                 <p class="en">
                     This installation features around fifty period dresses arranged like a military regiment,
-                    symbolizing the patriarchal society that constrained women. The work refers to a historic action by
-                    the MLF (Women’s Liberation Movement) on August 26, 1970.
+                    symbolizing the patriarchal society that constrained women... Each dress contains a heart-level
+                    pocket with a zipper, revealing “love letters”... The artist uses sewing to create a visual poetry
+                    that gives voice to silenced women.
                 </p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/petitecho_2.jpg" alt="Vue d'ensemble installation">
+                <img src="images/petitecho_3.jpg" alt="Détail robe">
             </div>
 
             <div class="text-block">
                 <p>
-                    <a href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank">Site du Petit Echo de la
-                        Mode</a>
+                    L'installation fonctionne comme une "archéologie sociale" qui exhume la mémoire des femmes ménagères
+                    invisibilisées. Elle interroge les inégalités de genre persistantes et les stéréotypes, tout en
+                    rendant hommage aux luttes féminines passées. L'objectif est de créer un dialogue sur l'égalité des
+                    femmes, en confrontant notre société actuelle aux normes du passé qui continuent d'influencer le
+                    présent.
                 </p>
             </div>
+
         </section>
     </main>
 
@@ -121,6 +157,7 @@
         </div>
     </footer>
 
+    <script src="menu.js"></script>
     <script src="script.js"></script>
 </body>
 

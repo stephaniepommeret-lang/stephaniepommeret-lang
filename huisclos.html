@@ -9,49 +9,49 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .quote {
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.2rem;
+            border-left: 4px solid #333;
+            padding-left: 20px;
+            margin: 2rem 0;
+            color: #555;
+        }
+
+        .credits {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 2rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .credits a {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <div class="logo">
-            <h1><a href="index.html">Stéphanie Pommeret</a></h1>
-            <p>Plasticienne / Poètesse / Photographe</p>
-        </div>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li class="dropdown">
-                    <a href="#" class="active">Expositions</a>
-                    <div class="dropdown-content">
-                        <a href="huisclos.html">Huis Clos</a>
-                        <a href="#">Le Petit Echo de la Mode</a>
-                        <a href="#">Paradise</a>
-                        <a href="#">Collection de carte du monde</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Résidences</a>
-                    <div class="dropdown-content">
-                        <a href="#">Sao Tomé</a>
-                        <a href="#">Casablanca</a>
-                        <a href="#">Inde</a>
-                        <a href="#">Centre Bretagne</a>
-                        <a href="#">Maroc</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Séries photographies</a>
-                    <div class="dropdown-content">
-                        <a href="#">Tout.e.s migrant.e.s</a>
-                        <a href="#">Habiter la forêt</a>
-                        <a href="#">Confinement</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <!-- Content injected by menu.js -->
     </header>
 
     <main>
@@ -60,23 +60,24 @@
         </section>
 
         <section class="page-content">
+
+            <div class="project-image-full">
+                <img src="images/huisclos_affiche.png" alt="Affiche Huis Clos" style="max-width: 500px">
+            </div>
+
             <div class="text-block">
                 <p>
-                    Ce projet a vu le jour grâce à l’association <a href="https://www.limagequiparleblog.org">l’Image
-                        qui parle</a>, association culturelle, portée par Patricia La Calvez. Cette association est
-                    ancrée sur le territoire de Paimpol, soutenue par des institutions telles que la DRAC Bretagne, le
-                    CIAS de Guingamp-Paimpol Agglomération, le Conseil Départemental des Côtes d'Armor, la CAF des Côtes
-                    d'Armor et la ville de Paimpol, ainsi que des partenariats essentiels avec la gendarmerie de
-                    Guingamp-Paimpol et l'Association Maison de l'Argoat, c'est une démarche collaborative et sociale.
-                    Il intègre poésies, photographies, installation, collectage sonore et danse !
+                    Ce projet a vu le jour grâce à l’<strong>Association l’Image qui parle</strong>, association
+                    culturelle, portée par Patricia La Calvez. Cette association est ancrée sur le territoire de
+                    Paimpol, soutenue par des institutions telles que la DRAC Bretagne, le CIAS de Guingamp-Paimpol
+                    Agglomération, le Conseil Départemental des Côtes d'Armor, la CAF des Côtes d'Armor et la ville de
+                    Paimpol, ainsi que des partenariats essentiels avec la gendarmerie de Guingamp-Paimpol et
+                    l'Association Maison de l'Argoat. C'est une démarche collaborative et sociale. Il intègre poésies,
+                    photographies, installation, collectage sonore et danse !
                 </p>
                 <p class="en">
-                    This project came to life thanks to the association L'Image qui parle, a cultural association led by
-                    Patricia Le Calvez. This association is anchored in the territory of Paimpol, supported by
-                    institutions such as DRAC Bretagne, CIAS de Guingamp-Paimpol Agglomération, the Departmental Council
-                    of Côtes d'Armor, CAF des Côtes d'Armor and the city of Paimpol, as well as essential partnerships
-                    with the Guingamp-Paimpol gendarmerie and the Association Maison de l'Argoat. It is a collaborative
-                    and social approach that integrates poetry, photography, installation, sound collection and dance!
+                    This project came to life thanks to the association L'Image qui parle... It is a collaborative and
+                    social approach that integrates poetry, photography, installation, sound collection and dance!
                 </p>
             </div>
 
@@ -85,31 +86,85 @@
                     Ces créations sont nées de la nécessité de rendre la parole des femmes visible dans l’espace commun.
                     Ces créations sont les moyens utilisés pour rendre compte des violences subies par les femmes au
                     quotidien ainsi que dans leur intime, en leur offrant un lieu d’écoute et de visibilité.
+                </p>
+                <p>
                     Ces textes, photographies, podcast et installation ont été créés à partir de témoignages de femmes
                     originaires de Paimpol et de son agglomération. Les textes sont hybrides, entre narration et poésie,
                     telle une analogie.
                 </p>
-                <p class="en">
-                    These creations were born from the necessity to make women's voices visible in the common space.
-                    These creations are the means used to account for the violence suffered by women in their daily
-                    lives as well as in their intimacy, by offering them a place for listening and visibility.
-                    These texts, photographs, podcasts and installation were created from testimonies of women from
-                    Paimpol and its metropolitan area. The texts are hybrid, between narration and poetry, like an
-                    analogy.
-                </p>
+            </div>
+
+            <div class="quote">
+                « Ces paroles, ces rencontres avec des femmes victimes nourrissent mon travail, c’est ma matière
+                première. De cette récolte de paroles, j’en prélève des bribes. Je retravaille ces récits sous le prisme
+                artistique. Je souhaite agir à mon niveau d’artiste, pour donner la parole aux femmes victimes. Avec
+                l’art, j’ai trouvé un moyen d’extérioriser ma pensée et faire remonter le refoulé à la surface. »
+            </div>
+
+            <div class="project-image-full">
+                <img src="images/huisclos_1.jpg" alt="Installation de robes">
+                <p class="en" style="text-align: center; font-size: 0.9rem;">Installation de robes au Pavillon des
+                    expositions temporaires</p>
             </div>
 
             <div class="text-block">
                 <p>
-                    <a
-                        href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">Ecoute
-                        sonore</a> à partir du collectage de paroles...
+                    L'installation présente une vingtaine de robes contemporaines suspendues à différentes hauteurs. Les
+                    robes arborent des poches en velours rouge, symbolisant des blessures intimes et collectives, à
+                    l'intérieur desquelles sont placés les textes.
                 </p>
+                <p class="en">
+                    The installation presents about twenty contemporary dresses suspended at different heights. The
+                    dresses feature red velvet pockets, symbolizing intimate and collective wounds, inside which the
+                    texts are placed.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/huisclos_2.jpg" alt="Huis Clos détail">
+                <img src="images/huisclos_3.jpeg" alt="Huis Clos détail">
+                <img src="images/huisclos_4.jpg" alt="Huis Clos détail">
+                <img src="images/huisclos_5.jpg" alt="Huis Clos détail">
+            </div>
+
+            <div class="text-block">
+                <h3 style="margin-top: 4rem;">Performance Dansée : DOUX LEURRE - DOUCE HEURE</h3>
+                <p>
+                    Au Festival Bobines de Femmes à Lanloup. 6 femmes qui ont participé à HUIS CLOS se sont retrouvées
+                    au LIEU, espace de danse de la <a href="https://www.ciegregoireandco.fr/la-compagnie/"
+                        target="_blank">Compagnie Grégoire and Co</a> à Guingamp pour 12 ateliers autour du corps et de
+                    la réparation.
+                </p>
+                <p>
+                    Sylvie Le Quéré, chorégraphe, invite ces femmes à se mettre en mouvement ensemble, en danse pour
+                    partager, reconquérir par le corps la transformation de la douleur qui devient douceur.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/huisclos_6.jpg" alt="Performance dansée">
+                <img src="images/huisclos_7.jpg" alt="Performance dansée">
+            </div>
+
+            <div class="credits">
+                <p><strong>Crédits :</strong></p>
+                <p>Projet initié et accompagné par Patricia Le Calvez de <a
+                        href="https://www.limagequiparleblog.org">L’image qui Parle</a>.</p>
+                <p>Ecoute sonore réalisée par Patricia Le Calvez à partir de témoignages.</p>
+                <p>Crédits photos : Samantha, Christian Lameul, Emmanuelle Pays.</p>
+                <p><a href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                        target="_blank">Ecouter le podcast sonore</a></p>
             </div>
         </section>
     </main>
 
     <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/stephanie.pommeret" target="_blank"><img src="images/facebook.png"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/stephaniepommeret/" target="_blank"><img src="images/instagram.png"
+                    alt="Instagram"></a>
+        </div>
         <div class="contact-info">
             <p>Coordonnée / Coordinated : <a href="mailto:stephaniepommeret@hotmail.fr">stephaniepommeret@hotmail.fr</a>
             </p>
@@ -117,6 +172,7 @@
         </div>
     </footer>
 
+    <script src="menu.js"></script>
     <script src="script.js"></script>
 </body>
 
