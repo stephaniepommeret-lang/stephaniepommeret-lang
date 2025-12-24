@@ -9,6 +9,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,19 +34,58 @@
 
     <main>
         <section class="intro">
-            <h2>Sao Tomé</h2>
-            <p>Résidence / Residency</p>
+            <h2>Résidence à Sao Tomé y Principé</h2>
+            <p>Residency in Sao Tomé and Principe</p>
         </section>
 
         <section class="page-content">
-            <div class="project-image-full">
-                <img src="images/saotome.jpg" alt="Sao Tomé">
+            <div class="project-image-full" style="max-width: 800px; margin: 0 auto;">
+                <img src="images/saotome_main.jpg" alt="Résidence Sao Tomé - Installation">
             </div>
 
             <div class="text-block">
+                <p><strong>2020 - Alliance Française de São Tomé</strong></p>
+
                 <p>
-                    Recherche en cours...
+                    <strong>Carte brodées et cousues, en wax et bazin, 120 X 80 cm</strong>
                 </p>
+
+                <h3>Carte du monde en patchwork de wax - São Tomé</h3>
+
+                <p>
+                    Invitée par l'Alliance Française de São Tomé (golfe de Guinée), j'ai collaboré avec des femmes
+                    couturières et brodeuses locales. Elles assemblent des morceaux de wax en patchwork précieux
+                    rebrodé.
+                </p>
+                <p>
+                    Cette carte utilise la projection de Fuller, qui représente la Terre sur un polyèdre déplié, offrant
+                    une vision alternative du monde.
+                </p>
+                <p>
+                    Collaboration avec Judith Sylva, Lauriane Chanel et l'équipe de l'Alliance Française de São Tomé.
+                </p>
+
+                <br>
+
+                <h3>World Map in Wax Patchwork - São Tomé</h3>
+
+                <p class="en">
+                    Invited by the Alliance Française of São Tomé (Gulf of Guinea), I collaborated with local
+                    seamstresses and embroiderers. They assemble pieces of wax fabric into precious re-embroidered
+                    patchwork.
+                </p>
+                <p class="en">
+                    This map uses Fuller's projection, which represents the Earth on an unfolded polyhedron, offering an
+                    alternative vision of the world.
+                </p>
+                <p class="en">
+                    Collaboration with Judith Sylva, Lauriane Chanel and the Alliance Française team of São Tomé.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <img src="images/saotome_1.jpg" alt="Détail installation">
+                <img src="images/saotome_2.jpg" alt="Détail installation">
             </div>
         </section>
     </main>

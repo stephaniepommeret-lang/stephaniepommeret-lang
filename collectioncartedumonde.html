@@ -4,11 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collection de carte du monde - Stéphanie Pommeret</title>
+    <title>Collection de cartes du monde - Stéphanie Pommeret</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .quote {
+            font-family: var(--font-heading);
+            font-style: italic;
+            font-size: 1.1rem;
+            border-left: 4px solid #333;
+            padding-left: 20px;
+            margin: 2rem 0;
+            color: #555;
+        }
+
+        .project-section {
+            margin-top: 4rem;
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,21 +50,110 @@
 
     <main>
         <section class="intro">
-            <h2>Collection de carte du monde</h2>
-            <p>Collection of World Map</p>
+            <h2>Collection de cartes</h2>
+            <p>Map Collection</p>
         </section>
 
         <section class="page-content">
+
             <div class="project-image-full">
-                <!-- Using saotome.jpg temporarily as it seems to be the background used widely, or can be replaced later -->
-                <img src="images/saotome.jpg" alt="Collection de carte du monde">
+                <img src="images/inde.jpg" alt="Collection de cartes - Vue d'atelier">
             </div>
 
             <div class="text-block">
+                <h3>Ma démarche artistique</h3>
+
                 <p>
-                    Recherche en cours...
+                    Pour les anciens cartographes, la production d'une carte était l'œuvre d'une vie. Aujourd'hui, je
+                    considère chaque carte comme une œuvre d'art.
+                </p>
+                <p>
+                    Je rejoins pleinement Jean-Claude Groshens lorsqu'il écrit dans le catalogue de l'exposition
+                    <em>Cartes et figures de la Terre</em> (Centre Georges Pompidou, 1980) :
+                </p>
+
+                <div class="quote">
+                    <p>
+                        « La cartographie vit de cette sorte d'ambiguïté qui la place au confluent de la science exacte
+                        et de l'art. Fondée sur la description physique et la théorie mathématique, elle retrouve
+                        nécessairement à un moment ou à un autre de son histoire, cette espèce de pari qui réintroduit
+                        l'imaginaire dans les principes théoriques et fait de la carte une représentation. »
+                    </p>
+                </div>
+
+                <p>
+                    Mon approche consiste à réutiliser des projections scientifiques du monde pour proposer une vision
+                    globale, sans frontières, comme un tout unifié. A travers mes résidences d'artistes, je collabore
+                    avec les artisans locaux, en m'appropriant leur savoir-faire et la poésie issue des pratiques
+                    ancestrales.
+                </p>
+                <p>
+                    De cette rencontre entre rigueur scientifique, vision contemporaine et techniques traditionnelles
+                    naissent de nouvelles cartographies sensibles.
+                </p>
+
+                <br>
+
+                <p class="en">
+                    <strong>Map Collection</strong><br>
+                    I fully share Jean-Claude Groshens' view when he writes in the catalogue of the exhibition <em>Maps
+                        and Figures of the Earth</em> (Centre Georges Pompidou, 1980):
+                </p>
+                <div class="quote">
+                    <p class="en">
+                        "Cartography thrives on this kind of ambiguity that places it at the confluence of exact science
+                        and art. Based on physical description and mathematical theory, it necessarily rediscovers at
+                        one moment or another in its history, this kind of wager that reintroduces the imaginary into
+                        theoretical principles and makes the map a representation."
+                    </p>
+                </div>
+                <p class="en">
+                    My approach consists of reusing scientific projections of the world to propose a global vision,
+                    without borders, as one unified whole. Through my artist residencies, I collaborate with local
+                    craftspeople, appropriating their know-how and poetry derived from ancestral practices.
+                    This encounter between scientific rigor, contemporary vision and traditional techniques gives birth
+                    to new sensitive cartographies.
                 </p>
             </div>
+
+            <div class="gallery">
+                <img src="images/collection_detail_1.jpg" alt="Détail carte">
+                <img src="images/collection_detail_2.jpg" alt="Détail carte">
+            </div>
+
+            <div class="text-block project-section">
+                <h3>Carte en Zardozi faite en Inde à Lucknow</h3>
+                <p><em>Zardozi Map made in India in Lucknow</em></p>
+
+                <div class="project-image-full" style="margin: 2rem 0;">
+                    <img src="images/collection_inde.jpg" alt="Carte Zardozi Inde">
+                </div>
+
+                <p>
+                    Cette carte du monde a été brodée par des artisans de Lucknow selon la technique Zardozi ("travail
+                    d'or" en persan), utilisant fils dorés et argentés.
+                </p>
+                <p>
+                    J'ai choisi une projection chinoise qui place l'Inde au centre, décentrant l'Europe et offrant une
+                    vision alternative du monde.
+                </p>
+                <p>
+                    Les abeilles brodées symbolisent l'organisation harmonieuse et font écho à la crise écologique
+                    actuelle : leur disparition menacerait l'humanité entière.
+                </p>
+
+                <br>
+
+                <p class="en">
+                    This world map was embroidered by craftspeople from Lucknow using the Zardozi technique ("gold work"
+                    in Persian), employing golden and silver threads.
+                </p>
+                <p class="en">
+                    I chose a Chinese projection that places India at the center, decentering Europe and offering an
+                    alternative vision of the world.
+                </p>
+            </div>
+
         </section>
     </main>
 
