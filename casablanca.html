@@ -9,6 +9,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,13 +40,40 @@
 
         <section class="page-content">
             <div class="project-image-full">
-                <img src="images/casablanca.png" alt="Casablanca">
+                <img src="images/casablanca_gateaux.jpg" alt="Performance dégustative - Casablanca">
             </div>
 
             <div class="text-block">
+                <h3>Performance dégustative - Casablanca, Espace H2</h3>
                 <p>
-                    Recherche en cours...
+                    Conférence et exposition accueillies par Mohamed Rachdi à l'espace H2 à Casablanca.
                 </p>
+                <p>
+                    Événement soutenu par l'Institut Français, l'association La Fourmi-e, Mohamed Rachdi, Amina et
+                    Chafik Aaziz.
+                </p>
+                <br>
+                <p class="en">
+                    <strong>Tasting performance - Casablanca, Espace H2</strong><br>
+                    Conference and exhibition hosted by Mohamed Rachdi at Espace H2 in Casablanca.
+                </p>
+                <p class="en">
+                    Event supported by the French Institute, La Fourmi-e association, Mohamed Rachdi, Amina and Chafik
+                    Aaziz.
+                </p>
+
+                <div class="sup-logos" style="margin-top: 2rem; display: flex; gap: 20px; align-items: center;">
+                    <img src="images/logo_institut_francais.png" alt="Institut Français"
+                        style="width: auto; height: 60px;">
+                    <img src="images/logo_lafourmie.png" alt="La Fourmi-e" style="width: auto; height: 60px;">
+                    <img src="images/logo_h2.jpg" alt="H2" style="width: auto; height: 60px;">
+                </div>
+            </div>
+
+            <div class="gallery">
+                <img src="images/casablanca_1.jpg" alt="Espace H2">
+                <img src="images/casablanca_2.jpg" alt="Espace H2 Casablanca">
+                <img src="images/casablanca_3.jpg" alt="H2 espace d'art contemporain">
             </div>
         </section>
     </main>

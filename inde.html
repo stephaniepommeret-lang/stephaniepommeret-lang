@@ -9,6 +9,42 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
+    <style>
+        /* Carousel styles */
+        .carousel-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-container img {
+            height: 400px;
+            width: auto;
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .carousel-container {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .project-section {
+            margin-bottom: 3rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,15 +60,57 @@
         </section>
 
         <section class="page-content">
+
             <div class="project-image-full">
-                <img src="images/inde.jpg" alt="Inde">
+                <img src="images/inde_main.jpg" alt="Performance en Inde">
             </div>
 
-            <div class="text-block">
+            <div class="text-block project-section">
+                <h3>Performance au Festival Sanatkada, à Lucknow</h3>
+
                 <p>
-                    Recherche en cours...
+                    L'objet en lui-même vient de la terre, il est naturel, simple, modeste, fragile, c'est un peu pour
+                    moi notre condition humaine mais cet objet contient la lumière.
+                </p>
+                <p>
+                    La lumière est un symbole universel, spirituel, la lumière c'est la création, la connaissance, la
+                    civilisation, il n'y aurait pas de vie sans lumière. Nous avons besoin de toutes les lumières du
+                    monde pour évoluer, nous sommes tous interdépendants les uns des autres.
+                </p>
+                <p>
+                    La rencontre avec le public a été un moment fort, le dialogue a eu lieu. Chaque étape de la
+                    performance révélait quelque chose d'existentiel.
+                </p>
+
+                <p style="font-size: 0.9em; margin-top: 1rem;"><em>Crédit Photo Richard Franco</em></p>
+
+                <br>
+
+                <p class="en">
+                    <strong>Performance at Sanatkada Festival, Lucknow</strong><br>
+                </p>
+                <p class="en">
+                    The object in itself comes from the earth, it is natural, simple, modest, fragile, it is a little
+                    for me our human condition but this object contains the light.
+                </p>
+                <p class="en">
+                    Light is a universal, spiritual symbol, light is creation, knowledge, civilization, there would be
+                    no life without light. We need all the lights in the world to evolve, we are all interdependent on
+                    each other.
+                </p>
+                <p class="en">
+                    The meeting with the public was a highlight, the dialogue took place. Each stage of the performance
+                    revealed something existential.
                 </p>
             </div>
+
+            <div class="carousel-container">
+                <img src="images/inde_1.jpg" alt="Inde detail 1">
+                <img src="images/inde_2.jpg" alt="Inde detail 2">
+                <img src="images/inde_3.jpg" alt="Inde detail 3">
+                <img src="images/inde_square.jpg" alt="Inde detail 4">
+            </div>
+
         </section>
     </main>
 
