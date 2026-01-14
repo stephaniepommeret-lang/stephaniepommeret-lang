@@ -275,6 +275,29 @@ footer {
     .dropdown:hover .dropdown-content {
         display: block;
     }
+
+    /* Mobile specific adjustments */
+    #nav-links li.dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        background-color: #f4f4f4;
+        display: block;
+        /* Always show in mobile or use JS to toggle */
+        padding-left: 1rem;
+        border-left: 2px solid #ddd;
+        margin-left: 1rem;
+    }
+
+    .dropdown-content a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        color: #555;
+    }
 }
 
 /* CV Styles */

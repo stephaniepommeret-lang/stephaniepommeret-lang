@@ -41,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     const headerEl = document.querySelector('header');
-    if (!headerEl.innerHTML.trim()) {
+    // Fix: Check if content is empty OR just a comment/whitespace
+    // This resolves the issue where <!-- Content injected... --> blocked injection
+    if (headerEl && (!headerEl.innerHTML.trim() || headerEl.innerHTML.trim().startsWith('<!--'))) {
         headerEl.innerHTML = headerHtml;
     }
 
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('#nav-links a');
 
     links.forEach(link => {
+        // Exact match or base href
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
             // Also underscore the parent dropdown if it's a dropdown item
@@ -59,9 +62,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-});
 
-function toggleMenu() {
-    var navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show");
-}
+    // Mobile Menu Logic
+    // DEFINED GLOBALLY to be accessible by the inline onclick
+    window.toggleMenu = function () {
+        var navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+    };
+
+    // Close menu when clicking a link (mobile UX)
+    const navItems = document.querySelectorAll('#nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const navLinks = document.getElementById("nav-links");
+            if (navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+            }
+        });
+    });
+});
