@@ -1,7 +1,7 @@
 :root {
     --text-color: #333;
     --bg-color: #fff;
-    --accent-color: #777;
+    --accent-color: #555;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
 }
@@ -195,7 +195,7 @@ footer {
     padding: 3rem 2rem;
     text-align: center;
     font-size: 0.85rem;
-    color: #888;
+    color: #666;
     margin-top: auto;
 }
 

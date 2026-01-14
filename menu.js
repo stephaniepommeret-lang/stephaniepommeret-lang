@@ -40,7 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     </nav>
     `;
 
-    document.querySelector('header').innerHTML = headerHtml;
+    const headerEl = document.querySelector('header');
+    if (!headerEl.innerHTML.trim()) {
+        headerEl.innerHTML = headerHtml;
+    }
 
     // Highlight active link based on current URL
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
