@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="intro">
+    <section class="intro">
+        <h2>{{ page.title }}</h2>
+        {% if page.subtitle %}
+        <p>{{ page.subtitle }}</p>
+        {% endif %}
+    </section>
+</section>
+
+<section class="page-content">
+    {% if page.main_image %}
+    <div class="project-image-full">
+        <img src="{{ page.main_image }}" alt="{{ page.title }}">
+        {% if page.main_image_caption %}
+        <p class="caption">{{ page.main_image_caption }}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="text-block">
+        {{ content }}
+    </div>
+</section>

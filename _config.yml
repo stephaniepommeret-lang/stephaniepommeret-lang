@@ -1,0 +1,135 @@
+# Configuration Jekyll pour le site de Stéphanie Pommeret
+
+# Informations du site
+title: Stéphanie Pommeret
+description: Plasticienne / Poètesse / Photographe
+autitle: "Stéphanie Pommeret"
+languages: ["fr", "en"]
+email: stephaniepommeret@hotmail.fr
+
+# URL du site
+url: "https://www.stephaniepommeret.com"
+baseurl: ""
+
+# Configuration Jekyll
+permalink: pretty
+markdown: kramdown
+highlighter: rouge
+
+# Plugins Jekyll (compatibles avec GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .DS_Store
+  - "*.py"
+  - "*.txt"
+  - maroc_raw.html
+
+# Collections (pour organiser les projets)
+collections:
+  expositions:
+    output: true
+    permalink: /:collection/:name
+  residences:
+    output: true
+    permalink: /:collection/:name
+  photos:
+    output: true
+    permalink: /:collection/:name
+
+# Defaults front matter
+defaults:
+  - scope:
+      path: ""
+      type: "expositions"
+    values:
+      layout: "project"
+      category: "exposition"
+  - scope:
+      path: ""
+      type: "residences"
+    values:
+      layout: "project"
+      category: "residence"
+  - scope:
+      path: ""
+      type: "photos"
+    values:
+      layout: "project"
+      category: "photo"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Navigation
+navigation:
+  - title: Home
+    title_en: Home
+    url: /
+  - title: CV
+    title_en: CV
+    url: /cv
+  - title: Expositions
+    title_en: Exhibitions
+    dropdown:
+      - title: Huis Clos
+        title_en: Huis Clos (No Way Out)
+        url: /expositions/huisclos
+      - title: Le Petit Echo de la Mode
+        title_en: Le Petit Echo de la Mode
+        url: /expositions/lepetitechodelamode
+      - title: Paradise
+        title_en: « The paradise (to be) regained »
+        url: /expositions/paradise
+      - title: Collection de carte du monde
+        title_en: Collection de carte du monde (World Map Collection)
+        url: /expositions/collectioncartedumonde
+  - title: Résidences
+    title_en: Residencies
+    dropdown:
+      - title: Sao Tomé
+        title_en: Sao Tome
+        url: /residences/saotome
+      - title: Casablanca
+        title_en: Casablanca
+        url: /residences/casablanca
+      - title: Inde
+        title_en: India
+        url: /residences/inde
+      - title: Centre Bretagne
+        title_en: Centre Bretagne
+        url: /residences/centrebretagne
+      - title: Maroc
+        title_en: Morocco
+        url: /residences/maroc
+  - title: Séries photographies
+    title_en: Photography Series
+    dropdown:
+      - title: Tout.e.s migrant.e.s
+        title_en: Tout.e.s migrant.e.s (All Migrants)
+        url: /photos/toutesmigrantes
+      - title: Habiter la forêt
+        title_en: Habiter la forêt (Inhabiting the forest)
+        url: /photos/habiterlaforet
+      - title: Confinement
+        title_en: Confinement (Lockdown)
+        url: /photos/confinement
+
+# SEO et réseaux sociaux
+social:
+  facebook: stephaniepommeret
+  instagram: stephaniepommeret
+  soundcloud: stephaniepommeret

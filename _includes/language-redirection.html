@@ -1,0 +1,31 @@
+<script>
+    (function () {
+        // 1. Bot Detection
+        var botPattern = "(googlebot\/|bot|Googlebot-Mobile|jython|crawl|spider|slurp|yandex|bind|facebook|twitter)";
+        var re = new RegExp(botPattern, 'i');
+        if (re.test(navigator.userAgent)) {
+            return; // Do nothing if bot
+        }
+
+        // 2. User Preference (localStorage)
+        var userLang = localStorage.getItem('user_lang');
+        var currentPath = window.location.pathname;
+
+        // 3. Logic for Root (/)
+        // Only redirect if at the exact root or index.html
+        if (currentPath === '/' || currentPath === '/index.html') {
+            if (userLang === 'en') {
+                window.location.replace('/en/');
+                return;
+            }
+            if (!userLang) {
+                // 4. Browser Language Detection (if no preference)
+                var browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang && browserLang.startsWith('en')) {
+                    // Redirect to English version
+                    window.location.replace('/en/');
+                }
+            }
+        }
+    })();
+</script>

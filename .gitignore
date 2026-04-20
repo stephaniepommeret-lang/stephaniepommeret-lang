@@ -1,0 +1,27 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby
+Gemfile.lock
+vendor/
+
+# System
+.DS_Store
+*.py
+*.pyc
+__pycache__/
+
+# Old HTML files (keep for reference, but don't publish)
+*.html
+!_includes/*.html
+!_layouts/*.html
+
+# Documents
+documents/
+
+# Backup files
+*_original.*
+*_backup.*

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'fr' }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description"
+        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- Hreflang Tags for SEO -->
+    {% if page.translation_key %}
+    {% assign current_lang = page.lang | default: 'fr' %}
+    <link rel="alternate" hreflang="{{ current_lang }}" href="{{ site.url }}{{ page.url }}">
+
+    {% assign translations = site.pages | concat: site.posts | where: "translation_key", page.translation_key %}
+    {% for translation in translations %}
+    {% if translation.lang != current_lang %}
+    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ site.url }}{{ translation.url }}">
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- SEO Tag (Jekyll plugin) -->
+    {% seo %}
+
+    <!-- Language Redirection (Bot Aware) -->
+    {% include language-redirection.html %}
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        {% include header.html %}
+        {% include navigation.html %}
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            var navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("show");
+        }
+
+        // Close menu when clicking a link (mobile UX)
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll('#nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const navLinks = document.getElementById("nav-links");
+                    if (navLinks.classList.contains('show')) {
+                        navLinks.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+</body>
+
+</html>
