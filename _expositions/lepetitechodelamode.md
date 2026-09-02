@@ -1,28 +1,50 @@
 ---
 layout: project
-title: "Archives du magazine Le Petit Echo de la Mode"
+title: "Archives du magazine Le Petit Écho de la Mode"
 main_image: /images/petitecho_1.jpg
 lang: fr
 translation_key: lepetitechodelamode
+description: "Aux archives du Petit Écho de la Mode, Stéphanie Pommeret crée une installation de robes sur la mémoire des femmes et les inégalités de genre."
+locale: fr_FR
+main_image_alt: "Visiteuse face à une installation murale d'assiettes brodées"
+image:
+  path: /images/petitecho_1.jpg
+  width: 540
+  height: 717
+  alt: "Visiteuse face à une installation murale d'assiettes brodées"
+schema:
+  type: VisualArtwork
+  artform: "Installation"
+  art_medium: "Robes, couture, broderie et archives imprimées"
+  about:
+    - "Mémoire des femmes"
+    - "Injonctions de genre"
+    - "Archives"
+    - "Couture"
+  events:
+    - type: Event
+      name: "Résidence aux archives du Petit Écho de la Mode"
+      location: "Châtelaudren-Plouagat"
+      start_date: "2024"
 ---
 
 <div class="text-block project-section">
 <h4 style="margin-top: 2rem;">La résidence</h4>
 <p>
-                    Plusieurs semaines de résidence dans l’ancienne imprimerie du magazine <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank">Le Petit Echo de la Mode</a>, à Châtelaudren. Un lieu chargé d’histoires,
+                    Plusieurs semaines de résidence dans l’ancienne imprimerie du magazine <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank" rel="noopener noreferrer">Le Petit Écho de la Mode</a>, à Châtelaudren. Un lieu chargé d’histoires,
                     d’injonctions feutrées et de silences têtus. J’ai plongé dans ces pages jaunies où l’on parlait
                     d’amour, de cuisine, de couture… mais aussi, en filigrane, de devoirs conjugaux, de beauté
                     réglementée et de vies de femmes confinées.
                 </p>
 <p>
-                    À partir de ces fragments, des <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank">créations</a> prennent forme dans l’espace du Petit Écho.
+                    À partir de ces fragments, des <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank" rel="noopener noreferrer">créations</a> prennent forme dans l’espace du Petit Écho.
                     Je ne veux pas
                     tout dévoiler ici, car ces installations sont à vivre. À travers elles, j’essaie de faire entendre
                     les chuchotements du passé, de les faire vibrer dans le présent. Un travail d’archéologie sensible,
                     entre mémoire collective et émotions intimes.
                 </p>
 <p>
-                    📍 <a class="highlight-link" href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank">Site du Petit Echo de la Mode</a>
+                    📍 <a class="highlight-link" href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank" rel="noopener noreferrer">Site du Petit Écho de la Mode</a>
 </p>
 </div>
 <div class="gallery">
@@ -32,7 +54,7 @@ translation_key: lepetitechodelamode
 <div class="instagram-container" style="display: flex; align-items: start; justify-content: center;">
 <blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
 <div style="padding:16px;">
-<a href="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+<a href="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener noreferrer">
 <div style=" display: flex; flex-direction: row; align-items: center;">
 <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
 </div>

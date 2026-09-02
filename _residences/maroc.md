@@ -6,6 +6,32 @@ main_image: /images/maroc_main.jpg
 main_image_caption: "Résidence d'artiste à l'Institut Français, Tétouan, Villa Dar Ben Jelloun"
 lang: fr
 translation_key: maroc
+description: "Résidences à Tétouan et à Fès : Stéphanie Pommeret crée des cartes du monde avec des artisans et place les savoir-faire marocains au cœur de sa pratique."
+locale: fr_FR
+main_image_alt: "Carte du monde composée de fragments colorés sur une table de la Villa Dar Ben Jelloun"
+image:
+  path: /images/maroc_main.jpg
+  width: 2500
+  height: 1875
+  alt: "Carte du monde composée de fragments colorés sur une table de la Villa Dar Ben Jelloun"
+schema:
+  type: VisualArtwork
+  artform: "Cartographie"
+  art_medium: "Savoir-faire artisanaux marocains"
+  about:
+    - "Tétouan"
+    - "Fès"
+    - "Cartographie"
+    - "Dialogue culturel"
+  events:
+    - type: Event
+      name: "Résidence Dar Ben Jelloun"
+      location: "Tétouan, Maroc"
+      start_date: "2018"
+    - type: Event
+      name: "Résidence Dar Batha"
+      location: "Fès, Maroc"
+      start_date: "2019"
 ---
 
 <div class="text-block">
@@ -18,9 +44,8 @@ translation_key: maroc
                     dialogue des cultures.
                 </p>
 <p>
-                    Tétouan et Fès sont des villes monuments, classées au patrimoine mondial par l'UNESCO, j'ai été
-                    frappé par l'authenticité et la beauté de ces villes, ses deux médinas, ses habitants et ses
-                    artisans, qui perpétuent un savoir-faire issue de traditions millénaires.
+                    Tétouan et Fès sont des villes monuments, classées au patrimoine mondial par l'UNESCO, j'ai été frappée par l'authenticité et la beauté de ces villes, ses deux médinas, ses habitants et ses
+                    artisans, qui perpétuent un savoir-faire issu de traditions millénaires.
                 </p>
 <p>
                     L’objectif dans cette résidence est de m’enrichir de mon environnement et de rencontrer les acteurs
@@ -38,8 +63,8 @@ translation_key: maroc
                     et des choix de couleurs, de formes, de lettres…
                 </p>
 <p>
-                    Etre cartographe c’est regarder le monde en spectateur puis l’organiser, avec une certaine structure
-                    pour qu’il devienne intelligible. Les choix des cartographes nous emmènent a des perceptions du
+                    Être cartographe c’est regarder le monde en spectateur puis l’organiser, avec une certaine structure
+                    pour qu’il devienne intelligible. Les choix des cartographes nous emmènent à des perceptions du
                     monde très variables. La carte n’est pas neutre, car le monde est matérialisé à travers des codes.
                 </p>
 </div>

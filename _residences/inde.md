@@ -5,13 +5,34 @@ subtitle: "Résidence"
 main_image: /images/inde.jpg
 lang: fr
 translation_key: inde
+description: "Résidence 2019 à Lucknow : au festival Sanatkada, Stéphanie Pommeret crée une carte du monde collective composée de centaines de lampes en terre."
+locale: fr_FR
+main_image_alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
+image:
+  path: /images/inde.jpg
+  width: 1280
+  height: 852
+  alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
+schema:
+  type: VisualArtwork
+  artform: "Installation participative"
+  art_medium: "Lampes en terre, huile de moutarde et mèches"
+  about:
+    - "Cartographie"
+    - "Création collective"
+    - "Artisanat de Dewa"
+  events:
+    - type: Event
+      name: "Résidence et festival Sanatkada"
+      location: "Lucknow, Inde"
+      start_date: "2019"
 ---
 
 <div class="text-block project-section">
 <h3>Performance au Festival Sanatkada, à Lucknow</h3>
-<p><strong>Avec l'<a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank">Alliance
-                            française de Lucknow</a> en partenariat avec l'<a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank">Institut français de New Delhi</a> et
-                        l'ONG <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank">Sanatkada</a>
+<p><strong>Avec l'<a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank" rel="noopener noreferrer">Alliance
+                            française de Lucknow</a> en partenariat avec l'<a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank" rel="noopener noreferrer">Institut français de New Delhi</a> et
+                        l'ONG <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank" rel="noopener noreferrer">Sanatkada</a>
                         (2019)</strong></p>
 <h4 style="margin-top: 2rem;">La Carte du Monde en Lampes de Terre</h4>
 <p>J'ai eu cette idée lors d'une visite dans un village de Dewa avec l'équipe de Sanatkada.</p>
@@ -46,5 +67,4 @@ translation_key: inde
 <img alt="Inde extra 3" src="/images/inde/35_2CArte_bougies.jpg"/>
 <img alt="Inde extra 4" src="/images/inde/Oilamp_-_11_2.jpg"/>
 <img alt="Inde extra 5" src="/images/inde/Oilamp_-_2.jpg"/>
-</div>
 </div>

@@ -1,12 +1,19 @@
 ---
 layout: page
-title: Stéphanie Pommeret - Plasticienne / Poètesse / Photographe
-description: Discover the artistic work of Stéphanie Pommeret
+title: Visual artist, photographer and poet in Saint-Brieuc
 hero_image: /images/home-hero.jpg
 hero_image_webp: /images/home-hero.webp
 lang: en
 translation_key: home
 permalink: /en/
+description: "Stéphanie Pommeret is a visual artist, photographer and poet based in Saint-Brieuc whose poetic practice addresses social issues."
+locale: en_GB
+hero_alt: "Embroidered world map on white fabric held against a blue, cloudy sky"
+image:
+  path: /images/home-hero.jpg
+  width: 1200
+  height: 794
+  alt: "Embroidered world map on white fabric held against a blue, cloudy sky"
 ---
 
 
@@ -21,6 +28,6 @@ permalink: /en/
 </div>
 <div class="author">
     <p><strong>Vanessa Auclerc-Galland</strong><br/>
-    Expository Comissioner
+    Curator
     </p>
 </div>

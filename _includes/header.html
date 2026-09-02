@@ -1,5 +1,19 @@
+{%- assign current_lang = page.lang | default: "fr" -%}
+{%- assign home_pages = site.pages | where: "translation_key", "home" -%}
+{%- assign home_page = home_pages | where: "lang", current_lang | first -%}
+{%- assign home_url = home_page.url | default: "/" -%}
+
 <div class="logo">
-    <h1><a href="{{ site.baseurl }}/">Stéphanie Pommeret</a></h1>
-    <p>{% if page.lang == 'en' %}Visual Artist / Poet / Photographer{% else %}Plasticienne / Poètesse / Photographe{%
-        endif %}</p>
+    {%- comment -%}
+    Le nom de l'artiste n'est le <h1> que sur la page d'accueil. Ailleurs, le <h1>
+    est le titre de la page (cf. _layouts/project.html). L'apparence est identique
+    dans les deux cas : voir .site-title dans assets/css/style.css.
+    Le lien renvoie vers l'accueil de la langue courante.
+    {%- endcomment -%}
+    {% if page.translation_key == "home" %}
+    <h1 class="site-title"><a href="{{ home_url | relative_url }}">Stéphanie Pommeret</a></h1>
+    {% else %}
+    <p class="site-title"><a href="{{ home_url | relative_url }}">Stéphanie Pommeret</a></p>
+    {% endif %}
+    <p class="site-tagline">{% if current_lang == 'en' %}Visual Artist / Poet / Photographer{% else %}Plasticienne / Poétesse / Photographe{% endif %}</p>
 </div>

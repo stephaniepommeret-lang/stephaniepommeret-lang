@@ -2,14 +2,54 @@
 
 # Informations du site
 title: Stéphanie Pommeret
-description: Plasticienne / Poètesse / Photographe
-autitle: "Stéphanie Pommeret"
+tagline: "Artiste plasticienne, photographe et poétesse à Saint-Brieuc"
+description: "Stéphanie Pommeret, artiste plasticienne, photographe et poétesse à Saint-Brieuc, développe un travail poétique construit autour de questions sociales."
 languages: ["fr", "en"]
+lang: fr
+locale: fr_FR
 email: stephaniepommeret@hotmail.fr
 
-# URL du site
-url: "https://www.stephaniepommeret.com"
+# URL du site — doit correspondre au CNAME (le www redirige en 301 vers le domaine nu)
+url: "https://stephaniepommeret.com"
 baseurl: ""
+
+# Identité de l'artiste (utilisée par jekyll-seo-tag et par les données structurées)
+author:
+  name: "Stéphanie Pommeret"
+  type: Person
+  url: "https://stephaniepommeret.com"
+  alternate_names:
+    - "Stephanie Pommeret"
+  job_title_fr: "Artiste plasticienne, photographe et poétesse"
+  job_title_en: "Visual artist, photographer and poet"
+  description_fr: "Stéphanie Pommeret est une artiste plasticienne, photographe et poétesse basée à Saint-Brieuc, en Bretagne."
+  description_en: "Stéphanie Pommeret is a visual artist, photographer and poet based in Saint-Brieuc, Brittany."
+  knows_about_fr:
+    - "Photographie plasticienne"
+    - "Écoféminisme"
+    - "Broderie"
+    - "Double exposition photographique"
+    - "Corps maternel"
+    - "Cartographie"
+    - "Installation"
+    - "Poésie"
+  knows_about_en:
+    - "Fine-art photography"
+    - "Ecofeminism"
+    - "Embroidery"
+    - "Photographic double exposure"
+    - "Maternal body"
+    - "Cartography"
+    - "Installation art"
+    - "Poetry"
+  awards_fr:
+    - "Bourse de création ADAGP — dotation Temps de recherche artistique (2025)"
+    - "Aide à l'installation d'atelier DRAC (2022)"
+    - "Aide à la création DRAC pour « The paradise (to be) regained » (2020)"
+  awards_en:
+    - "ADAGP creation grant — Artistic Research Time endowment (2025)"
+    - "DRAC studio installation grant (2022)"
+    - "DRAC creation grant for “The paradise (to be) regained” (2020)"
 
 # Configuration Jekyll
 permalink: pretty
@@ -33,8 +73,13 @@ exclude:
   - .jekyll-cache
   - .DS_Store
   - "*.py"
-  - "*.txt"
+  - urls_to_scrape.txt
   - maroc_raw.html
+  - README.md
+  - GUIDE_EDITION.md
+  # Les deux PDF sont actuellement vides (0 octet) : ne pas les publier ni les
+  # soumettre au sitemap tant qu'ils n'ont pas été restaurés.
+  - documents
 
 # Collections (pour organiser les projets)
 collections:
@@ -81,27 +126,27 @@ navigation:
     url: /
   - title: CV
     title_en: CV
-    url: /cv
+    url: /cv/
   - title: Expositions
     title_en: Exhibitions
     dropdown:
       - title: Huis Clos
         title_en: Huis Clos (No Way Out)
         url: /expositions/huisclos
-      - title: Le Petit Echo de la Mode
-        title_en: Le Petit Echo de la Mode
+      - title: Le Petit Écho de la Mode
+        title_en: Le Petit Écho de la Mode
         url: /expositions/lepetitechodelamode
       - title: Paradise
         title_en: « The paradise (to be) regained »
         url: /expositions/paradise
-      - title: Collection de carte du monde
-        title_en: Collection de carte du monde (World Map Collection)
+      - title: Collection de cartes
+        title_en: Collection de cartes (Map Collection)
         url: /expositions/collectioncartedumonde
   - title: Résidences
     title_en: Residencies
     dropdown:
-      - title: Sao Tomé
-        title_en: Sao Tome
+      - title: São Tomé
+        title_en: São Tomé
         url: /residences/saotome
       - title: Casablanca
         title_en: Casablanca
@@ -115,21 +160,30 @@ navigation:
       - title: Maroc
         title_en: Morocco
         url: /residences/maroc
-  - title: Séries photographies
+  - title: Séries photographiques
     title_en: Photography Series
     dropdown:
       - title: Tout.e.s migrant.e.s
         title_en: Tout.e.s migrant.e.s (All Migrants)
         url: /photos/toutesmigrantes
-      - title: Habiter la forêt
-        title_en: Habiter la forêt (Inhabiting the forest)
-        url: /photos/habiterlaforet
+      - title: Le Goût de l'eau
+        title_en: Le Goût de l'eau (The Taste of Water)
+        url: /photos/goutdeleau
+      - title: Materia Prima
+        title_en: Materia Prima
+        url: /photos/materiaprima
       - title: Confinement
         title_en: Confinement (Lockdown)
         url: /photos/confinement
 
 # SEO et réseaux sociaux
+# Le compte SoundCloud renvoie une 404 : il a été retiré du footer et des sameAs.
 social:
+  name: "Stéphanie Pommeret"
   facebook: stephaniepommeret
   instagram: stephaniepommeret
-  soundcloud: stephaniepommeret
+  links:
+    - "https://www.facebook.com/stephaniepommeret"
+    - "https://www.instagram.com/stephaniepommeret/"
+    - "https://www.adagp.fr/fr/identities/stephanie-pommeret-1152583"
+    - "https://bienalsur.org/es/artistas/597"

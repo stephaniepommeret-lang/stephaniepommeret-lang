@@ -5,6 +5,28 @@ subtitle: "Série photographique"
 main_image: /images/confinement_1.jpg
 lang: fr
 translation_key: confinement
+description: "Confinement, série photographique de Stéphanie Pommeret, explore l'intimité, le camouflage et notre rapport au temps, à l'espace et au quotidien."
+locale: fr_FR
+main_image_alt: "Portrait d'une femme fondue dans une projection de roses et de feuillages"
+image:
+  path: /images/confinement_1.jpg
+  width: 1950
+  height: 2600
+  alt: "Portrait d'une femme fondue dans une projection de roses et de feuillages"
+schema:
+  type: VisualArtwork
+  artform: "Série photographique"
+  art_medium: "Photographie"
+  about:
+    - "Confinement"
+    - "Intimité"
+    - "Camouflage"
+    - "Quotidien"
+  events:
+    - type: ExhibitionEvent
+      name: "Déconfinement"
+      location: "Bonjour Minuit, Saint-Brieuc"
+      start_date: "2021"
 ---
 
 <div class="text-block">
@@ -13,7 +35,7 @@ translation_key: confinement
                     pourrions être.
                     Circonscrits dans notre intimité, le confinement fut l'occasion de l'ausculter, d'y porter une
                     attention nouvelle et de s'y situer moyennant de nouveaux comportements, parfois aux antipodes :
-                    repli sur soi, relâchement, introspection, lâcher prise...
+                    repli sur soi, relâchement, introspection, lâcher prise…
                     Les photographies de Stéphanie Pommeret en font l'inventaire, dressant ainsi une typologie des poses
                     et d'expression dans un contexte collectivement partagé.
                     Comme un mariage forcé, il a fallu cohabiter avec un quotidien parfois oublié, banalisé ou négligé.
@@ -27,7 +49,7 @@ translation_key: confinement
                     Faire corps avec son environnement, c'est disparaître un peu, prendre du recul pour mieux en prendre
                     la mesure. S'y projeter et y être projeté, c'est un peu comme incarner la pensée Hopi laquelle
                     n'objective pas l'univers mais en fusionne tous les éléments : de « je vois une fleur » à « je suis
-                    fleur »
+                    fleur ».
                     Se protéger c'est aussi s'effacer, se fondre dans le décor ; les camouflages exécutés font basculer
                     le travail photographique de Stéphanie Pommeret du genre du portrait à celui du paysage dont les
                     motifs et l'absence de limite illustrent bien ce nouveau rapport au temps et à l'espace.

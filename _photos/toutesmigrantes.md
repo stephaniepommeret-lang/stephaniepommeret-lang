@@ -5,10 +5,36 @@ subtitle: "Série photographique"
 main_image: /images/toutesmigrantes_ali1.jpg
 lang: fr
 translation_key: toutesmigrantes
+description: "Tout.e.s migrant.e.s croise photographie, migrations humaines et oiseaux migrateurs, avec la Réserve naturelle de la baie de Saint-Brieuc."
+locale: fr_FR
+main_image_alt: "Personne vêtue de blanc, recroquevillée sous une projection d'oiseaux migrateurs"
+image:
+  path: /images/toutesmigrantes_ali1.jpg
+  width: 1950
+  height: 1300
+  alt: "Personne vêtue de blanc, recroquevillée sous une projection d'oiseaux migrateurs"
+schema:
+  type: VisualArtwork
+  artform: "Exposition photographique"
+  art_medium: "Photographie"
+  about:
+    - "Migrations humaines"
+    - "Oiseaux migrateurs"
+    - "Écologie"
+    - "Baie de Saint-Brieuc"
+  events:
+    - type: ExhibitionEvent
+      name: "All migrants"
+      location: "La Passerelle, Saint-Brieuc"
+      start_date: "2022"
+    - type: ExhibitionEvent
+      name: "All Migrants"
+      location: "Mairie d'Hillion"
+      start_date: "2025"
 ---
 
 <div class="text-block">
-<p><strong>Projet en collaboration avec la <a class="highlight-link" href="https://www.reservebaiedesaintbrieuc.com" target="_blank">réserve naturelle de la Baie de
+<p><strong>Projet en collaboration avec la <a class="highlight-link" href="https://www.reservebaiedesaintbrieuc.com" target="_blank" rel="noopener noreferrer">réserve naturelle de la Baie de
                             Saint-Brieuc</a></strong></p>
 <p><strong>Exposition photographique de Stéphanie Pommeret</strong></p>
 <div style="text-align: center; margin: 30px 0;">
@@ -16,11 +42,11 @@ translation_key: toutesmigrantes
 </div>
 <div class="exhibition-list" style="margin-bottom: 3rem;">
 <p><strong>Exposition présentée à :</strong></p>
-<p><strong><a class="highlight-link" href="https://bienalsur.org/index.php/es/artistas/597" target="_blank">BIENALSUR</a></strong>, Biennale d’art contemporain en Amérique
+<p><strong><a class="highlight-link" href="https://bienalsur.org/index.php/es/artistas/597" target="_blank" rel="noopener noreferrer">BIENALSUR</a></strong>, Biennale d’art contemporain en Amérique
                         du Sud, 2019, Août 2023, et Mai 2024</p>
 <ul>
-<li><a class="highlight-link" href="https://bienalsur.org/en/single_agenda/486" target="_blank">Centro Cultural El Parque de España</a>, à Rosario</li>
-<li><a class="highlight-link" href="https://bienalsur.org/en/single_agenda/545" target="_blank">Centro Cultural Banco do Brasil à Brasilia</a>, <a class="highlight-link" href="https://bienalsur.org/es/single_agenda/545" target="_blank">São Paulo</a> et <a class="highlight-link" href="https://bienalsur.org/es/single_agenda/557" target="_blank">Rio de Janeiro</a></li>
+<li><a class="highlight-link" href="https://bienalsur.org/en/single_agenda/486" target="_blank" rel="noopener noreferrer">Centro Cultural El Parque de España</a>, à Rosario</li>
+<li><a class="highlight-link" href="https://bienalsur.org/en/single_agenda/545" target="_blank" rel="noopener noreferrer">Centro Cultural Banco do Brasil à Brasilia</a>, <a class="highlight-link" href="https://bienalsur.org/es/single_agenda/545" target="_blank" rel="noopener noreferrer">São Paulo</a> et <a class="highlight-link" href="https://bienalsur.org/es/single_agenda/557" target="_blank" rel="noopener noreferrer">Rio de Janeiro</a></li>
 </ul>
 <p>Soutenue notamment par l'UNESCO, la Fundacion Foro del Sur et UNTREF Universidad Nacional de Tres
                         de Febrero.</p>
@@ -29,7 +55,7 @@ translation_key: toutesmigrantes
 <li><strong>La Passerelle</strong>, scène nationale de Saint-Brieuc</li>
 <li><strong>RÉSIA</strong> (Réseau Éducation Solidarités Internationales Armor)</li>
 <li><strong>Le Grand Pré</strong>, centre culturel de Langueux</li>
-<li><strong>Le Dôme</strong>, centre culturel de Saint Avé</li>
+<li><strong>Le Dôme</strong>, centre culturel de Saint-Avé</li>
 <li><strong>L’Image Qui Parle</strong> à Paimpol</li>
 </ul>
 </div>
@@ -40,7 +66,7 @@ translation_key: toutesmigrantes
                         comme toutes ses consœurs, n’a eu de cesse de bouger, de se déplacer, de voyager, de migrer,
                         tout au long de son histoire depuis son origine africaine il y a presque 2 millions d'années.
                         Les premiers humains ont migré pour des raisons multiples, tels que le changement climatique,
-                        l'approvisionnement alimentaire ou peut-être juste pour découvrir de nouveaux horizons.... Peu
+                        l'approvisionnement alimentaire ou peut-être juste pour découvrir de nouveaux horizons… Peu
                         importe les motivations, car depuis l’origine de la vie sur terre, nous sommes tous des
                         migrants. Ainsi « les néandertaliens et homo sapiens arrivés en Europe étaient des migrants et
                         se sont mélangés pour faire de nous des métis originels. » écrivait Edgar Morin.
@@ -49,10 +75,10 @@ translation_key: toutesmigrantes
                         Que l’on soit un émigré d’un côté de la frontière ou un immigré de l’autre, tout cela n’a pas
                         vraiment de sens. Les migrations sont non seulement indispensables à la survie de l’individu
                         mais aussi pour le maintien de l’espèce sur le long terme. Car une espèce qui ne peut plus se
-                        déplacer, qui est limité géographiquement - on parle alors d’endémisme -, est fortement menacée
+                        déplacer, qui est limitée géographiquement - on parle alors d’endémisme -, est fortement menacée
                         par le moindre changement des conditions de vie sur le site, et risque de disparaitre très
-                        rapidement. L’une des richesses de la baie de Saint-Brieuc ne provient- elle pas de ses oiseaux
-                        qui ont émigrés des contrées nordiques pour immigrer en Bretagne ?
+                        rapidement. L’une des richesses de la baie de Saint-Brieuc ne provient-elle pas de ses oiseaux
+                        qui ont émigré des contrées nordiques pour immigrer en Bretagne ?
                     </p>
 <p style="margin-top: 1rem;"><strong>Alain Ponsero</strong><br/>Conservateur<br/>Directeur de la réserve naturelle de la baie de Saint-Brieuc</p>
 </div>
@@ -60,7 +86,7 @@ translation_key: toutesmigrantes
 <h3>Migration !</h3>
 <p>
                         Le terme parle des oiseaux comme des humains. On passe d’un lieu à l’autre. D’un pays à l’autre.
-                        Pour les oiseaux ce n’est un voyage sans retour, au contraire c’est un cycle. Pour l’humain, le
+                        Pour les oiseaux ce n’est pas un voyage sans retour, au contraire c’est un cycle. Pour l’humain, le
                         retour n’est pas toujours le cycle du voyage, mais il peut l’être. Volontaire ou contraint. On
                         migre pour nourrir sa famille, pour trouver du travail ou faire des études, fuir une dictature
                         ou un système d’oppression. Partir par amour, arriver par désir. Face à la guerre, aussi, une

@@ -1,83 +1,110 @@
+// Menu principal : une seule source de vérité (ce fichier est chargé par _layouts/default.html).
+// Objectifs : utilisable au clavier, états ARIA corrects, comportement identique
+// au rendu précédent en apparence.
 document.addEventListener("DOMContentLoaded", function () {
-    const headerHtml = `
-    <div class="logo">
-        <h1><a href="index.html">Stéphanie Pommeret</a></h1>
-        <p>Plasticienne / Poètesse / Photographe</p>
-    </div>
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li class="dropdown">
-                <a href="#">Expositions</a>
-                <div class="dropdown-content">
-                    <a href="huisclos.html">Huis Clos</a>
-                    <a href="lepetitechodelamode.html">Le Petit Echo de la Mode</a>
-                    <a href="paradise.html">Paradise</a>
-                    <a href="collectioncartedumonde.html">Collection de carte du monde</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#">Résidences</a>
-                <div class="dropdown-content">
-                    <a href="saotome.html">Sao Tomé</a>
-                    <a href="casablanca.html">Casablanca</a>
-                    <a href="inde.html">Inde</a>
-                    <a href="centrebretagne.html">Centre Bretagne</a>
-                    <a href="maroc.html">Maroc</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="#">Séries photographies</a>
-                <div class="dropdown-content">
-                    <a href="toutesmigrantes.html">Tout.e.s migrant.e.s</a>
-                    <a href="habiterlaforet.html">Habiter la forêt</a>
-                    <a href="confinement.html">Confinement</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-    `;
+    const nav = document.querySelector("header nav");
+    const menuButton = document.querySelector(".menu-icon");
+    const navLinks = document.getElementById("nav-links");
+    const dropdownButtons = Array.from(document.querySelectorAll(".dropdown-toggle"));
+    const mobile = window.matchMedia("(max-width: 768px)");
 
-    const headerEl = document.querySelector('header');
-    // Fix: Check if content is empty OR just a comment/whitespace
-    // This resolves the issue where <!-- Content injected... --> blocked injection
-    if (headerEl && (!headerEl.innerHTML.trim() || headerEl.innerHTML.trim().startsWith('<!--'))) {
-        headerEl.innerHTML = headerHtml;
+    if (!nav || !menuButton || !navLinks) return;
+
+    function setMainMenu(open) {
+        navLinks.classList.toggle("show", open);
+        menuButton.setAttribute("aria-expanded", String(open));
     }
 
-    // Highlight active link based on current URL
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    const links = document.querySelectorAll('#nav-links a');
+    function setDropdown(button, open) {
+        const item = button.closest(".dropdown");
+        if (!item) return;
+        item.classList.toggle("is-open", open);
+        button.setAttribute("aria-expanded", String(open));
+    }
 
-    links.forEach(link => {
-        // Exact match or base href
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-            // Also underscore the parent dropdown if it's a dropdown item
-            const parentDropdown = link.closest('.dropdown');
-            if (parentDropdown) {
-                parentDropdown.querySelector('a').classList.add('active');
-            }
-        }
+    function closeAllDropdowns() {
+        dropdownButtons.forEach(function (button) { setDropdown(button, false); });
+    }
+
+    menuButton.addEventListener("click", function () {
+        setMainMenu(!navLinks.classList.contains("show"));
     });
 
-    // Mobile Menu Logic
-    // DEFINED GLOBALLY to be accessible by the inline onclick
-    window.toggleMenu = function () {
-        var navLinks = document.getElementById("nav-links");
-        navLinks.classList.toggle("show");
-    };
+    dropdownButtons.forEach(function (button) {
+        const item = button.closest(".dropdown");
+        if (!item) return;
 
-    // Close menu when clicking a link (mobile UX)
-    const navItems = document.querySelectorAll('#nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const navLinks = document.getElementById("nav-links");
-            if (navLinks.classList.contains('show')) {
-                navLinks.classList.remove('show');
+        button.addEventListener("click", function () {
+            const willOpen = !item.classList.contains("is-open");
+            closeAllDropdowns();
+            setDropdown(button, willOpen);
+        });
+
+        // Sur desktop, le survol et le focus ouvrent le sous-menu (comme avant).
+        item.addEventListener("mouseenter", function () {
+            if (!mobile.matches) setDropdown(button, true);
+        });
+
+        item.addEventListener("mouseleave", function () {
+            if (!mobile.matches && !item.contains(document.activeElement)) setDropdown(button, false);
+        });
+
+        item.addEventListener("focusin", function () {
+            if (!mobile.matches) setDropdown(button, true);
+        });
+
+        item.addEventListener("focusout", function () {
+            window.setTimeout(function () {
+                if (!mobile.matches && !item.contains(document.activeElement)) setDropdown(button, false);
+            }, 0);
+        });
+    });
+
+    // Fermeture du menu mobile après un clic sur un lien, et mémorisation de la langue.
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            if (mobile.matches) setMainMenu(false);
+            closeAllDropdowns();
+
+            const choice = link.dataset.langChoice;
+            if (choice) {
+                try {
+                    localStorage.setItem("user_lang", choice);
+                } catch (e) {
+                    // Le stockage peut être bloqué : la navigation reste fonctionnelle.
+                }
             }
         });
     });
+
+    document.addEventListener("click", function (event) {
+        if (!nav.contains(event.target)) closeAllDropdowns();
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key !== "Escape") return;
+
+        const openButton = dropdownButtons.find(function (button) {
+            return button.getAttribute("aria-expanded") === "true";
+        });
+
+        if (openButton) {
+            setDropdown(openButton, false);
+            openButton.focus();
+        } else if (navLinks.classList.contains("show")) {
+            setMainMenu(false);
+            menuButton.focus();
+        }
+    });
+
+    function syncViewport() {
+        setMainMenu(false);
+        closeAllDropdowns();
+    }
+
+    if (mobile.addEventListener) {
+        mobile.addEventListener("change", syncViewport);
+    } else if (mobile.addListener) {
+        mobile.addListener(syncViewport);
+    }
 });

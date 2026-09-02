@@ -4,6 +4,27 @@ title: "Collection de cartes"
 main_image: /images/inde.jpg
 lang: fr
 translation_key: collectioncartedumonde
+description: "Collection de cartes de Stéphanie Pommeret : cartographies sensibles sans frontières, créées avec des artisans et des savoir-faire traditionnels."
+locale: fr_FR
+main_image_alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
+image:
+  path: /images/inde.jpg
+  width: 1280
+  height: 852
+  alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
+schema:
+  type: VisualArtwork
+  artform: "Collection de cartes"
+  art_medium: "Cartographie, textile, broderie et installation"
+  about:
+    - "Cartographie sensible"
+    - "Frontières"
+    - "Savoir-faire artisanaux"
+  events:
+    - type: ExhibitionEvent
+      name: "Cartes"
+      location: "Galerie de Binic-Étables-sur-Mer"
+      start_date: "2024"
 ---
 
 <div class="text-block">
@@ -26,7 +47,7 @@ translation_key: collectioncartedumonde
 </div>
 <p>
                     Mon approche consiste à réutiliser des projections scientifiques du monde pour proposer une vision
-                    globale, sans frontières, comme un tout unifié. A travers mes résidences d'artistes, je collabore
+                    globale, sans frontières, comme un tout unifié. À travers mes résidences d'artistes, je collabore
                     avec les artisans locaux, en m'appropriant leur savoir-faire et la poésie issue des pratiques
                     ancestrales.
                 </p>

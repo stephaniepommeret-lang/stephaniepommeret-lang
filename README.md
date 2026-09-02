@@ -1,6 +1,6 @@
 # Site de Stéphanie Pommeret
 
-Site web de Stéphanie Pommeret - Plasticienne / Poètesse / Photographe
+Site web de Stéphanie Pommeret - Plasticienne / Poétesse / Photographe
 
 ## 🚀 Jekyll
 

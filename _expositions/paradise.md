@@ -5,6 +5,28 @@ subtitle: "* Le paradis à reconquérir"
 main_image: /images/paradise.jpg
 lang: fr
 translation_key: paradise
+description: "The paradise (to be) regained, recherche de Stéphanie Pommeret en Côtes-d'Armor avec des producteurs bio, interroge notre rapport au vivant."
+locale: fr_FR
+main_image_alt: "Empilement de formes en céramique dans un sous-bois de mousse et de feuillage"
+image:
+  path: /images/paradise.jpg
+  width: 1960
+  height: 1308
+  alt: "Empilement de formes en céramique dans un sous-bois de mousse et de feuillage"
+schema:
+  type: CreativeWork
+  artform: "Recherche artistique"
+  art_medium: "Photographie et céramique"
+  about:
+    - "Producteurs biologiques"
+    - "Environnement"
+    - "Vivant"
+    - "Monde sauvage"
+  events:
+    - type: ExhibitionEvent
+      name: "The paradise to be regained"
+      location: "Espace Victor Hugo, Ploufragan"
+      start_date: "2023"
 ---
 
 <div class="text-block">
@@ -13,9 +35,9 @@ translation_key: paradise
 </div>
 <p>
                     Je reprends volontairement le titre d’un essai de Henry David Thoreau, pour nommer la recherche que
-                    je poursuis dans le département des Côtes d’Armor, là ou je vis, avec les producteurs bios. Cet
+                    je poursuis dans le département des Côtes d’Armor, là où je vis, avec les producteurs bios. Cet
                     extrait illustre parfaitement ce que j’ai pu ressentir lorsque j’ai fait une résidence en Centre
-                    Bretagne, dans une ferme. Les paysans sont reliés à la Terre, a qui nous devons notre survie.
+                    Bretagne, dans une ferme. Les paysans sont reliés à la Terre, à qui nous devons notre survie.
                 </p>
 <p>
                     Face à notre société capitaliste et consumériste, nos perceptions sont comme brouillées, nos sens
@@ -38,7 +60,7 @@ translation_key: paradise
                     22320 La Harmoye
                 </p>
 <p>
-<strong><a href="https://auxptitslegumesdhillion.com/" target="_blank">AUX P'TITS
+<strong><a href="https://auxptitslegumesdhillion.com/" target="_blank" rel="noopener noreferrer">AUX P'TITS
                             LEGUMES</a></strong><br/>
                     La ville Indeloup<br/>
                     22120 Hillion

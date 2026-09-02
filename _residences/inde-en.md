@@ -5,12 +5,33 @@ subtitle: "Residency"
 main_image: /images/inde.jpg
 lang: en
 translation_key: inde
+description: "2019 residency in Lucknow: at the Sanatkada Festival, Stéphanie Pommeret creates a collective world map from hundreds of clay lamps."
+locale: en_GB
+main_image_alt: "World map made of lit oil lamps, created collectively in Lucknow"
+image:
+  path: /images/inde.jpg
+  width: 1280
+  height: 852
+  alt: "World map made of lit oil lamps, created collectively in Lucknow"
+schema:
+  type: VisualArtwork
+  artform: "Participatory installation"
+  art_medium: "Clay lamps, mustard oil and wicks"
+  about:
+    - "Cartography"
+    - "Collective creation"
+    - "Dewa craftsmanship"
+  events:
+    - type: Event
+      name: "Résidence et festival Sanatkada"
+      location: "Lucknow, Inde"
+      start_date: "2019"
 ---
 
 <div class="text-block project-section">
     <h3>Performance at Sanatkada Festival, Lucknow</h3>
     <p>
-        <strong>With the <a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank">Alliance Française of Lucknow</a> in partnership with the <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank">French Institute of New Delhi</a> and the NGO <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank">Sanatkada</a> (2019)</strong>
+        <strong>With the <a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank" rel="noopener noreferrer">Alliance Française of Lucknow</a> in partnership with the <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank" rel="noopener noreferrer">French Institute of New Delhi</a> and the NGO <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank" rel="noopener noreferrer">Sanatkada</a> (2019)</strong>
     </p>
 
     <h4 style="margin-top: 2rem;">The World Map Made of Clay Lamps</h4>

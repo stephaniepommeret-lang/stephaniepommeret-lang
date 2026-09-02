@@ -1,100 +1,110 @@
-<nav>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+{% assign current_lang = page.lang | default: "fr" %}
+{% assign all_pages = site.pages | concat: site.expositions | concat: site.residences | concat: site.photos %}
+
+<nav aria-label="{% if current_lang == 'en' %}Main navigation{% else %}Navigation principale{% endif %}">
+    <button type="button" class="menu-icon" aria-controls="nav-links" aria-expanded="false"
+        aria-label="{% if current_lang == 'en' %}Open navigation{% else %}Ouvrir la navigation{% endif %}">
+        <span aria-hidden="true">☰</span>
+    </button>
 
     <ul id="nav-links">
-        {% assign current_lang = page.lang | default: "fr" %}
-        {% assign all_pages = site.pages | concat: site.expositions | concat: site.residences | concat: site.photos %}
-
         {% for item in site.navigation %}
         {% assign target_url = item.url %}
 
-        <!-- Only attempt translation if we are in English mode -->
+        {%- comment -%}
+        En anglais, on résout l'URL de la traduction via translation_key.
+        Si aucune traduction n'existe, on retombe sur l'URL française.
+        {%- endcomment -%}
         {% if current_lang == "en" %}
-        <!-- HARDCODED MAPPING FALLBACK (Robustness) -->
-        <!-- Because dynamic lookup in liquid loops can be flaky with relative URLs -->
-        {% if item.url == "/" %}
-        {% assign target_url = "/index-en.html" %}
-        {% elsif item.url == "/expositions/huisclos.html" or item.url == "/expositions/huisclos" %}
-        {% assign target_url = "/expositions/huisclos-en.html" %}
-        {% endif %}
-
-        <!-- Dynamic Attempt (Overrides hardcoded if found) -->
         {% assign potential_fr_page = all_pages | where: "url", item.url | first %}
         {% if potential_fr_page and potential_fr_page.translation_key %}
-        {% assign valid_en_page = all_pages | where: "translation_key", potential_fr_page.translation_key | where:
-        "lang", "en" | first %}
+        {% assign valid_en_page = all_pages | where: "translation_key", potential_fr_page.translation_key | where: "lang", "en" | first %}
         {% if valid_en_page %}
         {% assign target_url = valid_en_page.url %}
         {% endif %}
         {% endif %}
         {% endif %}
 
-        <li
-            class="{% if item.dropdown %}dropdown{% endif %} {% if item.url == page.url or target_url == page.url %}active{% endif %}">
+        {% assign is_current = false %}
+        {% if item.url == page.url or target_url == page.url %}{% assign is_current = true %}{% endif %}
+
+        <li class="{% if item.dropdown %}dropdown{% endif %} {% if is_current %}active{% endif %}">
             {% if item.dropdown %}
-            <a href="#">
+            {% assign dropdown_id = item.title | slugify | append: "-menu" %}
+
+            {%- comment -%}Le sous-menu est-il actif ? (une de ses entrées correspond à la page){%- endcomment -%}
+            {% assign group_active = false %}
+            {% for subitem in item.dropdown %}
+            {% assign sub_check = subitem.url %}
+            {% if current_lang == "en" %}
+            {% assign sub_fr_check = all_pages | where: "url", subitem.url | first %}
+            {% if sub_fr_check and sub_fr_check.translation_key %}
+            {% assign sub_en_check = all_pages | where: "translation_key", sub_fr_check.translation_key | where: "lang", "en" | first %}
+            {% if sub_en_check %}{% assign sub_check = sub_en_check.url %}{% endif %}
+            {% endif %}
+            {% endif %}
+            {% if sub_check == page.url %}{% assign group_active = true %}{% endif %}
+            {% endfor %}
+
+            <button type="button" class="dropdown-toggle{% if group_active %} active{% endif %}" aria-expanded="false"
+                aria-controls="{{ dropdown_id }}">
                 {% if current_lang == "en" %}{{ item.title_en }}{% else %}{{ item.title }}{% endif %}
-            </a>
-            <div class="dropdown-content">
+            </button>
+
+            <div class="dropdown-content" id="{{ dropdown_id }}">
                 {% for subitem in item.dropdown %}
                 {% assign sub_target_url = subitem.url %}
                 {% if current_lang == "en" %}
-                {% if subitem.url == "/expositions/huisclos.html" or subitem.url == "/expositions/huisclos" %}
-                {% assign sub_target_url = "/expositions/huisclos-en.html" %}
-                {% endif %}
-
-                <!-- Dynamic Attempt for Subitems -->
                 {% assign sub_fr = all_pages | where: "url", subitem.url | first %}
                 {% if sub_fr and sub_fr.translation_key %}
-                {% assign sub_en = all_pages | where: "translation_key", sub_fr.translation_key | where: "lang", "en" |
-                first %}
+                {% assign sub_en = all_pages | where: "translation_key", sub_fr.translation_key | where: "lang", "en" | first %}
                 {% if sub_en %}{% assign sub_target_url = sub_en.url %}{% endif %}
                 {% endif %}
                 {% endif %}
-                <a href="{{ site.baseurl }}{{ sub_target_url }}"
-                    class="{% if page.url == sub_target_url %}active{% endif %}">
+                <a href="{{ sub_target_url | relative_url }}"
+                    {% if page.url == sub_target_url %}class="active" aria-current="page"{% endif %}>
                     {% if current_lang == "en" %}{{ subitem.title_en }}{% else %}{{ subitem.title }}{% endif %}
                 </a>
                 {% endfor %}
             </div>
             {% else %}
-            <a href="{{ site.baseurl }}{{ target_url }}"
-                class="{% if page.url == item.url or page.url == target_url %}active{% endif %}">
+            <a href="{{ target_url | relative_url }}" {% if is_current %}class="active" aria-current="page"{% endif %}>
                 {% if current_lang == "en" %}{{ item.title_en }}{% else %}{{ item.title }}{% endif %}
             </a>
             {% endif %}
         </li>
         {% endfor %}
 
-        <!-- Language Switcher -->
+        <!-- Sélecteur de langue -->
         <li class="lang-switch">
             {% if page.translation_key %}
-            <!-- Use the globally defined all_pages which now includes collections -->
             {% assign translations = all_pages | where: "translation_key", page.translation_key %}
             {% assign en_page = translations | where: "lang", "en" | first %}
             {% assign fr_page = translations | where: "lang", "fr" | first %}
 
             {% if current_lang == "fr" %}
             {% if en_page %}
-            <a href="{{ site.baseurl }}{{ en_page.url }}" class="lang-toggle-en"
-                onclick="localStorage.setItem('user_lang', 'en')">EN</a>
+            <a href="{{ en_page.url | relative_url }}" class="lang-toggle-en" data-lang-choice="en" hreflang="en"
+                lang="en" aria-label="View this page in English">EN</a>
             {% else %}
-            <span class="lang-disabled">EN</span>
+            <span class="lang-disabled" aria-disabled="true">EN</span>
             {% endif %}
-            <span class="lang-separator">/</span>
-            <span class="current-lang">FR</span>
+            <span class="lang-separator" aria-hidden="true">/</span>
+            <span class="current-lang" aria-label="Français, langue actuelle">FR</span>
             {% else %}
-            <span class="current-lang">EN</span>
-            <span class="lang-separator">/</span>
+            <span class="current-lang" aria-label="English, current language">EN</span>
+            <span class="lang-separator" aria-hidden="true">/</span>
             {% if fr_page %}
-            <a href="{{ site.baseurl }}{{ fr_page.url }}" class="lang-toggle-fr"
-                onclick="localStorage.setItem('user_lang', 'fr')">FR</a>
+            <a href="{{ fr_page.url | relative_url }}" class="lang-toggle-fr" data-lang-choice="fr" hreflang="fr"
+                lang="fr" aria-label="Voir cette page en français">FR</a>
             {% else %}
-            <span class="lang-disabled">FR</span>
+            <span class="lang-disabled" aria-disabled="true">FR</span>
             {% endif %}
             {% endif %}
             {% else %}
-            <span class="lang-disabled">EN</span> / <span class="lang-disabled">FR</span>
+            <span class="lang-disabled" aria-disabled="true">EN</span>
+            <span class="lang-separator" aria-hidden="true">/</span>
+            <span class="lang-disabled" aria-disabled="true">FR</span>
             {% endif %}
         </li>
     </ul>

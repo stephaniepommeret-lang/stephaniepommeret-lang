@@ -4,13 +4,38 @@ title: "Collection de cartes (Map Collection)"
 main_image: /images/inde.jpg
 lang: en
 translation_key: collectioncartedumonde
+description: "Stéphanie Pommeret's Map Collection presents borderless sensitive cartographies made with craftspeople and traditional techniques."
+locale: en_GB
+main_image_alt: "World map made of lit oil lamps, created collectively in Lucknow"
+image:
+  path: /images/inde.jpg
+  width: 1280
+  height: 852
+  alt: "World map made of lit oil lamps, created collectively in Lucknow"
+schema:
+  type: VisualArtwork
+  artform: "Map collection"
+  art_medium: "Cartography, textile, embroidery and installation"
+  about:
+    - "Sensitive cartography"
+    - "Borders"
+    - "Traditional craftsmanship"
+  events:
+    - type: ExhibitionEvent
+      name: "Cartes"
+      location: "Galerie de Binic-Étables-sur-Mer"
+      start_date: "2024"
 ---
 
 <div class="text-block">
-    <h3>Map Collection</h3>
+    <h3>My artistic approach</h3>
     <p>
-        I fully share Jean-Claude Groshens' view when he writes in the catalogue of the exhibition <em>Maps
-        and Figures of the Earth</em> (Centre Georges Pompidou, 1980):
+        For the cartographers of the past, producing a map was the work of a lifetime. Today, I consider
+        each map to be a work of art.
+    </p>
+    <p>
+        I fully share Jean-Claude Groshens’ view when he writes in the catalogue of the exhibition <em>Cartes
+        et figures de la Terre</em> (Centre Georges Pompidou, 1980):
     </p>
     <div class="quote">
         <p>

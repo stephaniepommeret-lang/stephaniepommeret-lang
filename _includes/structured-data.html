@@ -1,0 +1,200 @@
+{%- comment -%}
+Données structurées Schema.org.
+Alimentées par _config.yml (bloc `author`) et par le front matter des pages
+(champs `description`, `image`, `schema`). Aucune donnée n'est inventée ici :
+si un champ est absent du front matter, la propriété n'est pas émise.
+{%- endcomment -%}
+{%- assign current_lang = page.lang | default: site.lang | default: "fr" -%}
+{%- assign canonical_url = page.url | absolute_url -%}
+
+{%- assign person_id = "/#person" | absolute_url -%}
+{%- assign website_id = "/#website" | absolute_url -%}
+{%- assign webpage_id = page.url | append: "#webpage" | absolute_url -%}
+{%- assign work_id = page.url | append: "#work" | absolute_url -%}
+{%- assign image_id = page.url | append: "#primaryimage" | absolute_url -%}
+{%- assign breadcrumb_id = page.url | append: "#breadcrumb" | absolute_url -%}
+
+{%- assign person_job = site.author.job_title_fr -%}
+{%- assign person_description = site.author.description_fr -%}
+{%- assign person_knows_about = site.author.knows_about_fr -%}
+{%- assign person_awards = site.author.awards_fr -%}
+{%- assign home_label = "Accueil" -%}
+{%- if current_lang == "en" -%}
+  {%- assign person_job = site.author.job_title_en -%}
+  {%- assign person_description = site.author.description_en -%}
+  {%- assign person_knows_about = site.author.knows_about_en -%}
+  {%- assign person_awards = site.author.awards_en -%}
+  {%- assign home_label = "Home" -%}
+{%- endif -%}
+
+{%- assign is_project = false -%}
+{%- if page.collection == "photos" or page.collection == "expositions" or page.collection == "residences" -%}
+  {%- assign is_project = true -%}
+{%- endif -%}
+
+{%- assign page_type = "WebPage" -%}
+{%- if page.translation_key == "cv" -%}{%- assign page_type = "ProfilePage" -%}{%- endif -%}
+
+{%- assign primary_image = nil -%}
+{%- assign primary_image_alt = nil -%}
+{%- assign primary_image_width = nil -%}
+{%- assign primary_image_height = nil -%}
+{%- if page.image.path -%}
+  {%- assign primary_image = page.image.path -%}
+  {%- assign primary_image_alt = page.image.alt -%}
+  {%- assign primary_image_width = page.image.width -%}
+  {%- assign primary_image_height = page.image.height -%}
+{%- elsif page.main_image -%}
+  {%- assign primary_image = page.main_image -%}
+  {%- assign primary_image_alt = page.main_image_alt -%}
+{%- elsif page.hero_image -%}
+  {%- assign primary_image = page.hero_image -%}
+  {%- assign primary_image_alt = page.hero_alt -%}
+{%- endif -%}
+{%- if primary_image -%}{%- assign primary_image_url = primary_image | absolute_url -%}{%- endif -%}
+
+{%- assign work_type = page.schema.type | default: "VisualArtwork" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": ["fr", "en"],
+      "publisher": { "@id": {{ person_id | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "alternateName": {{ site.author.alternate_names | jsonify }},
+      "url": {{ site.author.url | jsonify }},
+      "jobTitle": {{ person_job | jsonify }},
+      "description": {{ person_description | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint-Brieuc",
+        "addressRegion": "Côtes-d’Armor, Bretagne",
+        "addressCountry": { "@type": "Country", "name": "France" }
+      }
+      {%- if site.social.links and site.social.links != empty -%},
+      "sameAs": {{ site.social.links | jsonify }}
+      {%- endif -%}
+      {%- if person_knows_about and person_knows_about != empty -%},
+      "knowsAbout": {{ person_knows_about | jsonify }}
+      {%- endif -%}
+      {%- if person_awards and person_awards != empty -%},
+      "award": {{ person_awards | jsonify }}
+      {%- endif -%}
+    },
+    {
+      "@type": {{ page_type | jsonify }},
+      "@id": {{ webpage_id | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ page.title | default: site.title | jsonify }},
+      "inLanguage": {{ current_lang | jsonify }},
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "about": { "@id": {{ person_id | jsonify }} },
+      "mainEntity": { "@id": {% if is_project %}{{ work_id | jsonify }}{% else %}{{ person_id | jsonify }}{% endif %} }
+      {%- if page.description -%},
+      "description": {{ page.description | jsonify }}
+      {%- endif -%}
+      {%- if primary_image -%},
+      "primaryImageOfPage": { "@id": {{ image_id | jsonify }} }
+      {%- endif -%}
+      {%- if is_project -%},
+      "breadcrumb": { "@id": {{ breadcrumb_id | jsonify }} }
+      {%- endif -%}
+    }
+    {%- if is_project -%},
+    {
+      "@type": {{ work_type | jsonify }},
+      "@id": {{ work_id | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "inLanguage": {{ current_lang | jsonify }},
+      "creator": { "@id": {{ person_id | jsonify }} }
+      {%- if page.description -%},
+      "description": {{ page.description | jsonify }}
+      {%- endif -%}
+      {%- if primary_image -%},
+      "image": { "@id": {{ image_id | jsonify }} }
+      {%- endif -%}
+      {%- if page.schema.date_created -%},
+      "dateCreated": {{ page.schema.date_created | jsonify }}
+      {%- endif -%}
+      {%- if page.schema.artform -%},
+      "artform": {{ page.schema.artform | jsonify }}
+      {%- endif -%}
+      {%- if page.schema.art_medium -%},
+      "artMedium": {{ page.schema.art_medium | jsonify }}
+      {%- endif -%}
+      {%- if page.schema.about and page.schema.about != empty -%},
+      "about": [
+        {%- for subject in page.schema.about -%}
+        { "@type": "Thing", "name": {{ subject | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+      {%- endif -%}
+      {%- if page.schema.events and page.schema.events != empty -%},
+      "subjectOf": [
+        {%- for event in page.schema.events -%}
+        { "@id": {{ page.url | append: "#event-" | append: forloop.index | absolute_url | jsonify }} }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+      {%- endif -%}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ breadcrumb_id | jsonify }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": {{ home_label | jsonify }}, "item": {{ "/" | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": {{ canonical_url | jsonify }} }
+      ]
+    }
+    {%- endif -%}
+    {%- if primary_image -%},
+    {
+      "@type": "ImageObject",
+      "@id": {{ image_id | jsonify }},
+      "contentUrl": {{ primary_image_url | jsonify }},
+      "url": {{ primary_image_url | jsonify }},
+      "name": {{ primary_image_alt | default: page.title | jsonify }},
+      "caption": {{ primary_image_alt | default: page.title | jsonify }},
+      "representativeOfPage": true
+      {%- if primary_image_width -%},
+      "width": {{ primary_image_width }}
+      {%- endif -%}
+      {%- if primary_image_height -%},
+      "height": {{ primary_image_height }}
+      {%- endif -%}
+    }
+    {%- endif -%}
+    {%- if page.schema.events -%}
+      {%- for event in page.schema.events -%}
+      {%- assign event_type = event.type | default: "ExhibitionEvent" -%},
+    {
+      "@type": {{ event_type | jsonify }},
+      "@id": {{ page.url | append: "#event-" | append: forloop.index | absolute_url | jsonify }},
+      "name": {{ event.name | jsonify }}
+      {%- if event.location -%},
+      "location": { "@type": "Place", "name": {{ event.location | jsonify }} }
+      {%- endif -%}
+      {%- if event.start_date -%},
+      "startDate": {{ event.start_date | jsonify }}
+      {%- endif -%}
+      {%- if event_type == "ExhibitionEvent" -%},
+      "workFeatured": { "@id": {{ work_id | jsonify }} }
+      {%- else -%},
+      "about": { "@id": {{ work_id | jsonify }} }
+      {%- endif -%}
+    }
+      {%- endfor -%}
+    {%- endif -%}
+  ]
+}
+</script>

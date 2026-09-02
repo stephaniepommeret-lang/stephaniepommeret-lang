@@ -1,25 +1,27 @@
-// Language handling is now static via Jekyll pages.
-// No JS redirection needed for now.
+// La gestion des langues est statique, via les pages Jekyll.
+// Aucune redirection JS n'est nécessaire ici.
 
-// Swiper Initialization
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if Swiper is loaded
+    const galleryContainers = document.querySelectorAll('.gallery, .carousel-container');
+    if (!galleryContainers.length) return;
+
     if (typeof Swiper === 'undefined') {
-        console.error('Swiper.js not loaded');
+        // Sans Swiper, les images restent affichées les unes sous les autres (cf. CSS).
+        console.error('Swiper.js non chargé : affichage statique conservé.');
         return;
     }
 
-    // Initialize Swiper for .gallery and .carousel-container
-    // We add the 'swiper' class to these containers first
-    const galleryContainers = document.querySelectorAll('.gallery, .carousel-container');
+    const isEnglish = document.documentElement.lang === 'en';
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     galleryContainers.forEach(container => {
-        container.classList.add('swiper');
-
-        // Wrap all direct children (images) in a swiper-wrapper and then swiper-slide
+        // Seules les images deviennent des diapositives. Les autres enfants
+        // (l'intégration Instagram du Petit Écho, par exemple) restent en place.
         const images = Array.from(container.children).filter(child => child.tagName === 'IMG');
-
         if (images.length === 0) return;
+
+        container.classList.add('swiper');
+        container.setAttribute('aria-label', isEnglish ? 'Image gallery' : 'Galerie d’images');
 
         const wrapper = document.createElement('div');
         wrapper.className = 'swiper-wrapper';
@@ -27,34 +29,34 @@ document.addEventListener("DOMContentLoaded", function () {
         images.forEach(img => {
             const slide = document.createElement('div');
             slide.className = 'swiper-slide';
-
-            // Move image into slide
             slide.appendChild(img);
             wrapper.appendChild(slide);
         });
 
-        // Clear container and append wrapper
-        container.innerHTML = '';
-        container.appendChild(wrapper);
+        // On insère la galerie en tête, sans effacer le reste du conteneur.
+        const trailingContent = container.firstElementChild;
+        container.insertBefore(wrapper, trailingContent);
 
-        // Add pagination and navigation
         const pagination = document.createElement('div');
         pagination.className = 'swiper-pagination';
-        container.appendChild(pagination);
+        container.insertBefore(pagination, trailingContent);
 
-        const nextButton = document.createElement('div');
+        const nextButton = document.createElement('button');
+        nextButton.type = 'button';
         nextButton.className = 'swiper-button-next';
-        container.appendChild(nextButton);
+        container.insertBefore(nextButton, trailingContent);
 
-        const prevButton = document.createElement('div');
+        const prevButton = document.createElement('button');
+        prevButton.type = 'button';
         prevButton.className = 'swiper-button-prev';
-        container.appendChild(prevButton);
+        container.insertBefore(prevButton, trailingContent);
 
-        // Initialize Swiper instance
         new Swiper(container, {
-            loop: true,
-            speed: 600,
-            autoHeight: true, // Adjust height to the current slide
+            loop: images.length > 1,
+            rewind: images.length <= 1,
+            speed: reducedMotion ? 0 : 600,
+            autoHeight: true,
+            watchOverflow: true,
             pagination: {
                 el: pagination,
                 clickable: true,
@@ -65,10 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             keyboard: {
                 enabled: true,
+                onlyInViewport: true,
             },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
+            a11y: {
+                enabled: true,
+                prevSlideMessage: isEnglish ? 'Previous image' : 'Image précédente',
+                nextSlideMessage: isEnglish ? 'Next image' : 'Image suivante',
             },
         });
     });

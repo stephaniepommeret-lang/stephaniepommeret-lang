@@ -5,6 +5,28 @@ subtitle: "Thoreau"
 main_image: /images/paradise.jpg
 lang: en
 translation_key: paradise
+description: "The paradise (to be) regained is Stéphanie Pommeret's research in Côtes-d'Armor with organic producers on our relationship with the living world."
+locale: en_GB
+main_image_alt: "Stack of ceramic forms in undergrowth of moss and foliage"
+image:
+  path: /images/paradise.jpg
+  width: 1960
+  height: 1308
+  alt: "Stack of ceramic forms in undergrowth of moss and foliage"
+schema:
+  type: CreativeWork
+  artform: "Artistic research"
+  art_medium: "Photography and ceramics"
+  about:
+    - "Organic producers"
+    - "Environment"
+    - "Living world"
+    - "Wilderness"
+  events:
+    - type: ExhibitionEvent
+      name: "The paradise to be regained"
+      location: "Espace Victor Hugo, Ploufragan"
+      start_date: "2023"
 ---
 
 <div class="text-block">
@@ -21,7 +43,7 @@ translation_key: paradise
         Faced with our capitalist and consumerist society, our perceptions are blurred, our senses are
         caught up and charged by the screens. The colors, the sounds are made in such a way that they
         implacably capture our attention. So I want to develop a work on astonishment in the face of the
-        environment. I aspire to rediscover the taste of the wild, through beauty, disgust, delight...
+        environment. I aspire to rediscover the taste of the wild, through beauty, disgust, delight…
     </p>
 </div>
 
@@ -39,7 +61,7 @@ translation_key: paradise
         22320 La Harmoye
     </p>
     <p>
-        <strong><a href="https://auxptitslegumesdhillion.com/" target="_blank">AUX P'TITS LEGUMES</a></strong><br>
+        <strong><a href="https://auxptitslegumesdhillion.com/" target="_blank" rel="noopener noreferrer">AUX P'TITS LEGUMES</a></strong><br>
         La ville Indeloup<br>
         22120 Hillion
     </p>

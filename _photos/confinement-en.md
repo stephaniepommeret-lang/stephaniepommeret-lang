@@ -5,6 +5,28 @@ subtitle: "Photographic series"
 main_image: /images/confinement_1.jpg
 lang: en
 translation_key: confinement
+description: "Confinement, a photographic series by Stéphanie Pommeret, explores intimacy, camouflage and our relationship to time, space and everyday life."
+locale: en_GB
+main_image_alt: "Portrait of a woman blending into a projection of roses and foliage"
+image:
+  path: /images/confinement_1.jpg
+  width: 1950
+  height: 2600
+  alt: "Portrait of a woman blending into a projection of roses and foliage"
+schema:
+  type: VisualArtwork
+  artform: "Photographic series"
+  art_medium: "Photography"
+  about:
+    - "Lockdown"
+    - "Intimacy"
+    - "Camouflage"
+    - "Everyday life"
+  events:
+    - type: ExhibitionEvent
+      name: "Déconfinement"
+      location: "Bonjour Minuit, Saint-Brieuc"
+      start_date: "2021"
 ---
 
 <div class="text-block">
@@ -12,13 +34,13 @@ translation_key: confinement
         Never before have we experienced what we are and what we could be. Circumscribed in our intimacy,
         the confinement was the occasion to auscultate it, to pay a new attention to it and to be located
         there by means of new behaviors, sometimes at the antipodes: withdrawal, self-relaxation,
-        introspection, letting go. . Stéphanie Pommeret's photographs make an inventory, thus drawing up a
+        introspection, letting go. Stéphanie Pommeret's photographs make an inventory, thus drawing up a
         typology of poses and expression in a collectively shared context. Like a forced marriage, we had to
-        live with a daily newspaper that was sometimes forgotten, trivialized or neglected. To hold on, it
+        live with a daily life that was sometimes forgotten, trivialized or neglected. To hold on, it
         sometimes proved necessary to reinvent it, sublimate it, rave about it: little things have become
         the object of our attention and object of distraction. So it is with the look carried on a plate, a
         flower, the patterns of a tile or an image, which, carried by a change in our relationship to time
-        and space, then take on another dimension, than they reassure us or they transport us. Little things
+        and space, then take on another dimension, whether they reassure us or they transport us. Little things
         that allow us to decentralize, through which we fade for a moment and that we incorporate. To become
         one with your environment is to disappear a little, to step back to better take the measure. To
         project oneself there and to be projected there is a bit like embodying the Hopi thought which does
@@ -26,7 +48,7 @@ translation_key: confinement
         protect oneself is also to fade away, to blend into the background; the camouflages executed shift
         Stéphanie Pommeret's photographic work from the genre of portrait to that of landscape, whose
         patterns and the absence of limits illustrate this new relationship with time and space. In a
-        hallucinatory atmosphere, Stéphanie Pommeret declines a dreamlike and whimsical universe which puts
+        hallucinatory atmosphere, Stéphanie Pommeret unfolds a dreamlike and whimsical universe which puts
         the individual, however central in the images, in perspective and proceeds from the escape.
     </p>
     <p style="text-align: right; font-style: italic;">Vanessa Auclerc-Galand</p>

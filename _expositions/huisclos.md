@@ -4,12 +4,38 @@ title: "Huis Clos"
 main_image: /images/huisclos_affiche.png
 lang: fr
 translation_key: huisclos
+description: "Huis Clos, projet de Stéphanie Pommeret et de L'Image qui parle, rend visibles des témoignages de femmes par la poésie, la photographie, le son et la danse."
+locale: fr_FR
+main_image_alt: "Affiche de Huis Clos : corps de femme recouvert de projections bleues"
+image:
+  path: /images/huisclos_affiche.png
+  width: 483
+  height: 720
+  alt: "Affiche de Huis Clos : corps de femme recouvert de projections bleues"
+schema:
+  type: VisualArtwork
+  artform: "Installation pluridisciplinaire"
+  art_medium: "Photographie, poésie, textile, son et danse"
+  about:
+    - "Témoignages de femmes"
+    - "Violences faites aux femmes"
+    - "Écoute"
+    - "Espace public"
+  events:
+    - type: ExhibitionEvent
+      name: "Huis Clos"
+      location: "La halle, Paimpol"
+      start_date: "2023"
+    - type: ExhibitionEvent
+      name: "Huis Clos"
+      location: "Préfecture de Saint-Brieuc"
+      start_date: "2024"
 ---
 
 <div class="text-block">
     <p>
-        Ce projet a vu le jour grâce à l’<a class="highlight-link" href="https://www.limagequiparleblog.org/huis-clos" target="_blank">Association l’Image qui parle</a>, association
-        culturelle, portée par Patricia La Calvez. Cette association est ancrée sur le territoire de
+        Ce projet a vu le jour grâce à l’<a class="highlight-link" href="https://www.limagequiparleblog.org/huis-clos" target="_blank" rel="noopener noreferrer">Association l’Image qui parle</a>, association
+        culturelle, portée par Patricia Le Calvez. Cette association est ancrée sur le territoire de
         Paimpol, soutenue par des institutions telles que la DRAC Bretagne, le CIAS de Guingamp-Paimpol
         Agglomération, le Conseil Départemental des Côtes d'Armor, la CAF des Côtes d'Armor et la ville de
         Paimpol, ainsi que des partenariats essentiels avec la gendarmerie de Guingamp-Paimpol et
@@ -19,9 +45,9 @@ translation_key: huisclos
 </div>
 <div class="text-block">
     <p>
-        Ces <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank">créations</a> sont nées de la nécessité de rendre la parole des femmes
+        Ces <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank" rel="noopener noreferrer">créations</a> sont nées de la nécessité de rendre la parole des femmes
         visible dans l’espace commun.
-        Ces <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank">créations</a> sont les moyens utilisés pour rendre compte des violences
+        Ces <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank" rel="noopener noreferrer">créations</a> sont les moyens utilisés pour rendre compte des violences
         subies par les femmes au
         quotidien ainsi que dans leur intime, en leur offrant un lieu d’écoute et de visibilité.
     </p>
@@ -57,7 +83,7 @@ translation_key: huisclos
 <div class="text-block">
     <h3 style="margin-top: 4rem;">Performance Dansée : DOUX LEURRE - DOUCE HEURE</h3>
     <p>
-        Sylvie Le Quéré, chorégraphe et danseuse de la compagnie <a class="highlight-link" href="https://www.ciegregoireandco.fr/" target="_blank">Grégoire and Co</a>, invite ces femmes à se
+        Sylvie Le Quéré, chorégraphe et danseuse de la compagnie <a class="highlight-link" href="https://www.ciegregoireandco.fr/" target="_blank" rel="noopener noreferrer">Grégoire and Co</a>, invite ces femmes à se
         mettre en mouvement ensemble, en danse pour partager, reconquérir par le corps la transformation de
         la douleur qui devient douceur.
     </p>
@@ -67,11 +93,11 @@ translation_key: huisclos
     <img src="/images/huisclos_7.jpg" alt="Performance dansée">
 </div>
 <div style="text-align: center; margin: 3rem 0;">
-    <a href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" class="podcast-cta">Ecouter le podcast sonore</a>
+    <a href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer" class="podcast-cta">Écouter le podcast sonore</a>
 </div>
 <div class="credits">
     <p><strong>Crédits :</strong></p>
-    <p>Projet initié et accompagné par Patricia Le Calvez de <a class="highlight-link" href="https://www.limagequiparleblog.org/huis-clos" target="_blank">L’image qui Parle</a>.</p>
-    <p>Ecoute sonore réalisée par Patricia Le Calvez à partir de témoignages.</p>
-    <p>Crédits photos : Samantha, Christian Lameul, <a class="highlight-link" href="https://hanslucas.com/epays/photo/82089" target="_blank">Emmanuelle Pays</a>.</p>
+    <p>Projet initié et accompagné par Patricia Le Calvez de <a class="highlight-link" href="https://www.limagequiparleblog.org/huis-clos" target="_blank" rel="noopener noreferrer">L’image qui Parle</a>.</p>
+    <p>Écoute sonore réalisée par Patricia Le Calvez à partir de témoignages.</p>
+    <p>Crédits photos : Samantha, Christian Lameul, <a class="highlight-link" href="https://hanslucas.com/epays/photo/82089" target="_blank" rel="noopener noreferrer">Emmanuelle Pays</a>.</p>
 </div>

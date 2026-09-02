@@ -6,12 +6,34 @@ subtitle: "Residency"
 main_image: /images/centrebretagne_main.jpg
 lang: en
 translation_key: centrebretagne
+description: "In Central Brittany, Stéphanie Pommeret's Champ d'expression residency in Trémargat and Rostrenen connects art and environmental concerns."
+locale: en_GB
+main_image_alt: "Portrait of a woman covered by a projection of ferns"
+image:
+  path: /images/centrebretagne_main.jpg
+  width: 2500
+  height: 3333
+  alt: "Portrait of a woman covered by a projection of ferns"
+schema:
+  type: CreativeWork
+  artform: "Artist residency"
+  art_medium: "Photography and installation"
+  about:
+    - "Art"
+    - "Environment"
+    - "Farming"
+    - "Central Brittany"
+  events:
+    - type: Event
+      name: "Champ d'expression"
+      location: "Trémargat et Rostrenen"
+      start_date: "2019"
 ---
 
 <div class="text-block">
     <h3>"Champ d'expression" Residency</h3>
     <p>
-        Residency with "La Fourmi-e" association in Trémargat, hosted by Mathieu and Nolwenn Le Boedec-Castrec, "Les chèvres de Kergonan". And another one at Edouard Herriot College in Rostrenen.
+        Residency with "La Fourmi-e" association in Trémargat, hosted by Mathieu and Nolwenn Le Boedec-Castrec, "Les chèvres de Kergonan". And another one at Édouard Herriot College in Rostrenen.
     </p>
     <p>
         Opening of "Champ d’Expression" at the Kergonan farm (photo © Éric Legret).
@@ -23,7 +45,7 @@ translation_key: centrebretagne
         experience.
     </p>
     <p>
-        This video by Stéphanie was presented at <a href="https://www.laartshow.com" target="_blank">LA Art Show</a> – Los Angeles, in collaboration with <a href="https://www.torranceartmuseum.com" target="_blank">Torrance Art Museum</a>. It was selected by <a href="https://www.artdependence.com/authors/kisito-assangni/" target="_blank">Kisito Assangni</a> as part of his curated program ECOPOETICS OF GENERIC WORLD, which addresses environmental concerns and climate change.
+        This video by Stéphanie was presented at <a href="https://www.laartshow.com" target="_blank" rel="noopener noreferrer">LA Art Show</a> – Los Angeles, in collaboration with <a href="https://www.torranceartmuseum.com" target="_blank" rel="noopener noreferrer">Torrance Art Museum</a>. It was selected by <a href="https://www.artdependence.com/authors/kisito-assangni/" target="_blank" rel="noopener noreferrer">Kisito Assangni</a> as part of his curated program ECOPOETICS OF GENERIC WORLD, which addresses environmental concerns and climate change.
     </p>
 </div>
 

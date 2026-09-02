@@ -2,26 +2,30 @@
 layout: default
 ---
 
-<section class="intro">
-    <section class="intro">
-        <h2>{{ page.title }}</h2>
+<article>
+    <header class="intro">
+        <h1 class="project-title">{{ page.title }}</h1>
         {% if page.subtitle %}
         <p>{{ page.subtitle }}</p>
         {% endif %}
-    </section>
-</section>
+    </header>
 
-<section class="page-content">
-    {% if page.main_image %}
-    <div class="project-image-full">
-        <img src="{{ page.main_image }}" alt="{{ page.title }}">
-        {% if page.main_image_caption %}
-        <p class="caption">{{ page.main_image_caption }}</p>
+    <section class="page-content">
+        {% if page.main_image %}
+        <figure class="project-image-full">
+            <img src="{{ page.main_image | relative_url }}"
+                alt="{{ page.main_image_alt | default: page.image.alt | default: page.title | escape }}"
+                {% if page.image.width %}width="{{ page.image.width }}"{% endif %}
+                {% if page.image.height %}height="{{ page.image.height }}"{% endif %}
+                loading="eager" decoding="async" fetchpriority="high">
+            {% if page.main_image_caption %}
+            <figcaption class="caption">{{ page.main_image_caption }}</figcaption>
+            {% endif %}
+        </figure>
         {% endif %}
-    </div>
-    {% endif %}
 
-    <div class="text-block">
-        {{ content }}
-    </div>
-</section>
+        <div class="project-content">
+            {{ content }}
+        </div>
+    </section>
+</article>

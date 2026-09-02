@@ -6,6 +6,32 @@ main_image: /images/maroc_main.jpg
 main_image_caption: "Artist residency at the French Institute, Tetouan, Villa Dar Ben Jelloun"
 lang: en
 translation_key: maroc
+description: "Residencies in Tetouan and Fez: Stéphanie Pommeret creates world maps with craftspeople and puts Moroccan traditional skills at the heart of her practice."
+locale: en_GB
+main_image_alt: "World map made of colored fragments on a table at Villa Dar Ben Jelloun"
+image:
+  path: /images/maroc_main.jpg
+  width: 2500
+  height: 1875
+  alt: "World map made of colored fragments on a table at Villa Dar Ben Jelloun"
+schema:
+  type: VisualArtwork
+  artform: "Cartography"
+  art_medium: "Moroccan traditional craftsmanship"
+  about:
+    - "Tetouan"
+    - "Fez"
+    - "Cartography"
+    - "Cultural dialogue"
+  events:
+    - type: Event
+      name: "Résidence Dar Ben Jelloun"
+      location: "Tétouan, Maroc"
+      start_date: "2018"
+    - type: Event
+      name: "Résidence Dar Batha"
+      location: "Fès, Maroc"
+      start_date: "2019"
 ---
 
 <div class="text-block">
@@ -33,8 +59,7 @@ translation_key: maroc
     </p>
     <p>
         A map is not only a locating device, it is the work of a cartographer, who must collect information,
-        identify and determine landmarks, then it is a translation in drawing and choices of colors, forms ,
-        letters ... To be a cartographer is to look at the world as a spectator and then to organize it,
+        identify and determine landmarks, then it is a translation in drawing and choices of colors, forms, letters… To be a cartographer is to look at the world as a spectator and then to organize it,
         with a certain structure so that it becomes intelligible. The choices of the cartographers take us
         to very variable perceptions of the world. The map is not neutral because the world is materialized
         through codes.

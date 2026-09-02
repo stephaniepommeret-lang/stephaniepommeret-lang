@@ -1,0 +1,83 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Stéphanie Pommeret
+
+> Stéphanie Pommeret est une artiste plasticienne, photographe et poétesse basée à Saint-Brieuc, dans les Côtes-d'Armor, en Bretagne. Son travail, issu d'une démarche poétique, se construit autour de questions sociales : le corps des femmes, le vivant, les migrations, la maternité. Elle emploie la photographie, l'installation, la broderie, la cartographie textile et la poésie.
+
+- Nom canonique : Stéphanie Pommeret
+- Variante sans accent : Stephanie Pommeret
+- Profession : artiste plasticienne, photographe et poétesse
+- Localisation professionnelle : Saint-Brieuc, Côtes-d'Armor, Bretagne, France
+- Langues du site : français et anglais
+- Site officiel : {{ '/' | absolute_url }}
+- Le site ne publie pas d'information sur sa date ou son lieu de naissance.
+
+## Faits essentiels sur le travail
+
+- Le geste textile — coudre, broder — est appliqué à la carte du monde, à la robe et à la cicatrice. C'est le fil conducteur de l'œuvre.
+- *Le Goût de l'eau* est une série de doubles expositions photographiques réalisées dans les mares de rochers de la côte bretonne. Elle relie le corps féminin, le vivant non humain et l'écoféminisme.
+- *Materia Prima* porte sur le corps maternel, les cicatrices de césarienne et les marques de grossesse. Les photographies sont brodées au fil doré puis rephotographiées, en écho au Kintsugi japonais.
+- *Tout.e.s migrant.e.s* met en relation migrations humaines et migrations d'oiseaux, en collaboration avec la Réserve naturelle de la baie de Saint-Brieuc.
+- *Confinement* est une série sur l'intimité, le camouflage et le rapport au temps et à l'espace pendant le confinement.
+- *Huis Clos* rend visibles des témoignages de femmes victimes de violences, par la poésie, la photographie, l'installation, le collectage sonore et la danse. Le projet est mené avec l'association L'Image qui parle.
+- *Archives du magazine Le Petit Écho de la Mode* est une installation d'une cinquantaine de robes d'époque, créée en résidence dans l'ancienne imprimerie du magazine à Châtelaudren.
+- *The paradise (to be) regained* est une recherche menée en Côtes-d'Armor avec des producteurs biologiques, d'après un essai de Henry David Thoreau.
+- La *Collection de cartes* réunit des cartographies sensibles sans frontières, réalisées avec des artisans locaux au cours de résidences internationales.
+- À Lucknow (Inde, 2019), elle a réalisé une carte du monde collective composée de centaines de lampes à huile en terre.
+- À São Tomé (2020), elle a réalisé une carte du monde en patchwork de wax et de bazin brodé.
+
+## Pages principales
+
+- [Accueil]({{ '/' | absolute_url }}) — présentation du travail
+- [Homepage (English)]({{ '/en/' | absolute_url }})
+- [Biographie et CV]({{ '/cv/' | absolute_url }}) — expositions, résidences, collaborations, publications, prix et soutiens
+- [Biography and CV (English)]({{ '/cv-en/' | absolute_url }})
+
+## Séries photographiques
+
+- [Le Goût de l'eau]({{ '/photos/goutdeleau' | absolute_url }}) — doubles expositions, corps féminin, écoféminisme
+- [Le Goût de l'eau (English)]({{ '/photos/goutdeleau-en' | absolute_url }})
+- [Materia Prima]({{ '/photos/materiaprima' | absolute_url }}) — corps maternel, cicatrices, broderie de fil doré
+- [Materia Prima (English)]({{ '/photos/materiaprima-en' | absolute_url }})
+- [Tout.e.s migrant.e.s]({{ '/photos/toutesmigrantes' | absolute_url }}) — migrations humaines, oiseaux, écologie
+- [Tout.e.s migrant.e.s (English)]({{ '/photos/toutesmigrantes-en' | absolute_url }})
+- [Confinement]({{ '/photos/confinement' | absolute_url }}) — intimité, camouflage, quotidien
+- [Confinement (English)]({{ '/photos/confinement-en' | absolute_url }})
+
+## Expositions
+
+- [Huis Clos]({{ '/expositions/huisclos' | absolute_url }}) — témoignages de femmes, poésie, photographie, installation, son, danse
+- [Huis Clos (English)]({{ '/expositions/huisclos-en' | absolute_url }})
+- [Archives du Petit Écho de la Mode]({{ '/expositions/lepetitechodelamode' | absolute_url }}) — robes, couture, archives, mémoire des femmes
+- [Le Petit Écho de la Mode (English)]({{ '/expositions/lepetitechodelamode-en' | absolute_url }})
+- [The paradise (to be) regained]({{ '/expositions/paradise' | absolute_url }}) — vivant, environnement, producteurs biologiques
+- [The paradise (to be) regained (English)]({{ '/expositions/paradise-en' | absolute_url }})
+- [Collection de cartes]({{ '/expositions/collectioncartedumonde' | absolute_url }}) — cartographie sensible, savoir-faire artisanaux
+- [Map Collection (English)]({{ '/expositions/collectioncartedumonde-en' | absolute_url }})
+
+## Résidences
+
+- [São Tomé-et-Principe]({{ '/residences/saotome' | absolute_url }}) — carte textile en wax et bazin, 2020
+- [São Tomé and Príncipe (English)]({{ '/residences/saotome-en' | absolute_url }})
+- [Casablanca]({{ '/residences/casablanca' | absolute_url }}) — performance dégustative, conférence et exposition à l'espace H2
+- [Casablanca (English)]({{ '/residences/casablanca-en' | absolute_url }})
+- [Inde]({{ '/residences/inde' | absolute_url }}) — carte du monde en lampes à huile, Lucknow, 2019
+- [India (English)]({{ '/residences/inde-en' | absolute_url }})
+- [Centre Bretagne]({{ '/residences/centrebretagne' | absolute_url }}) — résidence Champ d'expression, Trémargat et Rostrenen
+- [Centre Bretagne (English)]({{ '/residences/centrebretagne-en' | absolute_url }})
+- [Maroc]({{ '/residences/maroc' | absolute_url }}) — Tétouan et Fès, cartographie et savoir-faire artisanaux
+- [Morocco (English)]({{ '/residences/maroc-en' | absolute_url }})
+
+## Identifiants externes
+
+- ADAGP : https://www.adagp.fr/fr/identities/stephanie-pommeret-1152583
+- BIENALSUR : https://bienalsur.org/es/artistas/597
+- Instagram : https://www.instagram.com/stephaniepommeret/
+- Facebook : https://www.facebook.com/stephaniepommeret
+
+## Fichiers techniques
+
+- Sitemap : {{ '/sitemap.xml' | absolute_url }}

@@ -1,15 +1,44 @@
+/* =========================================================================
+   Stéphanie Pommeret — feuille de style unique
+   Les valeurs de couleur et de taille reprennent l'existant : ce fichier
+   raffine le rythme, la typographie et l'accessibilité sans changer
+   l'identité visuelle du site.
+   ========================================================================= */
+
 :root {
     --text-color: #333;
     --bg-color: #fff;
     --accent-color: #555;
+    --muted-color: #666;
+    --line-color: #eee;
+    --surface-subtle: #f4f4f4;
+
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
+
+    /* Longueur de ligne confortable pour du texte justifié en français */
+    --measure: 68ch;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    --duration-fast: 180ms;
+    --duration-base: 300ms;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scrollbar-color: #b8b8b8 transparent;
+    scrollbar-width: thin;
 }
 
 body {
@@ -20,22 +49,80 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    caret-color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+::selection {
+    background: #e8e8e8;
+    color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.2rem solid transparent;
+    border-radius: 999px;
+    background: #b8b8b8;
+    background-clip: padding-box;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s;
+    transition:
+        color var(--duration-fast) var(--ease-out),
+        text-decoration-color var(--duration-fast) var(--ease-out);
 }
 
-.highlight-link {
-    text-decoration: underline !important;
-    text-underline-offset: 3px;
+a:hover {
+    color: var(--accent-color);
+    text-decoration-color: var(--accent-color);
+}
+
+/* Focus clavier : fin, mais toujours visible. */
+:where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+:where(a, button):active {
+    opacity: 0.78;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    background: var(--text-color);
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+a.highlight-link {
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 0.18em;
     font-weight: bold;
     color: var(--accent-color);
 }
 
-.podcast-cta {
+a.podcast-cta {
     display: inline-block;
     padding: 12px 24px;
     margin: 2rem auto;
@@ -44,27 +131,26 @@ a {
     font-family: var(--font-heading);
     font-style: italic;
     font-weight: 500;
-    transition: all 0.3s ease;
-    text-decoration: none !important;
+    text-decoration: none;
+    transition:
+        color var(--duration-fast) var(--ease-out),
+        background-color var(--duration-fast) var(--ease-out),
+        border-color var(--duration-fast) var(--ease-out);
 }
 
-.podcast-cta:hover {
+a.podcast-cta:hover {
     background-color: var(--accent-color);
-    color: white !important;
+    color: var(--bg-color);
 }
 
-a:hover {
-    color: var(--accent-color);
-    text-decoration-color: var(--accent-color);
-}
+/* ------------------------------------------------------------------ Header */
 
-/* Header */
 header {
     padding: 2rem 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--line-color);
 }
 
 .logo {
@@ -72,22 +158,26 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.logo h1 {
+/* .site-title est soit un <h1> (accueil), soit un <p> : même rendu. */
+.logo .site-title {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
     font-weight: 400;
-    letter-spacing: 2px;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 
-.logo p {
+.logo .site-tagline {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--muted-color);
     margin-top: 0.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
 }
 
-/* Navigation */
+/* -------------------------------------------------------------- Navigation */
+
 nav {
     width: 100%;
     display: flex;
@@ -105,57 +195,88 @@ nav {
     position: relative;
 }
 
-#nav-links a {
+#nav-links a,
+.dropdown-toggle {
+    display: block;
+    padding: 0.5rem 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
     font-size: 0.95rem;
-    text-transform: uppercase;
+    line-height: inherit;
     letter-spacing: 1px;
-    padding: 0.5rem 0;
-    display: block;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-#nav-links a.active {
+#nav-links a.active,
+#nav-links a[aria-current="page"],
+#nav-links .dropdown-toggle.active {
     border-bottom: 1px solid var(--text-color);
-}
-
-/* Dropdown */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    top: 100%;
-    left: 0;
-    padding: 0.5rem 0;
-    border: 1px solid #eee;
-    /* Added border for visibility */
-}
-
-.dropdown-content a {
-    padding: 0.8rem 1.5rem;
-    text-transform: none;
-    font-size: 0.9rem;
-    border-bottom: none;
-}
-
-/* Ensure the parent li keeps the hover state even when moving to the gap */
-.dropdown {
-    padding-bottom: 0;
-    /* Remove if any */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .menu-icon {
     display: none;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
     font-size: 1.5rem;
+    line-height: 1;
     cursor: pointer;
 }
 
-/* Main Content */
+/* Sous-menus */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    border: 1px solid var(--line-color);
+    background-color: var(--bg-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Pont invisible : le sous-menu ne se referme pas en traversant l'espace. */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    height: 0.4rem;
+}
+
+.dropdown-content a {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* Dans un panneau, un soulignement traverserait toute la largeur :
+   l'entrée courante se signale par la couleur et la graisse. */
+#nav-links .dropdown-content a,
+#nav-links .dropdown-content a.active,
+#nav-links .dropdown-content a[aria-current="page"] {
+    border-bottom: none;
+}
+
+#nav-links .dropdown-content a.active {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.dropdown:is(:hover, :focus-within, .is-open)>.dropdown-content {
+    display: block;
+}
+
+/* ------------------------------------------------------------------- Corps */
+
 main {
     flex: 1;
     width: 100%;
@@ -171,8 +292,6 @@ main {
 }
 
 .hero img {
-    max-width: 100%;
-    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -184,11 +303,38 @@ main {
     padding: 2rem 0;
 }
 
+.intro>h1,
+.intro>h2 {
+    max-width: 22ch;
+    margin-inline: auto;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+}
+
+/* Le titre de projet garde exactement la taille du <h2> d'origine. */
+.intro .project-title {
+    font-size: 1.5em;
+}
+
+.intro>:is(h1, h2)+p {
+    margin-top: var(--space-xs);
+    color: var(--muted-color);
+    letter-spacing: 0.02em;
+}
+
 .text-block {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     font-size: 1.1rem;
     font-style: italic;
     font-weight: 300;
+}
+
+/* Variante pour les textes longs : espace les paragraphes. */
+.text-block.spaced p+p {
+    margin-top: 1.2rem;
 }
 
 .author {
@@ -198,12 +344,286 @@ main {
     letter-spacing: 1px;
 }
 
-/* Footer */
+/* --------------------------------------------------------- Pages de projet */
+
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Le contenu des projets conserve la voix éditoriale du site (italique fin). */
+.project-content {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.page-content :is(.text-block, .text-section, .project-section) p {
+    text-align: justify;
+    text-wrap: pretty;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    orphans: 3;
+    widows: 3;
+}
+
+.page-content :is(.text-block, .text-section, .project-section, .quote, .credits) {
+    max-width: var(--measure);
+    margin-inline: auto;
+}
+
+.page-content :where(ul, ol):not(.cv-list) {
+    margin-block: var(--space-sm) var(--space-md);
+    padding-inline-start: 1.25rem;
+}
+
+.page-content :where(ul, ol):not(.cv-list) li+li {
+    margin-top: 0.35rem;
+}
+
+.page-content .en {
+    color: var(--muted-color);
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Ces blocs existaient dans le contenu sans avoir de style. */
+.quote {
+    margin: var(--space-xl) auto;
+    padding-inline-start: var(--space-md);
+    border-inline-start: 1px solid var(--line-color);
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-style: italic;
+    line-height: 1.7;
+    text-wrap: pretty;
+}
+
+.text-section+.text-section {
+    margin-top: var(--space-xl);
+}
+
+.project-section h4 {
+    margin-block: var(--space-md) var(--space-xs);
+}
+
+.credits {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--line-color);
+    color: var(--muted-color);
+    font-size: 0.875rem;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.credits p+p {
+    margin-top: 0.4rem;
+}
+
+.attribution {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.partner-logo {
+    margin-block: var(--space-lg);
+    text-align: center;
+}
+
+.partner-logo img {
+    width: min(100%, 18.75rem);
+    height: auto;
+    margin-inline: auto;
+}
+
+.sup-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ------------------------------------------------------------------ Images */
+
+.project-image-full {
+    margin-block: var(--space-lg);
+    text-align: center;
+}
+
+.project-image-full img {
+    display: block;
+    margin-inline: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    max-width: 60ch;
+    margin: 0.65rem auto 0;
+    color: var(--muted-color);
+    font-size: 0.8125rem;
+    font-style: normal;
+    line-height: 1.45;
+    text-align: start;
+}
+
+.hero-caption {
+    text-align: center;
+}
+
+/* Fondu discret à l'apparition, ajouté par assets/js/script.js. */
+.image-reveal {
+    opacity: 0;
+    transition: opacity 600ms var(--ease-out);
+}
+
+.image-reveal.is-loaded {
+    opacity: 1;
+}
+
+/* --------------------------------------------------------- Galeries Swiper */
+
+.swiper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: min(72vh, 44rem);
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    border: 0;
+    background: transparent;
+    color: var(--accent-color);
+    transform: scale(0.7);
+}
+
+.swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    background-clip: content-box;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent-color);
+}
+
+.gallery,
+.carousel-container {
+    display: block;
+    margin: var(--space-xl) 0;
+}
+
+/* Sans JavaScript ou si le CDN Swiper échoue, les images restent visibles. */
+.gallery:not(.swiper-initialized) img,
+.carousel-container:not(.swiper-initialized) img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto var(--space-sm);
+}
+
+.instagram-media {
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* ---------------------------------------------------------------------- CV */
+
+.cv-portrait {
+    max-width: 37.5rem;
+    margin: var(--space-lg) auto 0;
+}
+
+.cv-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.cv-section h3 {
+    font-family: var(--font-heading);
+    border-bottom: 2px solid var(--line-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.cv-list {
+    list-style: none;
+}
+
+/* Les années s'alignent en colonne : la chronologie devient lisible d'un coup d'œil. */
+.cv-list li {
+    display: grid;
+    grid-template-columns: 4.75rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    margin-bottom: 0.8rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--line-color);
+    text-align: start;
+    break-inside: avoid;
+}
+
+.cv-list li>strong:first-child {
+    font-variant-numeric: lining-nums tabular-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+    letter-spacing: 0.02em;
+}
+
+/* -------------------------------------------------------------------- 404 */
+
+.error-page {
+    max-width: 40rem;
+    margin: clamp(3rem, 12vh, 8rem) auto;
+    text-align: center;
+}
+
+.error-code {
+    color: var(--line-color);
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 15vw, 8rem);
+    line-height: 0.9;
+}
+
+.error-page h1 {
+    margin-top: var(--space-md);
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+.error-page p {
+    margin-top: var(--space-sm);
+}
+
+/* ------------------------------------------------------------------ Footer */
+
 footer {
     padding: 3rem 2rem;
     text-align: center;
     font-size: 0.85rem;
-    color: #666;
+    color: var(--muted-color);
     margin-top: auto;
 }
 
@@ -212,13 +632,16 @@ footer {
 }
 
 .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
+    display: inline-grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-inline: 0.125rem;
     opacity: 0.7;
-    transition: opacity 0.3s;
+    place-items: center;
+    transition: opacity var(--duration-fast) var(--ease-out);
 }
 
-.social-icons a:hover {
+.social-icons a:is(:hover, :focus-visible) {
     opacity: 1;
 }
 
@@ -232,208 +655,25 @@ footer {
     border-bottom: 1px dotted #888;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+/* ------------------------------------------------------- Sélecteur langue */
 
-    .logo {
-        text-align: center;
-        width: 100%;
-    }
-
-    nav {
-        justify-content: flex-end;
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: -6rem;
-        /* Adjust based on logo size */
-        right: 0;
-    }
-
-    #nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-
-    #nav-links.show {
-        display: flex;
-    }
-
-    #nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: #f9f9f9;
-        display: none;
-        /* JS toggle would be better for mobile dropdowns */
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    /* Mobile specific adjustments */
-    #nav-links li.dropdown {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dropdown-content {
-        position: relative;
-        box-shadow: none;
-        background-color: #f4f4f4;
-        display: block;
-        /* Always show in mobile or use JS to toggle */
-        padding-left: 1rem;
-        border-left: 2px solid #ddd;
-        margin-left: 1rem;
-    }
-
-    .dropdown-content a {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-        color: #555;
-    }
-}
-
-/* CV Styles */
-.cv-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cv-section {
-    margin-bottom: 2rem;
-}
-
-.cv-section h3 {
-    font-family: var(--font-heading);
-    border-bottom: 2px solid #eee;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    color: #444;
-}
-
-.cv-list {
-    list-style: none;
-}
-
-.cv-list li {
-    margin-bottom: 0.8rem;
-    padding-left: 1rem;
-    border-left: 3px solid #eee;
-}
-
-/* Page Content Styles */
-.page-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.page-content .text-block {
-    margin-bottom: 2rem;
-    text-align: justify;
-}
-
-.page-content .en {
-    color: #666;
-    margin-top: 0.5rem;
-    font-style: italic;
-}
-
-.project-image-full {
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.project-image-full img {
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-/* Carousel Styles (Swiper) */
-.swiper {
-    width: 100%;
-    height: auto;
-    padding-bottom: 2rem;
-    /* Space for pagination */
-}
-
-.swiper-slide {
-    text-align: center;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.swiper-slide img {
-    max-width: 100%;
-    max-height: 500px;
-    /* Limit height for better display */
-    object-fit: contain;
-    width: auto;
-    height: auto;
-}
-
-/* Custom Navigation Arrows */
-.swiper-button-next,
-.swiper-button-prev {
-    color: var(--accent-color);
-    transform: scale(0.7);
-    /* Smaller arrows */
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--accent-color);
-}
-
-/* Specific adjustments for previous gallery layout */
-.gallery {
-    display: block;
-    /* Overwrite grid if it was grid */
-    margin: 2rem 0;
-}
-
-/* Ensure images in gallery are hidden before JS kicks in to avoid FOUC */
-.gallery:not(.swiper-initialized) img,
-.carousel-container:not(.swiper-initialized) img {
-    display: none;
-}
-
-.gallery:not(.swiper-initialized) img:first-child,
-.carousel-container:not(.swiper-initialized) img:first-child {
-    display: block;
-    /* Show only first image if JS fails or loading */
-}
-
-/* Language Toggle Styles */
-/* Language Switcher in Menu */
 .lang-switch {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--muted-color);
     margin-left: 1rem;
 }
 
 .lang-switch a {
+    display: inline-grid;
+    min-width: 24px;
+    min-height: 24px;
+    place-items: center;
     text-decoration: none;
-    color: #999;
+    /* #767676 : 4,54:1 sur blanc — conforme AA, contre 2,85:1 auparavant. */
+    color: #767676;
     font-weight: 300;
 }
 
@@ -459,13 +699,182 @@ footer {
     font-weight: 300;
 }
 
-/* Mobile Adjustments for Language Switcher */
+/* ---------------------------------------------------------------- Mobile */
+
 @media (max-width: 768px) {
+    header {
+        position: relative;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        padding-inline: 2.75rem;
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        justify-content: flex-end;
+    }
+
+    /* Position ancrée au header, et non plus un `top: -6rem` calé sur la
+       hauteur du logo — qui cassait dès que le titre passait sur deux lignes. */
+    .menu-icon {
+        position: absolute;
+        top: 2rem;
+        right: 5%;
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        place-items: center;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+        margin-top: var(--space-sm);
+    }
+
+    #nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-links li.dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-links a,
+    .dropdown-toggle {
+        width: 100%;
+        min-height: 2.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    /* Sur mobile, seul un appui sur le bouton ouvre le sous-menu. */
+    .dropdown-content,
+    .dropdown:hover>.dropdown-content,
+    .dropdown:focus-within>.dropdown-content {
+        display: none;
+    }
+
+    .dropdown.is-open>.dropdown-content {
+        display: block;
+        position: static;
+        width: calc(100% - 2rem);
+        margin-inline: 1rem;
+        padding-block: 0.25rem 0.5rem;
+        border: 0;
+        border-left: 2px solid #ddd;
+        background: var(--surface-subtle);
+        box-shadow: none;
+    }
+
+    .dropdown-content::before {
+        display: none;
+    }
+
+    .dropdown-content a {
+        min-height: 2.5rem;
+        padding: 0.55rem 1rem;
+        color: var(--accent-color);
+        font-size: 0.85rem;
+    }
+
     .lang-switch {
         margin: 1rem 0;
         justify-content: center;
         width: 100%;
         order: -1;
-        /* Move to top of menu list */
+    }
+
+    /* Le texte justifié produit de grosses lézardes sur écran étroit. */
+    .page-content :is(.text-block, .text-section, .project-section) p {
+        text-align: start;
+        hyphens: none;
+        -webkit-hyphens: none;
+    }
+}
+
+/* ------------------------------------------------------- Mouvement réduit */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .image-reveal {
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------------------- Impression */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 14mm 16mm;
+    }
+
+    body {
+        display: block;
+        color: #000;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9.5pt;
+        line-height: 1.4;
+    }
+
+    header,
+    footer,
+    .skip-link,
+    .social-icons {
+        display: none !important;
+    }
+
+    main {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .intro {
+        padding: 0 0 8mm;
+    }
+
+    .cv-section {
+        margin-bottom: 6mm;
+    }
+
+    .cv-section h3 {
+        break-after: avoid;
+        border-bottom-color: #bbb;
+    }
+
+    .cv-list li {
+        break-inside: avoid;
+        margin-bottom: 2.5mm;
+        border-left-color: #bbb;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
     }
 }

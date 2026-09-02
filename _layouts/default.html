@@ -1,61 +1,98 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'fr' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-    <!-- Hreflang Tags for SEO -->
-    {% if page.translation_key %}
-    {% assign current_lang = page.lang | default: 'fr' %}
-    <link rel="alternate" hreflang="{{ current_lang }}" href="{{ site.url }}{{ page.url }}">
-
-    {% assign translations = site.pages | concat: site.posts | where: "translation_key", page.translation_key %}
-    {% for translation in translations %}
-    {% if translation.lang != current_lang %}
-    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ site.url }}{{ translation.url }}">
+    {%- comment -%}
+    Swiper n'est chargé que sur les pages qui contiennent réellement une galerie.
+    {%- endcomment -%}
+    {% assign uses_swiper = false %}
+    {% if content contains 'class="gallery"' or content contains 'class="carousel-container"' %}
+    {% assign uses_swiper = true %}
     {% endif %}
+
+    <!-- Icônes -->
+    <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="{{ '/images/apple-touch-icon.png' | relative_url }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- hreflang : inclut les collections, contrairement à la version précédente -->
+    {% if page.translation_key %}
+    {% assign all_translatable = site.pages | concat: site.expositions | concat: site.residences | concat: site.photos %}
+    {% assign translations = all_translatable | where: "translation_key", page.translation_key %}
+    {% for translation in translations %}
+    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | absolute_url }}">
+    {% endfor %}
+    {% assign default_translation = translations | where: "lang", "fr" | first %}
+    {% if default_translation %}
+    <link rel="alternate" hreflang="x-default" href="{{ default_translation.url | absolute_url }}">
+    {% endif %}
+    {% for translation in translations %}
+    {% unless translation.url == page.url %}
+    <meta property="og:locale:alternate" content="{{ translation.locale | default: 'en_GB' }}">
+    {% endunless %}
     {% endfor %}
     {% endif %}
 
-
-    <!-- Preconnect for performance -->
+    <!-- Préconnexion aux polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-
-    <!-- Google Fonts -->
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
+        onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
     </noscript>
 
-    <!-- SEO Tag (Jekyll plugin) -->
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    {% if uses_swiper %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    {% endif %}
+
+    {%- comment -%}
+    {% seo %} produit title, description, canonical, Open Graph et Twitter Cards.
+    Son JSON-LD (incorrect pour ce site) est retiré par _plugins/strip-seo-tag-json-ld.rb
+    et remplacé par l'include ci-dessous.
+    {%- endcomment -%}
     {% seo %}
+    {% feed_meta %}
 
-    <!-- Language Redirection (Bot Aware) -->
-    {% include language-redirection.html %}
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
 
-    <!-- Swiper.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="describedby" type="text/plain" href="{{ '/llms.txt' | absolute_url }}">
+
+    {% unless page.robots contains "noindex" %}
+    {% include structured-data.html %}
+    {% endunless %}
+
+    <noscript>
+        <style>
+            /* Sans JavaScript, Swiper ne s'initialise pas : on montre toutes les images. */
+            .gallery img,
+            .carousel-container img {
+                display: block;
+                margin: 0 auto 1rem;
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">{% if page.lang == 'en' %}Skip to content{% else %}Aller au contenu{% endif %}</a>
+
     <header>
         {% include header.html %}
         {% include navigation.html %}
     </header>
 
-    <main>
+    <main id="main-content">
         {{ content }}
     </main>
 
@@ -63,31 +100,13 @@
         {% include footer.html %}
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            var navLinks = document.getElementById("nav-links");
-            navLinks.classList.toggle("show");
-        }
+    <script src="{{ '/assets/js/menu.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/enhance.js' | relative_url }}" defer></script>
 
-        // Close menu when clicking a link (mobile UX)
-        document.addEventListener("DOMContentLoaded", function () {
-            const navItems = document.querySelectorAll('#nav-links a');
-            navItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const navLinks = document.getElementById("nav-links");
-                    if (navLinks.classList.contains('show')) {
-                        navLinks.classList.remove('show');
-                    }
-                });
-            });
-        });
-    </script>
-
-    <!-- Swiper.js JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+    {% if uses_swiper %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+    {% endif %}
 </body>
 
 </html>

@@ -1,28 +1,50 @@
 ---
 layout: project
-title: "Le Petit Echo de la Mode"
+title: "Le Petit Écho de la Mode"
 main_image: /images/petitecho_1.jpg
 lang: en
 translation_key: lepetitechodelamode
+description: "At the Petit Écho de la Mode archives, Stéphanie Pommeret creates a dress installation about women's memory and gender inequality."
+locale: en_GB
+main_image_alt: "Visitor facing a wall installation of embroidered plates"
+image:
+  path: /images/petitecho_1.jpg
+  width: 540
+  height: 717
+  alt: "Visitor facing a wall installation of embroidered plates"
+schema:
+  type: VisualArtwork
+  artform: "Installation"
+  art_medium: "Dresses, sewing, embroidery and printed archives"
+  about:
+    - "Women's memory"
+    - "Gender injunctions"
+    - "Archives"
+    - "Sewing"
+  events:
+    - type: Event
+      name: "Résidence aux archives du Petit Écho de la Mode"
+      location: "Châtelaudren-Plouagat"
+      start_date: "2024"
 ---
 
 <div class="text-block project-section">
     <h4 style="margin-top: 2rem;">Residency at Le Petit Écho de la Mode – Châtelaudren</h4>
     <p>
-        Several weeks of residency in the former printing house of <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank">Le Petit Écho de la Mode magazine</a>, in
+        Several weeks of residency in the former printing house of <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank" rel="noopener noreferrer">Le Petit Écho de la Mode magazine</a>, in
         Châtelaudren. A place steeped in stories, soft-spoken injunctions, and stubborn silences.
-        I delved into these yellowed pages filled with talk of love, cooking, and sewing... but also,
+        I delved into these yellowed pages filled with talk of love, cooking, and sewing… but also,
         between the lines, of marital duties, regulated beauty, and women's lives confined within
         carefully drawn roles.
     </p>
     <p>
-        From these fragments, <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank">creations</a> are taking shape within the space of
-        Le Petit Écho.
-        Through them, I try to make the whispers of the past heard, to let them resonate in the present.
-        A work of sensitive archaeology, woven between collective memory and intimate emotion.
+        From these fragments, <a class="highlight-link" href="https://www.facebook.com/watch/?v=1789957678298634" target="_blank" rel="noopener noreferrer">creations</a> are taking shape within the space of
+        Le Petit Écho. I do not want to reveal everything here, for these installations are meant to be
+        experienced. Through them, I try to make the whispers of the past heard, to let them resonate in
+        the present. A work of sensitive archaeology, woven between collective memory and intimate emotion.
     </p>
     <p>
-        📍 <a class="highlight-link" href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank">Le Petit Echo de la Mode website</a>
+        📍 <a class="highlight-link" href="https://www.petit-echo-mode.fr/presentation-2/" target="_blank" rel="noopener noreferrer">Le Petit Écho de la Mode website</a>
     </p>
 </div>
 
@@ -33,7 +55,7 @@ translation_key: lepetitechodelamode
     <div class="instagram-container" style="display: flex; align-items: start; justify-content: center;">
         <blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             <div style="padding:16px;">
-                <a href="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                <a href="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener noreferrer">
                     <div style=" display: flex; flex-direction: row; align-items: center;">
                         <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
                         <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
@@ -70,10 +92,15 @@ translation_key: lepetitechodelamode
     <h4 style="margin-top: 2rem;">The installation</h4>
     <p>
         This installation features around fifty period dresses arranged like a military regiment,
-        symbolizing the patriarchal society that constrained women... Each dress contains a heart-level
-        pocket with a zipper, revealing “love letters”... The artist uses sewing to create a visual
-        poetry
-        that gives voice to silenced women.
+        symbolizing the patriarchal society that constrained women. The work refers to the historic action
+        of the MLF (French Women’s Liberation Movement) on 26 August 1970, when nine activists attempted to
+        lay a wreath to “the wife of the Unknown Soldier” in Paris, in honour of the women forgotten by
+        History.
+    </p>
+    <p>
+        Each dress contains a heart-level pocket with a zipper, revealing “love letters” — personal
+        archives drawn from the women’s magazines of Le Petit Écho de la Mode. The artist uses sewing, a
+        traditional domestic gesture, to create a visual poetry that gives voice to silenced women.
     </p>
 </div>
 
@@ -84,7 +111,7 @@ translation_key: lepetitechodelamode
 <div class="text-block project-section">
     <h4 style="margin-top: 2rem;">Social Archaeology</h4>
     <p>
-        The installation functions as a "social archaeology" that exhumed the memory of invisibilized
+        The installation functions as a "social archaeology" that exhumes the memory of invisibilized
         housewives.
         It questions persistent gender inequalities and stereotypes, while paying tribute to past female
         struggles.
