@@ -14,10 +14,11 @@ vendor/
 *.pyc
 __pycache__/
 
-# Old HTML files (keep for reference, but don't publish)
+# Anciennes pages HTML issues de l'export Wix : on ne les publie pas.
 *.html
 !_includes/*.html
 !_layouts/*.html
+!404.html
 
 # Documents
 documents/
