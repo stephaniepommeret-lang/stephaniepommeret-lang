@@ -32,7 +32,8 @@ image:
     <div class="cv-section">
         <h3>Solo Exhibitions</h3>
         <ul class="cv-list">
-            <li><strong>2026</strong> No Way Out, with Patricia Le Calvez — Town of Vincennes (upcoming)</li>
+            <li><strong>2026</strong> Zico House, Beirut (Lebanon)</li>
+            <li><strong>2026</strong> No Way Out, with Patricia Le Calvez — Town of Vincennes</li>
             <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
             <li><strong>2025</strong> All Migrants, Town Hall of Hillion</li>
             <li><strong>2024</strong> No Way Out, Prefecture and temporary exhibition pavilion of Saint-Brieuc</li>
@@ -67,7 +68,6 @@ image:
     <div class="cv-section">
         <h3>Collective Exhibitions</h3>
         <ul class="cv-list">
-            <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do Brasilia (Brazil)</li>
             <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do São Paulo (Brazil)</li>
             <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do Rio de Janeiro (Brazil)</li>
             <li><strong>2023</strong> Bienalsur, Cuando la casa se cama, Santa Fé, Rosario (Argentina)</li>

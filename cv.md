@@ -31,7 +31,8 @@ image:
 <div class="cv-section">
 <h3>Expositions personnelles</h3>
 <ul class="cv-list">
-<li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes (à venir)</li>
+<li><strong>2026</strong> Zico House, Beyrouth (Liban)</li>
+<li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes</li>
 <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
 <li><strong>2025</strong> All Migrants, mairie d'Hillion</li>
 <li><strong>2024</strong> Huis Clos, Préfecture et pavillon des expositions temporaires de
@@ -69,8 +70,6 @@ image:
 <div class="cv-section">
 <h3>Expositions collectives</h3>
 <ul class="cv-list">
-<li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do Brasilia
-                        (Brésil)</li>
 <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do São Paulo
                         (Brésil)</li>
 <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do Rio de Janeiro
