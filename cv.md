@@ -31,7 +31,7 @@ image:
 <div class="cv-section">
 <h3>Expositions personnelles</h3>
 <ul class="cv-list">
-<li><strong>2026</strong> Zico House, Beyrouth (Liban)</li>
+<li><strong>2026</strong> Le Fil, Zico House, Beyrouth (Liban)</li>
 <li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes</li>
 <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
 <li><strong>2025</strong> All Migrants, mairie d'Hillion</li>
@@ -93,6 +93,7 @@ image:
 <div class="cv-section">
 <h3>Résidences</h3>
 <ul class="cv-list">
+<li><strong>2026</strong> Zico House, Beyrouth (Liban), avec le soutien d’Artemed</li>
 <li><strong>2025</strong> Ploumexpo, Ploumagoar</li>
 <li><strong>2024</strong> Le Petit Écho de la Mode, archives, Châtelaudren-Plouagat</li>
 <li><strong>2023</strong> Raconte-moi ton monde, projet avec le Résia, soutenue par la Fondation de

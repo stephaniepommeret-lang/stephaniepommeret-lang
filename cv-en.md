@@ -32,7 +32,7 @@ image:
     <div class="cv-section">
         <h3>Solo Exhibitions</h3>
         <ul class="cv-list">
-            <li><strong>2026</strong> Zico House, Beirut (Lebanon)</li>
+            <li><strong>2026</strong> Le Fil, Zico House, Beirut (Lebanon)</li>
             <li><strong>2026</strong> No Way Out, with Patricia Le Calvez — Town of Vincennes</li>
             <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
             <li><strong>2025</strong> All Migrants, Town Hall of Hillion</li>
@@ -87,6 +87,7 @@ image:
     <div class="cv-section">
         <h3>Residencies</h3>
         <ul class="cv-list">
+            <li><strong>2026</strong> Zico House, Beirut (Lebanon), supported by Artemed</li>
             <li><strong>2025</strong> Ploumexpo, Ploumagoar</li>
             <li><strong>2024</strong> Le Petit Écho de la Mode, archives, Châtelaudren-Plouagat</li>
             <li><strong>2023</strong> Tell me your world, project with Le Résia, supported by the Foundation of France</li>
