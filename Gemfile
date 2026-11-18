@@ -6,6 +6,7 @@ gem "jekyll-feed", "~> 0.17"
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-sitemap", "~> 1.4"
 gem "webrick", "~> 1.9"
+gem "bigdecimal", "~> 3.1"
 
 # Compilation Sass par libsass (sassc) : même rendu que jusqu'ici, sans
 # dépendre de protobuf / sass-embedded.
