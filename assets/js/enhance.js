@@ -82,4 +82,36 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!rel.includes("noreferrer")) rel.push("noreferrer");
         link.setAttribute("rel", rel.join(" "));
     });
+
+    /* ------------------------------------------------------------------
+       4. Intégrations tierces (reel Instagram du Petit Écho)
+       Le script de la plateforme n'est demandé qu'à l'approche du bloc :
+       rien n'est chargé depuis un tiers tant que le lecteur n'y arrive pas.
+       Sans JavaScript, le bloc reste un lien vers la publication.
+       ------------------------------------------------------------------ */
+    const embeds = document.querySelectorAll("[data-embed-src]");
+    const loadedEmbeds = new Set();
+
+    function loadEmbed(container) {
+        const src = container.dataset.embedSrc;
+        if (loadedEmbeds.has(src)) return;
+        loadedEmbeds.add(src);
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = src;
+        document.body.appendChild(script);
+    }
+
+    if (embeds.length && "IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                observer.unobserve(entry.target);
+                loadEmbed(entry.target);
+            });
+        }, { rootMargin: "800px 0px" });
+        embeds.forEach(function (container) { observer.observe(container); });
+    } else {
+        embeds.forEach(loadEmbed);
+    }
 });

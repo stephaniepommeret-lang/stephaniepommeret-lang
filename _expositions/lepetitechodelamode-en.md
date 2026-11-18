@@ -52,7 +52,8 @@ schema:
     {% include image.html path="/images/petitecho_poster.webp" alt="Poster for the exhibition at the Petit Écho de la Mode archives" %}
     {% include image.html path="/images/petitecho_4.avif" alt="Two visitors look at the hanging dresses" %}
     {% include image.html path="/images/petitecho_5.avif" alt="Suspended installation and carpet" %}
-    <div class="instagram-container" style="display: flex; align-items: start; justify-content: center;">
+</div>
+<div class="instagram-container" data-embed-src="https://www.instagram.com/embed.js" style="display: flex; align-items: start; justify-content: center;">
         <blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             <div style="padding:16px;">
                 <a href="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank" rel="noopener noreferrer">
@@ -84,8 +85,6 @@ schema:
                 </a>
             </div>
         </blockquote>
-        <script async src="//www.instagram.com/embed.js"></script>
-    </div>
 </div>
 
 <div class="text-block project-section">
