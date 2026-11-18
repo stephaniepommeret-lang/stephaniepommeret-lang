@@ -5,7 +5,7 @@ _site/
 .jekyll-metadata
 
 # Ruby
-Gemfile.lock
+# Gemfile.lock est versionné : versions reproductibles et auditables (bundle-audit).
 vendor/
 
 # System

@@ -1,12 +1,13 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3.3"
-gem "jekyll-feed", "~> 0.12"
+# Ruby >= 3.1 (le workflow GitHub Pages utilise la version de .github/workflows/jekyll.yml).
+gem "jekyll", "~> 4.4"
+gem "jekyll-feed", "~> 0.17"
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-sitemap", "~> 1.4"
-gem "webrick", "~> 1.8"
-gem "ffi", "~> 1.15.5" # Pinned for Ruby 2.6 compatibility
+gem "webrick", "~> 1.9"
 
-# Fix for protobuf/sass issue on older Ruby/Mac
-gem "jekyll-sass-converter", "~> 2.0"
+# Compilation Sass par libsass (sassc) : même rendu que jusqu'ici, sans
+# dépendre de protobuf / sass-embedded.
+gem "jekyll-sass-converter", "~> 2.2"
 gem "sassc", "~> 2.4"
