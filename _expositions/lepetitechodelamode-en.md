@@ -4,6 +4,7 @@ title: "Le Petit Écho de la Mode"
 main_image: /images/petitecho_1.avif
 lang: en
 translation_key: lepetitechodelamode
+embeds: [instagram]
 description: "At the Petit Écho de la Mode archives, Stéphanie Pommeret creates a dress installation about women's memory and gender inequality."
 locale: en_GB
 main_image_alt: "Visitor facing a wall installation of embroidered plates"

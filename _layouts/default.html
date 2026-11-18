@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {%- comment -%}
+    Politique de sécurité : tout est servi par le site lui-même. Seules
+    exceptions, déclarées page par page dans le front matter :
+      embeds: [instagram]  -> script et cadre de www.instagram.com
+    'unsafe-inline' ne vaut que pour les styles (feuille intégrée, attributs
+    style du contenu et de Swiper) ; aucun script inline n'est autorisé,
+    hormis les règles de spéculation ('inline-speculation-rules').
+    Le JSON-LD est un bloc de données, non exécuté, hors du champ de la CSP.
+    {%- endcomment -%}
+    {%- assign csp_script = "'self' 'inline-speculation-rules'" -%}
+    {%- assign csp_frame = "'none'" -%}
+    {%- if page.embeds contains "instagram" -%}
+    {%- assign csp_script = csp_script | append: " https://www.instagram.com" -%}
+    {%- assign csp_frame = "https://www.instagram.com" -%}
+    {%- endif %}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src {{ csp_script }}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; media-src 'self'; frame-src {{ csp_frame }}; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    {%- comment -%}
     Swiper n'est chargé que sur les pages qui contiennent réellement une galerie.
     {%- endcomment -%}
     {% assign uses_swiper = false %}
@@ -54,6 +72,7 @@
     {% endif %}
 
     <link rel="describedby" type="text/plain" href="{{ '/llms.txt' | absolute_url }}">
+
 
     {% unless page.robots contains "noindex" %}
     {% include structured-data.html %}

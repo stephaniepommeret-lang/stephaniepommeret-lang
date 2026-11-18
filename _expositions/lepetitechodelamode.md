@@ -4,6 +4,7 @@ title: "Archives du magazine Le Petit Écho de la Mode"
 main_image: /images/petitecho_1.avif
 lang: fr
 translation_key: lepetitechodelamode
+embeds: [instagram]
 description: "Aux archives du Petit Écho de la Mode, Stéphanie Pommeret crée une installation de robes sur la mémoire des femmes et les inégalités de genre."
 locale: fr_FR
 main_image_alt: "Visiteuse face à une installation murale d'assiettes brodées"
