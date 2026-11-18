@@ -2,7 +2,7 @@
 layout: project
 title: "Confinement (Lockdown)"
 subtitle: "Photographic series"
-main_image: /images/confinement_1.jpg
+main_image: /images/confinement_1.avif
 lang: en
 translation_key: confinement
 description: "Confinement, a photographic series by Stéphanie Pommeret, explores intimacy, camouflage and our relationship to time, space and everyday life."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "Portrait of a woman blending into a projection of roses and foliage"
 image:
   path: /images/confinement_1.jpg
-  width: 1950
-  height: 2600
+  width: 1200
+  height: 1600
   alt: "Portrait of a woman blending into a projection of roses and foliage"
 schema:
   type: VisualArtwork
@@ -54,5 +54,5 @@ schema:
     <p style="text-align: right; font-style: italic;">Vanessa Auclerc-Galand</p>
 </div>
 <div class="project-image-full">
-    <img src="/images/confinement_2.jpg" alt="Confinement - Photographic series">
+    {% include image.html path="/images/confinement_2.avif" alt="A figure amid reflections and vegetation" %}
 </div>

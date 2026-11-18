@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Archives du magazine Le Petit Écho de la Mode"
-main_image: /images/petitecho_1.jpg
+main_image: /images/petitecho_1.avif
 lang: fr
 translation_key: lepetitechodelamode
 description: "Aux archives du Petit Écho de la Mode, Stéphanie Pommeret crée une installation de robes sur la mémoire des femmes et les inégalités de genre."
@@ -48,9 +48,9 @@ schema:
 </p>
 </div>
 <div class="gallery">
-<img alt="Affiche Exposition" src="/images/petitecho_poster.png"/>
-<img alt="Détail Installation" src="/images/petitecho_4.jpeg"/>
-<img alt="Installation suspendue et tapis" src="/images/petitecho_5.jpg"/>
+{% include image.html path="/images/petitecho_poster.webp" alt="Affiche de l’exposition aux archives du Petit Écho de la Mode" %}
+{% include image.html path="/images/petitecho_4.avif" alt="Deux visiteuses regardent les robes suspendues" %}
+{% include image.html path="/images/petitecho_5.avif" alt="Installation suspendue et tapis" %}
 <div class="instagram-container" style="display: flex; align-items: start; justify-content: center;">
 <blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-permalink="https://www.instagram.com/reel/DPZVGcrDF9r/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 0; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
 <div style="padding:16px;">
@@ -103,7 +103,7 @@ schema:
                 </p>
 </div>
 <div class="project-image-full">
-<img alt="Vue d'ensemble installation" src="/images/petitecho_2.jpg"/>
+{% include image.html path="/images/petitecho_2.avif" alt="Vue d’ensemble des robes suspendues dans l’ancienne imprimerie" %}
 </div>
 <div class="text-block project-section">
 <h4 style="margin-top: 2rem;">Archéologie sociale</h4>

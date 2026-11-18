@@ -2,7 +2,7 @@
 layout: project
 title: "Materia Prima"
 subtitle: "Transcriptions corporelles — Série photographique"
-main_image: /images/materiaprima_1.jpg
+main_image: /images/materiaprima_1.avif
 lang: fr
 translation_key: materiaprima
 description: "Materia Prima interroge le corps maternel : Stéphanie Pommeret brode des fils dorés sur des photographies de cicatrices et de marques de grossesse."
@@ -10,8 +10,8 @@ locale: fr_FR
 main_image_alt: "Ventre portant une cicatrice de césarienne soulignée par une broderie de fil doré"
 image:
   path: /images/materiaprima_1.jpg
-  width: 1280
-  height: 854
+  width: 1200
+  height: 801
   alt: "Ventre portant une cicatrice de césarienne soulignée par une broderie de fil doré"
 schema:
   type: VisualArtwork

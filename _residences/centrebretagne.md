@@ -3,7 +3,7 @@ layout: project
 title: "Centre Bretagne"
 title_en: "Brittany Center"
 subtitle: "Résidence"
-main_image: /images/centrebretagne_main.jpg
+main_image: /images/centrebretagne_main.avif
 lang: fr
 translation_key: centrebretagne
 description: "En Centre Bretagne, Stéphanie Pommeret mène la résidence Champ d'expression à Trémargat et Rostrenen, autour de l'art et de l'environnement."
@@ -11,8 +11,8 @@ locale: fr_FR
 main_image_alt: "Portrait d'une femme recouverte d'une projection de fougères"
 image:
   path: /images/centrebretagne_main.jpg
-  width: 2500
-  height: 3333
+  width: 1200
+  height: 1600
   alt: "Portrait d'une femme recouverte d'une projection de fougères"
 schema:
   type: CreativeWork
@@ -54,8 +54,8 @@ schema:
                 </p>
 </div>
 <div class="gallery">
-<img alt="Champ d'expression - Trémargat" src="/images/centrebretagne_1.jpg"/>
-<img alt="Détail résidence" src="/images/centrebretagne_2.jpg"/>
-<img alt="Installation" src="/images/centrebretagne_3.jpg"/>
-<img alt="Détail" src="/images/centrebretagne_4.jpg"/>
+{% include image.html path="/images/centrebretagne_1.avif" alt="Un groupe traverse un pré bordé d’arbres à Trémargat" %}
+{% include image.html path="/images/centrebretagne_2.avif" alt="Carte du monde dessinée avec des feuilles au sol" %}
+{% include image.html path="/images/centrebretagne_3.avif" alt="Carte du monde noire sur un disque blanc" %}
+{% include image.html path="/images/centrebretagne_4.avif" alt="Intérieur d’une grange, avec du foin et des cadres accrochés" %}
 </div>

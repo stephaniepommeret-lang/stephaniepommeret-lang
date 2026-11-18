@@ -2,7 +2,7 @@
 layout: project
 title: "São Tomé and Príncipe"
 subtitle: "Residency"
-main_image: /images/saotome_1.jpg
+main_image: /images/saotome_1.avif
 lang: en
 translation_key: saotome
 description: "2020 residency at the Alliance Française of São Tomé: a wax and bazin patchwork world map made with local seamstresses and embroiderers."
@@ -50,6 +50,6 @@ schema:
     </p>
 </div>
 <div class="gallery">
-    <img src="/images/saotome_main.jpg" alt="Installation detail">
-    <img src="/images/saotome_2.jpg" alt="Installation detail">
+    {% include image.html path="/images/saotome_main.avif" alt="Palm trees and vegetation in São Tomé" %}
+    {% include image.html path="/images/saotome_2.avif" alt="Colourful patchwork world map against a black background" %}
 </div>

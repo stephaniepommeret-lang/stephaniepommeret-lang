@@ -2,7 +2,7 @@
 layout: project
 title: "Confinement"
 subtitle: "Série photographique"
-main_image: /images/confinement_1.jpg
+main_image: /images/confinement_1.avif
 lang: fr
 translation_key: confinement
 description: "Confinement, série photographique de Stéphanie Pommeret, explore l'intimité, le camouflage et notre rapport au temps, à l'espace et au quotidien."
@@ -10,8 +10,8 @@ locale: fr_FR
 main_image_alt: "Portrait d'une femme fondue dans une projection de roses et de feuillages"
 image:
   path: /images/confinement_1.jpg
-  width: 1950
-  height: 2600
+  width: 1200
+  height: 1600
   alt: "Portrait d'une femme fondue dans une projection de roses et de feuillages"
 schema:
   type: VisualArtwork
@@ -59,5 +59,5 @@ schema:
 <p style="text-align: right; font-style: italic;">Vanessa Auclerc-Galand</p>
 </div>
 <div class="project-image-full">
-<img alt="Confinement - Série photographique" src="/images/confinement_2.jpg"/>
+{% include image.html path="/images/confinement_2.avif" alt="Silhouette au milieu de reflets et de végétation" %}
 </div>

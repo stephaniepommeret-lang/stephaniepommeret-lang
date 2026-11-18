@@ -2,7 +2,7 @@
 layout: project
 title: "Casablanca"
 subtitle: "Residency"
-main_image: /images/casablanca_gateaux.jpg
+main_image: /images/casablanca_gateaux.avif
 lang: en
 translation_key: casablanca
 description: "In Casablanca, Stéphanie Pommeret presents a tasting performance, a conference and an exhibition at the H2 contemporary art space."
@@ -39,14 +39,14 @@ schema:
         Aaziz.
     </p>
     <div class="sup-logos" style="margin-top: 2rem; display: flex; gap: 20px; align-items: center;">
-        <img src="/images/logo_institut_francais.png" alt="Institut Français" style="width: auto; height: 60px;">
-        <img src="/images/logo_lafourmie.png" alt="La Fourmi-e" style="width: auto; height: 60px;">
-        <img src="/images/logo_h2.jpg" alt="H2" style="width: auto; height: 60px;">
+        {% include image.html path="/images/logo_institut_francais.webp" alt="Institut Français" style="width: auto; height: 60px;" %}
+        {% include image.html path="/images/logo_lafourmie.webp" alt="H2, art and culture, Casablanca" style="width: auto; height: 60px;" %}
+        {% include image.html path="/images/logo_h2.webp" alt="La Fourmi-e" style="width: auto; height: 60px;" %}
     </div>
 </div>
 
 <div class="gallery">
-    <img src="/images/casablanca_1.jpg" alt="Espace H2">
-    <img src="/images/casablanca_2.jpg" alt="Espace H2 Casablanca">
-    <img src="/images/casablanca_3.jpg" alt="H2 contemporary art space">
+    {% include image.html path="/images/casablanca_1.avif" alt="Group photograph at H2 art space" %}
+    {% include image.html path="/images/casablanca_2.avif" alt="A woman seated at a laptop at H2 art space" %}
+    {% include image.html path="/images/casablanca_3.avif" alt="A woman at work at a table covered with small objects" %}
 </div>

@@ -3,7 +3,7 @@ layout: project
 title: "Centre Bretagne"
 title_en: "Brittany Center"
 subtitle: "Residency"
-main_image: /images/centrebretagne_main.jpg
+main_image: /images/centrebretagne_main.avif
 lang: en
 translation_key: centrebretagne
 description: "In Central Brittany, Stéphanie Pommeret's Champ d'expression residency in Trémargat and Rostrenen connects art and environmental concerns."
@@ -11,8 +11,8 @@ locale: en_GB
 main_image_alt: "Portrait of a woman covered by a projection of ferns"
 image:
   path: /images/centrebretagne_main.jpg
-  width: 2500
-  height: 3333
+  width: 1200
+  height: 1600
   alt: "Portrait of a woman covered by a projection of ferns"
 schema:
   type: CreativeWork
@@ -50,8 +50,8 @@ schema:
 </div>
 
 <div class="gallery">
-    <img src="/images/centrebretagne_1.jpg" alt="Champ d'expression - Trémargat">
-    <img src="/images/centrebretagne_2.jpg" alt="Residency Detail">
-    <img src="/images/centrebretagne_3.jpg" alt="Installation">
-    <img src="/images/centrebretagne_4.jpg" alt="Detail">
+    {% include image.html path="/images/centrebretagne_1.avif" alt="A group crosses a tree-lined field in Trémargat" %}
+    {% include image.html path="/images/centrebretagne_2.avif" alt="World map made of leaves laid on the ground" %}
+    {% include image.html path="/images/centrebretagne_3.avif" alt="Black world map on a white disc" %}
+    {% include image.html path="/images/centrebretagne_4.avif" alt="Inside a barn with hay and framed pictures on display" %}
 </div>

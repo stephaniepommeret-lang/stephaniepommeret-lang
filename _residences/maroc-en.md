@@ -2,7 +2,7 @@
 layout: project
 title: "Morocco"
 subtitle: "Residency"
-main_image: /images/maroc_main.jpg
+main_image: /images/maroc_main.avif
 main_image_caption: "Artist residency at the French Institute, Tetouan, Villa Dar Ben Jelloun"
 lang: en
 translation_key: maroc
@@ -11,8 +11,8 @@ locale: en_GB
 main_image_alt: "World map made of colored fragments on a table at Villa Dar Ben Jelloun"
 image:
   path: /images/maroc_main.jpg
-  width: 2500
-  height: 1875
+  width: 1200
+  height: 900
   alt: "World map made of colored fragments on a table at Villa Dar Ben Jelloun"
 schema:
   type: VisualArtwork

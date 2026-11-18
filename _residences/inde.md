@@ -2,7 +2,7 @@
 layout: project
 title: "Inde"
 subtitle: "Résidence"
-main_image: /images/inde.jpg
+main_image: /images/inde.avif
 lang: fr
 translation_key: inde
 description: "Résidence 2019 à Lucknow : au festival Sanatkada, Stéphanie Pommeret crée une carte du monde collective composée de centaines de lampes en terre."
@@ -10,8 +10,8 @@ locale: fr_FR
 main_image_alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
 image:
   path: /images/inde.jpg
-  width: 1280
-  height: 852
+  width: 1200
+  height: 799
   alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
 schema:
   type: VisualArtwork
@@ -58,13 +58,13 @@ schema:
                     chose de profond se révélait.</p>
 </div>
 <div class="carousel-container">
-<img alt="Inde detail 1" src="/images/inde_1.jpg"/>
-<img alt="Inde detail 2" src="/images/inde_2.jpg"/>
-<img alt="Inde detail 3" src="/images/inde_3.jpg"/>
-<img alt="Inde detail 4" src="/images/inde_square.jpg"/>
-<img alt="Inde extra 1" src="/images/inde/181faa_1329361e431641a49a4552b3eb088868~mv2.jpg.avif"/>
-<img alt="Inde extra 2" src="/images/inde/181faa_7bb509b946b84e95b2bb3615b70b24e8~mv2_d_1280_1280_s_2.jpg.avif"/>
-<img alt="Inde extra 3" src="/images/inde/35_2CArte_bougies.jpg"/>
-<img alt="Inde extra 4" src="/images/inde/Oilamp_-_11_2.jpg"/>
-<img alt="Inde extra 5" src="/images/inde/Oilamp_-_2.jpg"/>
+{% include image.html path="/images/inde_1.avif" alt="Deux personnes allument des lampes à huile" %}
+{% include image.html path="/images/inde_2.avif" alt="Deux personnes présentent une création textile colorée" %}
+{% include image.html path="/images/inde_3.avif" alt="Mains travaillant sur un motif en étoile" %}
+{% include image.html path="/images/inde_square.avif" alt="Carte illustrée de forme circulaire" %}
+{% include image.html path="/images/inde/181faa_1329361e431641a49a4552b3eb088868.avif" alt="Flammes au milieu de lampes à huile en terre" %}
+{% include image.html path="/images/portrait-stephanie-pommeret.avif" alt="Stéphanie Pommeret allume des lampes à huile à Lucknow" %}
+{% include image.html path="/images/inde/35_2CArte_bougies.avif" alt="Une personne accroupie allume des lampes à huile" %}
+{% include image.html path="/images/inde/Oilamp_-_11_2.avif" alt="Des personnes allument la carte du monde faite de lampes" %}
+{% include image.html path="/images/inde/Oilamp_-_2.avif" alt="Une main au-dessus de lampes à huile en terre" %}
 </div>

@@ -1,14 +1,14 @@
 ---
 layout: project
 title: "Huis Clos (No Way Out)"
-main_image: /images/huisclos_affiche.png
+main_image: /images/huisclos_affiche.webp
 lang: en
 translation_key: huisclos
 description: "Huis Clos, a project by Stéphanie Pommeret and L'Image qui parle, makes women's testimonies visible through poetry, photography, sound and dance."
 locale: en_GB
 main_image_alt: "Poster for Huis Clos: a woman's body covered with blue projections"
 image:
-  path: /images/huisclos_affiche.png
+  path: /images/huisclos_affiche.jpg
   width: 483
   height: 720
   alt: "Poster for Huis Clos: a woman's body covered with blue projections"
@@ -52,17 +52,17 @@ schema:
     </p>
 </div>
 <div class="project-image-full">
-    <img src="/images/huisclos_1.jpg" alt="Installation de robes">
+    {% include image.html path="/images/huisclos_1.avif" alt="Photograph and texts displayed in front of a window" %}
     <p class="caption">collage outdoors in public space</p>
 </div>
 <div class="quote">
     « These words, these meetings with women victims nourish my work, it is my raw material. From this harvest of words, I take snippets. I rework these stories through the artistic prism. I wish to act at my level as an artist, to give voice to women victims. With art, I found a way to externalize my thoughts and bring the repressed to the surface. »
 </div>
 <div class="gallery">
-    <img src="/images/huisclos_2.jpg" alt="Huis Clos detail">
-    <img src="/images/huisclos_3.jpeg" alt="Huis Clos detail">
-    <img src="/images/huisclos_4.jpg" alt="Huis Clos detail">
-    <img src="/images/huisclos_5.jpg" alt="Huis Clos detail">
+    {% include image.html path="/images/huisclos_2.avif" alt="Huis Clos photographs displayed on a building façade" %}
+    {% include image.html path="/images/huisclos_3.avif" alt="Passers-by in front of the outdoor Huis Clos display" %}
+    {% include image.html path="/images/huisclos_4.avif" alt="Blue projection on a wall above two figures" %}
+    {% include image.html path="/images/huisclos_5.avif" alt="Dark garment hanging in a pool of light" %}
 </div>
 <div class="text-block">
     <p>
@@ -78,8 +78,8 @@ schema:
     </p>
 </div>
 <div class="gallery">
-    <img src="/images/huisclos_6.jpg" alt="Performance dansée">
-    <img src="/images/huisclos_7.jpg" alt="Performance dansée">
+    {% include image.html path="/images/huisclos_6.avif" alt="Small red and white objects scattered on a dark floor" %}
+    {% include image.html path="/images/huisclos_7.avif" alt="Illuminated photographs along a wall at night" %}
 </div>
 <div style="text-align: center; margin: 3rem 0;">
     <a href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer" class="podcast-cta">Listen to the podcast</a>

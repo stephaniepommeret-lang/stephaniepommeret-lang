@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Collection de cartes (Map Collection)"
-main_image: /images/inde.jpg
+main_image: /images/inde.avif
 lang: en
 translation_key: collectioncartedumonde
 description: "Stéphanie Pommeret's Map Collection presents borderless sensitive cartographies made with craftspeople and traditional techniques."
@@ -9,8 +9,8 @@ locale: en_GB
 main_image_alt: "World map made of lit oil lamps, created collectively in Lucknow"
 image:
   path: /images/inde.jpg
-  width: 1280
-  height: 852
+  width: 1200
+  height: 799
   alt: "World map made of lit oil lamps, created collectively in Lucknow"
 schema:
   type: VisualArtwork
@@ -55,15 +55,15 @@ schema:
 </div>
 
 <div class="gallery">
-    <img src="/images/collection_detail_1.jpg" alt="Map detail">
-    <img src="/images/collection_detail_2.jpg" alt="Map detail">
+    {% include image.html path="/images/collection_detail_1.avif" alt="World map made from small multicoloured objects" %}
+    {% include image.html path="/images/collection_detail_2.avif" alt="A person works on a world map laid flat" %}
 </div>
 
 <div class="text-block project-section">
     <h3>Zardozi Map made in India in Lucknow</h3>
     
     <div class="project-image-full" style="margin: 2rem 0;">
-        <img src="/images/collection_inde.jpg" alt="Zardozi Map India">
+        {% include image.html path="/images/collection_inde.avif" alt="World map embroidered in gold thread on a dark background" %}
     </div>
 
     <p>

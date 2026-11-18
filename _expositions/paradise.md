@@ -2,7 +2,7 @@
 layout: project
 title: "« The paradise (to be) regained* »"
 subtitle: "* Le paradis à reconquérir"
-main_image: /images/paradise.jpg
+main_image: /images/paradise.avif
 lang: fr
 translation_key: paradise
 description: "The paradise (to be) regained, recherche de Stéphanie Pommeret en Côtes-d'Armor avec des producteurs bio, interroge notre rapport au vivant."
@@ -10,8 +10,8 @@ locale: fr_FR
 main_image_alt: "Empilement de formes en céramique dans un sous-bois de mousse et de feuillage"
 image:
   path: /images/paradise.jpg
-  width: 1960
-  height: 1308
+  width: 1200
+  height: 801
   alt: "Empilement de formes en céramique dans un sous-bois de mousse et de feuillage"
 schema:
   type: CreativeWork
@@ -48,8 +48,8 @@ schema:
                 </p>
 </div>
 <div class="gallery">
-<img alt="Art Contemporain" src="/images/paradise_2.jpg"/>
-<img alt="Détail" src="/images/paradise_3.jpg"/>
+{% include image.html path="/images/paradise_2.avif" alt="Deux mains tiennent des coquillages" %}
+{% include image.html path="/images/paradise_3.avif" alt="Avant-bras et paume couverts de petites graines" %}
 </div>
 <div class="text-block">
 <p><strong>Projet soutenu par la DRAC</strong></p>

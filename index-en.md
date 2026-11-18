@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Visual artist, photographer and poet in Saint-Brieuc
-hero_image: /images/home-hero.jpg
-hero_image_webp: /images/home-hero.webp
+hero_image: /images/home-hero.avif
 lang: en
 translation_key: home
 permalink: /en/

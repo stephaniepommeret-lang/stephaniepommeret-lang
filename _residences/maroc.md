@@ -2,7 +2,7 @@
 layout: project
 title: "Maroc"
 subtitle: "Résidence"
-main_image: /images/maroc_main.jpg
+main_image: /images/maroc_main.avif
 main_image_caption: "Résidence d'artiste à l'Institut Français, Tétouan, Villa Dar Ben Jelloun"
 lang: fr
 translation_key: maroc
@@ -11,8 +11,8 @@ locale: fr_FR
 main_image_alt: "Carte du monde composée de fragments colorés sur une table de la Villa Dar Ben Jelloun"
 image:
   path: /images/maroc_main.jpg
-  width: 2500
-  height: 1875
+  width: 1200
+  height: 900
   alt: "Carte du monde composée de fragments colorés sur une table de la Villa Dar Ben Jelloun"
 schema:
   type: VisualArtwork

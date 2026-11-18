@@ -6,9 +6,9 @@ translation_key: cv
 description: "Biographie et CV de Stéphanie Pommeret, artiste plasticienne à Saint-Brieuc : expositions, résidences, collaborations, publications et bourses."
 locale: fr_FR
 image:
-  path: /images/portrait-stephanie-pommeret.avif
-  width: 1230
-  height: 1230
+  path: /images/portrait-stephanie-pommeret.jpg
+  width: 1200
+  height: 1200
   alt: "Stéphanie Pommeret allumant une carte du monde composée de lampes à huile, Lucknow"
 ---
 
@@ -23,7 +23,7 @@ image:
 </div>
 
 <div class="project-image-full cv-portrait">
-<img alt="Stéphanie Pommeret allumant une carte du monde composée de lampes à huile, Lucknow" src="/images/portrait-stephanie-pommeret.avif" width="1230" height="1230" loading="lazy" decoding="async"/>
+{% include image.html path="/images/portrait-stephanie-pommeret.avif" alt="Stéphanie Pommeret allumant une carte du monde composée de lampes à huile, Lucknow" priority=true sizes="(max-width: 666px) 90vw, 600px" %}
 <p class="caption">Lucknow, festival Sanatkada, 2019.</p>
 </div>
 </section>

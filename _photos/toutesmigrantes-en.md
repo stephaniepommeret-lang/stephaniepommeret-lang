@@ -2,7 +2,7 @@
 layout: project
 title: "Tout.e.s migrant.e.s (All Migrants)"
 subtitle: "Photographic series"
-main_image: /images/toutesmigrantes_ali1.jpg
+main_image: /images/toutesmigrantes_ali1.avif
 lang: en
 translation_key: toutesmigrantes
 description: "Tout.e.s migrant.e.s combines photography, human migration and migrating birds, with the Saint-Brieuc Bay Nature Reserve."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "Person dressed in white, curled up beneath a projection of migrating birds"
 image:
   path: /images/toutesmigrantes_ali1.jpg
-  width: 1950
-  height: 1300
+  width: 1200
+  height: 800
   alt: "Person dressed in white, curled up beneath a projection of migrating birds"
 schema:
   type: VisualArtwork
@@ -38,7 +38,7 @@ schema:
     <p><em>Photographic exhibition by Stéphanie Pommeret</em></p>
 
     <div style="text-align: center; margin: 30px 0;">
-        <img src="/images/toutesmigrantes_reserve_logo.jpeg" alt="Logo Réserve Naturelle Baie de Saint-Brieuc" style="max-width: 300px;">
+        {% include image.html path="/images/toutesmigrantes_reserve_logo.webp" alt="Logo Réserve Naturelle Baie de Saint-Brieuc" style="max-width: 300px;" %}
     </div>
 
     <div class="exhibition-list" style="margin-bottom: 3rem;">
@@ -124,5 +124,5 @@ schema:
 </div>
 
 <div class="project-image-full">
-    <img src="/images/toutesmigrantes_photo2.jpg" alt="All Migrants - Photography">
+    {% include image.html path="/images/toutesmigrantes_photo2.avif" alt="Embroidered fabric hanging against a cloudy sky" %}
 </div>

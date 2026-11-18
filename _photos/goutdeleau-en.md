@@ -2,7 +2,7 @@
 layout: project
 title: "Le Goût de l'eau (The Taste of Water)"
 subtitle: "Photographic series"
-main_image: /images/goutdeleau_main.jpg
+main_image: /images/goutdeleau_main.avif
 lang: en
 translation_key: goutdeleau
 description: "Le Goût de l'eau, a double-exposure photographic series by Stéphanie Pommeret, connects the female body, non-human life and ecofeminism."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "Double exposure of a reclining female body and red seaweed in a rock pool"
 image:
   path: /images/goutdeleau_main.jpg
-  width: 1280
-  height: 854
+  width: 1200
+  height: 801
   alt: "Double exposure of a reclining female body and red seaweed in a rock pool"
 schema:
   type: VisualArtwork
@@ -54,10 +54,10 @@ schema:
     <p><strong><em>Le Goût de l'eau</em> is a work of resistance.</strong></p>
 </div>
 <div class="project-image-full">
-    <img src="/images/goutdeleau_1.jpg" alt="Le Goût de l'eau - Photographic series">
+    {% include image.html path="/images/goutdeleau_1.avif" alt="Torso and aquatic vegetation superimposed in a double exposure" %}
 </div>
 <div class="project-image-full">
-    <img src="/images/goutdeleau_2.jpg" alt="Le Goût de l'eau - Photographic series">
+    {% include image.html path="/images/goutdeleau_2.avif" alt="Close-up of an eye superimposed on vegetation" %}
 </div>
 <div class="text-block spaced">
     <p style="font-style: italic;">

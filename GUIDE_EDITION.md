@@ -37,7 +37,7 @@ Chaque fichier commence par un **en-tête** entre `---` :
 layout: project
 title: Titre de votre projet
 subtitle: Résidence
-main_image: images/maroc_main.jpg
+main_image: /images/maroc_main.avif
 ---
 
 Ici commence votre texte...
@@ -88,18 +88,23 @@ Ceci est un autre paragraphe (une ligne vide entre les deux).
 
 ### Images
 
-```markdown
-![Description de l'image](images/inde_1.jpg)
+```liquid
+{% include image.html path="/images/inde_1.avif" alt="Deux personnes allument des lampes à huile" %}
 ```
 
 ## 📷 Ajouter des images
 
-1. **Placez votre image** dans le dossier `images/`
-2. **Nommez-la simplement** : `maroc_1.jpg` (pas d'espaces, pas d'accents)
-3. **Ajoutez-la dans votre texte** :
+1. Placez une version AVIF ou WebP dans `images/`, avec un nom simple et une largeur maximale de 1 600 px.
+2. Renseignez sa largeur et sa hauteur réelles dans `_data/images.yml`. Si plusieurs tailles existent, ajoutez leurs chemins et largeurs dans `srcset`.
+3. Utilisez l’include ci-dessus dans le texte avec une description adaptée à la langue. Pour l’image principale d’un projet, indiquez le chemin dans `main_image` et le texte alternatif dans `main_image_alt`.
+4. Dans `image.path`, indiquez la version JPG destinée au partage et renseignez ses propres dimensions dans `image.width` et `image.height`.
 
-```markdown
-![Mon atelier au Maroc](images/maroc_1.jpg)
+Voici l’entrée de l’image utilisée dans l’exemple.
+
+```yaml
+/images/inde_1.avif:
+  width: 568
+  height: 382
 ```
 
 ## 📄 Exemples pratiques
@@ -113,7 +118,7 @@ Ceci est un autre paragraphe (une ligne vide entre les deux).
 layout: project
 title: Maroc
 subtitle: Résidence
-main_image: images/maroc_main.jpg
+main_image: /images/maroc_main.avif
 ---
 
 Voici le texte de ma résidence au Maroc...
@@ -124,7 +129,7 @@ Je peux ajouter des paragraphes facilement.
 
 Et continuer à écrire.
 
-![Une belle photo](images/maroc_1.jpg)
+![Une belle photo](images/maroc_main.avif)
 ```
 
 ### Ajouter un nouveau projet
@@ -170,7 +175,7 @@ Une fois vos modifications faites :
 | Du texte en gras        | `**mon texte**`                     |
 | Une liste               | `- Point 1`<br>`- Point 2`          |
 | Un lien                 | `[clic ici](https://...)`           |
-| Une image               | `![description](images/inde_1.jpg)`  |
+| Une image               | `![description](images/inde_1.avif)`  |
 | Un nouveau paragraphe   | (une ligne vide)                    |
 
 ## 📞 Questions ?

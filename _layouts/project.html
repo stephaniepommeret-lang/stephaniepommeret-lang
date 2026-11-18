@@ -13,11 +13,8 @@ layout: default
     <section class="page-content">
         {% if page.main_image %}
         <figure class="project-image-full">
-            <img src="{{ page.main_image | relative_url }}"
-                alt="{{ page.main_image_alt | default: page.image.alt | default: page.title | escape }}"
-                {% if page.image.width %}width="{{ page.image.width }}"{% endif %}
-                {% if page.image.height %}height="{{ page.image.height }}"{% endif %}
-                loading="eager" decoding="async" fetchpriority="high">
+            {% assign main_alt = page.main_image_alt | default: page.image.alt | default: page.title %}
+            {% include image.html path=page.main_image alt=main_alt priority=true %}
             {% if page.main_image_caption %}
             <figcaption class="caption">{{ page.main_image_caption }}</figcaption>
             {% endif %}

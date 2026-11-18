@@ -2,7 +2,7 @@
 layout: project
 title: "Materia Prima"
 subtitle: "Bodily Transcriptions — Photographic series"
-main_image: /images/materiaprima_1.jpg
+main_image: /images/materiaprima_1.avif
 lang: en
 translation_key: materiaprima
 description: "Materia Prima explores the maternal body: Stéphanie Pommeret embroiders golden thread onto photographs of caesarean scars and pregnancy marks."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "Abdomen with a caesarean scar underlined by gold-thread embroidery"
 image:
   path: /images/materiaprima_1.jpg
-  width: 1280
-  height: 854
+  width: 1200
+  height: 801
   alt: "Abdomen with a caesarean scar underlined by gold-thread embroidery"
 schema:
   type: VisualArtwork

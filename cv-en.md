@@ -6,9 +6,9 @@ translation_key: cv
 description: "Biography and CV of Stéphanie Pommeret, a visual artist in Saint-Brieuc: exhibitions, residencies, collaborations, publications, grants and awards."
 locale: en_GB
 image:
-  path: /images/portrait-stephanie-pommeret.avif
-  width: 1230
-  height: 1230
+  path: /images/portrait-stephanie-pommeret.jpg
+  width: 1200
+  height: 1200
   alt: "Stéphanie Pommeret lighting a world map made of oil lamps, Lucknow"
 ---
 
@@ -23,7 +23,7 @@ image:
     </div>
 
     <div class="project-image-full cv-portrait">
-        <img src="/images/portrait-stephanie-pommeret.avif" alt="Stéphanie Pommeret lighting a world map made of oil lamps, Lucknow" width="1230" height="1230" loading="lazy" decoding="async">
+        {% include image.html path="/images/portrait-stephanie-pommeret.avif" alt="Stéphanie Pommeret lighting a world map made of oil lamps, Lucknow" priority=true sizes="(max-width: 666px) 90vw, 600px" %}
         <p class="caption">Lucknow, Sanatkada Festival, 2019.</p>
     </div>
 </section>

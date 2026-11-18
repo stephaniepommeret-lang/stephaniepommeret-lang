@@ -1,14 +1,14 @@
 ---
 layout: project
 title: "Huis Clos"
-main_image: /images/huisclos_affiche.png
+main_image: /images/huisclos_affiche.webp
 lang: fr
 translation_key: huisclos
 description: "Huis Clos, projet de Stéphanie Pommeret et de L'Image qui parle, rend visibles des témoignages de femmes par la poésie, la photographie, le son et la danse."
 locale: fr_FR
 main_image_alt: "Affiche de Huis Clos : corps de femme recouvert de projections bleues"
 image:
-  path: /images/huisclos_affiche.png
+  path: /images/huisclos_affiche.jpg
   width: 483
   height: 720
   alt: "Affiche de Huis Clos : corps de femme recouvert de projections bleues"
@@ -58,7 +58,7 @@ schema:
     </p>
 </div>
 <div class="project-image-full">
-    <img src="/images/huisclos_1.jpg" alt="Installation de robes">
+    {% include image.html path="/images/huisclos_1.avif" alt="Photographie et textes accrochés devant une fenêtre" %}
     <p class="caption">collage en extérieur dans l’espace public</p>
 </div>
 <div class="quote">
@@ -68,10 +68,10 @@ schema:
     l’art, j’ai trouvé un moyen d’extérioriser ma pensée et faire remonter le refoulé à la surface. »
 </div>
 <div class="gallery">
-    <img src="/images/huisclos_2.jpg" alt="Huis Clos détail">
-    <img src="/images/huisclos_3.jpeg" alt="Huis Clos détail">
-    <img src="/images/huisclos_4.jpg" alt="Huis Clos détail">
-    <img src="/images/huisclos_5.jpg" alt="Huis Clos détail">
+    {% include image.html path="/images/huisclos_2.avif" alt="Photographies de Huis Clos accrochées en façade" %}
+    {% include image.html path="/images/huisclos_3.avif" alt="Des passants devant les photographies de Huis Clos en extérieur" %}
+    {% include image.html path="/images/huisclos_4.avif" alt="Projection bleue sur un mur, au-dessus de deux silhouettes" %}
+    {% include image.html path="/images/huisclos_5.avif" alt="Vêtement sombre suspendu dans un halo de lumière" %}
 </div>
 <div class="text-block">
     <p>
@@ -89,8 +89,8 @@ schema:
     </p>
 </div>
 <div class="gallery">
-    <img src="/images/huisclos_6.jpg" alt="Performance dansée">
-    <img src="/images/huisclos_7.jpg" alt="Performance dansée">
+    {% include image.html path="/images/huisclos_6.avif" alt="Petits objets rouges et blancs éparpillés sur un sol sombre" %}
+    {% include image.html path="/images/huisclos_7.avif" alt="Photographies éclairées le long d’un mur, de nuit" %}
 </div>
 <div style="text-align: center; margin: 3rem 0;">
     <a href="https://soundcloud.com/limage-qui-parle/podcat-huis-clos?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" rel="noopener noreferrer" class="podcast-cta">Écouter le podcast sonore</a>

@@ -2,7 +2,7 @@
 layout: project
 title: "« The paradise (to be) regained »"
 subtitle: "Thoreau"
-main_image: /images/paradise.jpg
+main_image: /images/paradise.avif
 lang: en
 translation_key: paradise
 description: "The paradise (to be) regained is Stéphanie Pommeret's research in Côtes-d'Armor with organic producers on our relationship with the living world."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "Stack of ceramic forms in undergrowth of moss and foliage"
 image:
   path: /images/paradise.jpg
-  width: 1960
-  height: 1308
+  width: 1200
+  height: 801
   alt: "Stack of ceramic forms in undergrowth of moss and foliage"
 schema:
   type: CreativeWork
@@ -48,8 +48,8 @@ schema:
 </div>
 
 <div class="gallery">
-    <img src="/images/paradise_2.jpg" alt="Contemporary Art">
-    <img src="/images/paradise_3.jpg" alt="Detail">
+    {% include image.html path="/images/paradise_2.avif" alt="Two hands holding shells" %}
+    {% include image.html path="/images/paradise_3.avif" alt="Forearm and palm covered with small seeds" %}
 </div>
 
 <div class="text-block">

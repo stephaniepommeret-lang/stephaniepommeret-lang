@@ -2,7 +2,7 @@
 layout: project
 title: "São Tomé-et-Principe"
 subtitle: "Résidence"
-main_image: /images/saotome_1.jpg
+main_image: /images/saotome_1.avif
 lang: fr
 translation_key: saotome
 description: "Résidence 2020 à l'Alliance Française de São Tomé : une carte du monde en patchwork de wax et de bazin, créée avec des couturières et brodeuses locales."
@@ -51,6 +51,6 @@ schema:
 <br/>
 </div>
 <div class="gallery">
-<img alt="Détail installation" src="/images/saotome_main.jpg"/>
-<img alt="Détail installation" src="/images/saotome_2.jpg"/>
+{% include image.html path="/images/saotome_main.avif" alt="Palmiers et végétation à São Tomé" %}
+{% include image.html path="/images/saotome_2.avif" alt="Carte du monde en patchwork coloré sur fond noir" %}
 </div>

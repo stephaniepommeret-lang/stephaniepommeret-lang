@@ -4,13 +4,8 @@ layout: default
 
 {% if page.hero_image %}
 <section class="hero">
-    <picture>
-        {% if page.hero_image_webp %}
-        <source srcset="{{ page.hero_image_webp | relative_url }}" type="image/webp">
-        {% endif %}
-        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt | default: page.title | escape }}"
-            width="1200" height="794" loading="eager" decoding="async" fetchpriority="high">
-    </picture>
+    {% assign hero_alt = page.hero_alt | default: page.title %}
+    {% include image.html path=page.hero_image alt=hero_alt priority=true sizes="(max-width: 1200px) 90vw, calc(1200px - 10vw)" %}
     {% if page.hero_caption %}
     <p class="caption hero-caption">{{ page.hero_caption }}</p>
     {% endif %}

@@ -1,0 +1,199 @@
+/images/casablanca_1.avif:
+  width: 320
+  height: 320
+/images/casablanca_2.avif:
+  width: 321
+  height: 320
+/images/casablanca_3.avif:
+  width: 320
+  height: 320
+/images/casablanca_gateaux.avif:
+  width: 981
+  height: 543
+  srcset: /images/casablanca_gateaux-480.avif 480w, /images/casablanca_gateaux-800.avif 800w, /images/casablanca_gateaux.avif 981w
+/images/centrebretagne_1.avif:
+  width: 978
+  height: 394
+  srcset: /images/centrebretagne_1-480.avif 480w, /images/centrebretagne_1-800.avif 800w, /images/centrebretagne_1.avif 978w
+/images/centrebretagne_2.avif:
+  width: 726
+  height: 536
+  srcset: /images/centrebretagne_2-480.avif 480w, /images/centrebretagne_2.avif 726w
+/images/centrebretagne_3.avif:
+  width: 250
+  height: 331
+/images/centrebretagne_4.avif:
+  width: 1234
+  height: 822
+  srcset: /images/centrebretagne_4-480.avif 480w, /images/centrebretagne_4-800.avif 800w, /images/centrebretagne_4.avif 1234w
+/images/centrebretagne_main.avif:
+  width: 1350
+  height: 1800
+  srcset: /images/centrebretagne_main-480.avif 480w, /images/centrebretagne_main-800.avif 800w, /images/centrebretagne_main.avif 1350w
+/images/collection_detail_1.avif:
+  width: 600
+  height: 393
+  srcset: /images/collection_detail_1-480.avif 480w, /images/collection_detail_1.avif 600w
+/images/collection_detail_2.avif:
+  width: 600
+  height: 450
+  srcset: /images/collection_detail_2-480.avif 480w, /images/collection_detail_2.avif 600w
+/images/collection_inde.avif:
+  width: 600
+  height: 800
+  srcset: /images/collection_inde-480.avif 480w, /images/collection_inde.avif 600w
+/images/confinement_1.avif:
+  width: 1350
+  height: 1800
+  srcset: /images/confinement_1-480.avif 480w, /images/confinement_1-800.avif 800w, /images/confinement_1.avif 1350w
+/images/confinement_2.avif:
+  width: 1350
+  height: 1800
+  srcset: /images/confinement_2-480.avif 480w, /images/confinement_2-800.avif 800w, /images/confinement_2.avif 1350w
+/images/goutdeleau_1.avif:
+  width: 1280
+  height: 854
+  srcset: /images/goutdeleau_1-480.avif 480w, /images/goutdeleau_1-800.avif 800w, /images/goutdeleau_1.avif 1280w
+/images/goutdeleau_2.avif:
+  width: 1280
+  height: 854
+  srcset: /images/goutdeleau_2-480.avif 480w, /images/goutdeleau_2-800.avif 800w, /images/goutdeleau_2.avif 1280w
+/images/goutdeleau_main.avif:
+  width: 1280
+  height: 854
+  srcset: /images/goutdeleau_main-480.avif 480w, /images/goutdeleau_main-800.avif 800w, /images/goutdeleau_main.avif 1280w
+/images/home-hero.avif:
+  width: 1200
+  height: 794
+  srcset: /images/home-hero-480.avif 480w, /images/home-hero-800.avif 800w, /images/home-hero.avif 1200w
+/images/huisclos_1.avif:
+  width: 540
+  height: 719
+/images/huisclos_2.avif:
+  width: 536
+  height: 720
+/images/huisclos_3.avif:
+  width: 540
+  height: 716
+/images/huisclos_4.avif:
+  width: 355
+  height: 595
+/images/huisclos_5.avif:
+  width: 332
+  height: 498
+/images/huisclos_6.avif:
+  width: 752
+  height: 498
+  srcset: /images/huisclos_6-480.avif 480w, /images/huisclos_6.avif 752w
+/images/huisclos_7.avif:
+  width: 716
+  height: 479
+  srcset: /images/huisclos_7-480.avif 480w, /images/huisclos_7.avif 716w
+/images/huisclos_affiche.webp:
+  width: 483
+  height: 720
+/images/inde.avif:
+  width: 1280
+  height: 852
+  srcset: /images/inde-480.avif 480w, /images/inde-800.avif 800w, /images/inde.avif 1280w
+/images/inde/181faa_1329361e431641a49a4552b3eb088868.avif:
+  width: 1085
+  height: 722
+  srcset: /images/inde/181faa_1329361e431641a49a4552b3eb088868-480.avif 480w, /images/inde/181faa_1329361e431641a49a4552b3eb088868-800.avif 800w, /images/inde/181faa_1329361e431641a49a4552b3eb088868.avif 1085w
+/images/inde/35_2CArte_bougies.avif:
+  width: 1280
+  height: 1280
+  srcset: /images/inde/35_2CArte_bougies-480.avif 480w, /images/inde/35_2CArte_bougies-800.avif 800w, /images/inde/35_2CArte_bougies.avif 1280w
+/images/inde/Oilamp_-_11_2.avif:
+  width: 1280
+  height: 852
+  srcset: /images/inde/Oilamp_-_11_2-480.avif 480w, /images/inde/Oilamp_-_11_2-800.avif 800w, /images/inde/Oilamp_-_11_2.avif 1280w
+/images/inde/Oilamp_-_2.avif:
+  width: 1280
+  height: 1280
+  srcset: /images/inde/Oilamp_-_2-480.avif 480w, /images/inde/Oilamp_-_2-800.avif 800w, /images/inde/Oilamp_-_2.avif 1280w
+/images/inde_1.avif:
+  width: 568
+  height: 382
+  srcset: /images/inde_1-480.avif 480w, /images/inde_1.avif 568w
+/images/inde_2.avif:
+  width: 183
+  height: 183
+/images/inde_3.avif:
+  width: 183
+  height: 183
+/images/inde_square.avif:
+  width: 340
+  height: 344
+/images/logo_h2.webp:
+  width: 150
+  height: 112
+/images/logo_institut_francais.webp:
+  width: 156
+  height: 85
+/images/logo_lafourmie.webp:
+  width: 99
+  height: 99
+/images/maroc_main.avif:
+  width: 1600
+  height: 1200
+  srcset: /images/maroc_main-480.avif 480w, /images/maroc_main-800.avif 800w, /images/maroc_main-1200.avif 1200w, /images/maroc_main.avif 1600w
+/images/materiaprima_1.avif:
+  width: 1280
+  height: 854
+  srcset: /images/materiaprima_1-480.avif 480w, /images/materiaprima_1-800.avif 800w, /images/materiaprima_1.avif 1280w
+/images/paradise.avif:
+  width: 1600
+  height: 1068
+  srcset: /images/paradise-480.avif 480w, /images/paradise-800.avif 800w, /images/paradise-1200.avif 1200w, /images/paradise.avif 1600w
+/images/paradise_2.avif:
+  width: 705
+  height: 470
+  srcset: /images/paradise_2-480.avif 480w, /images/paradise_2.avif 705w
+/images/paradise_3.avif:
+  width: 975
+  height: 651
+  srcset: /images/paradise_3-480.avif 480w, /images/paradise_3-800.avif 800w, /images/paradise_3.avif 975w
+/images/petitecho_1.avif:
+  width: 540
+  height: 717
+/images/petitecho_2.avif:
+  width: 720
+  height: 480
+  srcset: /images/petitecho_2-480.avif 480w, /images/petitecho_2.avif 720w
+/images/petitecho_4.avif:
+  width: 540
+  height: 702
+/images/petitecho_5.avif:
+  width: 1024
+  height: 768
+  srcset: /images/petitecho_5-480.avif 480w, /images/petitecho_5-800.avif 800w, /images/petitecho_5.avif 1024w
+/images/petitecho_poster.webp:
+  width: 372
+  height: 720
+/images/portrait-stephanie-pommeret.avif:
+  width: 1230
+  height: 1230
+  srcset: /images/portrait-stephanie-pommeret-480.avif 480w, /images/portrait-stephanie-pommeret-800.avif 800w, /images/portrait-stephanie-pommeret.avif 1230w
+/images/saotome_1.avif:
+  width: 977
+  height: 653
+  srcset: /images/saotome_1-480.avif 480w, /images/saotome_1-800.avif 800w, /images/saotome_1.avif 977w
+/images/saotome_2.avif:
+  width: 522
+  height: 348
+/images/saotome_main.avif:
+  width: 980
+  height: 1306
+  srcset: /images/saotome_main-480.avif 480w, /images/saotome_main-800.avif 800w, /images/saotome_main.avif 980w
+/images/toutesmigrantes_ali1.avif:
+  width: 1600
+  height: 1067
+  srcset: /images/toutesmigrantes_ali1-480.avif 480w, /images/toutesmigrantes_ali1-800.avif 800w, /images/toutesmigrantes_ali1-1200.avif 1200w, /images/toutesmigrantes_ali1.avif 1600w
+/images/toutesmigrantes_photo2.avif:
+  width: 1600
+  height: 1071
+  srcset: /images/toutesmigrantes_photo2-480.avif 480w, /images/toutesmigrantes_photo2-800.avif 800w, /images/toutesmigrantes_photo2-1200.avif 1200w, /images/toutesmigrantes_photo2.avif 1600w
+/images/toutesmigrantes_reserve_logo.webp:
+  width: 380
+  height: 196

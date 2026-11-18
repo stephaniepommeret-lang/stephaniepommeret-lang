@@ -2,7 +2,7 @@
 layout: project
 title: "India"
 subtitle: "Residency"
-main_image: /images/inde.jpg
+main_image: /images/inde.avif
 lang: en
 translation_key: inde
 description: "2019 residency in Lucknow: at the Sanatkada Festival, Stéphanie Pommeret creates a collective world map from hundreds of clay lamps."
@@ -10,8 +10,8 @@ locale: en_GB
 main_image_alt: "World map made of lit oil lamps, created collectively in Lucknow"
 image:
   path: /images/inde.jpg
-  width: 1280
-  height: 852
+  width: 1200
+  height: 799
   alt: "World map made of lit oil lamps, created collectively in Lucknow"
 schema:
   type: VisualArtwork
@@ -73,13 +73,13 @@ schema:
 </div>
 
 <div class="carousel-container">
-    <img src="/images/inde_1.jpg" alt="India detail 1">
-    <img src="/images/inde_2.jpg" alt="India detail 2">
-    <img src="/images/inde_3.jpg" alt="India detail 3">
-    <img src="/images/inde_square.jpg" alt="India detail 4">
-    <img src="/images/inde/181faa_1329361e431641a49a4552b3eb088868~mv2.jpg.avif" alt="India extra 1">
-    <img src="/images/inde/181faa_7bb509b946b84e95b2bb3615b70b24e8~mv2_d_1280_1280_s_2.jpg.avif" alt="India extra 2">
-    <img src="/images/inde/35_2CArte_bougies.jpg" alt="India extra 3">
-    <img src="/images/inde/Oilamp_-_11_2.jpg" alt="India extra 4">
-    <img src="/images/inde/Oilamp_-_2.jpg" alt="India extra 5">
+    {% include image.html path="/images/inde_1.avif" alt="Two people light oil lamps" %}
+    {% include image.html path="/images/inde_2.avif" alt="Two people hold up a colourful textile piece" %}
+    {% include image.html path="/images/inde_3.avif" alt="Hands at work on a star-shaped design" %}
+    {% include image.html path="/images/inde_square.avif" alt="Circular illustrated map" %}
+    {% include image.html path="/images/inde/181faa_1329361e431641a49a4552b3eb088868.avif" alt="Flames among clay oil lamps" %}
+    {% include image.html path="/images/portrait-stephanie-pommeret.avif" alt="Stéphanie Pommeret lights oil lamps in Lucknow" %}
+    {% include image.html path="/images/inde/35_2CArte_bougies.avif" alt="A crouching figure lights oil lamps" %}
+    {% include image.html path="/images/inde/Oilamp_-_11_2.avif" alt="People light the world map made of lamps" %}
+    {% include image.html path="/images/inde/Oilamp_-_2.avif" alt="A hand reaching over clay oil lamps" %}
 </div>

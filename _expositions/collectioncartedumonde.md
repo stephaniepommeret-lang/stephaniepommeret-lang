@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Collection de cartes"
-main_image: /images/inde.jpg
+main_image: /images/inde.avif
 lang: fr
 translation_key: collectioncartedumonde
 description: "Collection de cartes de Stéphanie Pommeret : cartographies sensibles sans frontières, créées avec des artisans et des savoir-faire traditionnels."
@@ -9,8 +9,8 @@ locale: fr_FR
 main_image_alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
 image:
   path: /images/inde.jpg
-  width: 1280
-  height: 852
+  width: 1200
+  height: 799
   alt: "Carte du monde composée de lampes à huile allumées, réalisée collectivement à Lucknow"
 schema:
   type: VisualArtwork
@@ -57,13 +57,13 @@ schema:
                 </p>
 </div>
 <div class="gallery">
-<img alt="Détail carte" src="/images/collection_detail_1.jpg"/>
-<img alt="Détail carte" src="/images/collection_detail_2.jpg"/>
+{% include image.html path="/images/collection_detail_1.avif" alt="Carte du monde formée de petits éléments multicolores" %}
+{% include image.html path="/images/collection_detail_2.avif" alt="Une personne travaille sur une carte du monde posée à plat" %}
 </div>
 <div class="text-block project-section">
 <h3>Carte en Zardozi faite en Inde à Lucknow</h3>
 <div class="project-image-full" style="margin: 2rem 0;">
-<img alt="Carte Zardozi Inde" src="/images/collection_inde.jpg"/>
+{% include image.html path="/images/collection_inde.avif" alt="Carte du monde brodée en fil doré sur fond sombre" %}
 </div>
 <p>
                     Cette carte du monde a été brodée par des artisans de Lucknow selon la technique Zardozi ("travail

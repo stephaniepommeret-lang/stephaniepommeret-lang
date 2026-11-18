@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Artiste plasticienne, photographe et poétesse à Saint-Brieuc
-hero_image: /images/home-hero.jpg
-hero_image_webp: /images/home-hero.webp
+hero_image: /images/home-hero.avif
 lang: fr
 translation_key: home
 permalink: /
