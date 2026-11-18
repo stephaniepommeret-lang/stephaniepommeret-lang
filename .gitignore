@@ -11,6 +11,7 @@ vendor/
 # System
 .DS_Store
 *.py
+!_scripts/verify_assets.py
 *.pyc
 __pycache__/
 
