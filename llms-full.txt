@@ -1,0 +1,60 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+{%- comment -%}
+Texte intégral des pages, extrait automatiquement du contenu publié : aucun
+texte n'est rédigé ici. Le reel Instagram du Petit Écho (simple lien) est
+écarté. Les pages sont rendues avant ce fichier ; s'il restait des balises Liquid
+non interprétées dans la sortie, _scripts/verify_assets.py le signalerait.
+{%- endcomment -%}
+# Stéphanie Pommeret — texte intégral du site
+
+> Texte des pages de {{ '/' | absolute_url }}, en français puis en anglais, extrait automatiquement du contenu publié. Résumé et liens : {{ '/llms.txt' | absolute_url }}
+
+{%- assign home_fr = site.pages | where: "translation_key", "home" | where: "lang", "fr" | first -%}
+{%- assign home_en = site.pages | where: "translation_key", "home" | where: "lang", "en" | first -%}
+{%- assign cv_fr = site.pages | where: "translation_key", "cv" | where: "lang", "fr" | first -%}
+{%- assign cv_en = site.pages | where: "translation_key", "cv" | where: "lang", "en" | first -%}
+{%- assign projects = site.expositions | concat: site.residences | concat: site.photos -%}
+
+{%- for lang in site.languages -%}
+{%- if lang == "en" %}
+
+# English
+{%- assign entries = "" | split: "" | push: home_en | push: cv_en -%}
+{%- else %}
+
+# Français
+{%- assign entries = "" | split: "" | push: home_fr | push: cv_fr -%}
+{%- endif -%}
+{%- assign lang_projects = projects | where: "lang", lang -%}
+{%- assign entries = entries | concat: lang_projects -%}
+{%- for entry in entries %}
+
+## {{ entry.title }}
+
+URL : {{ entry.url | absolute_url }}
+{%- if entry.description %}
+Description : {{ entry.description }}
+{%- endif %}
+{% assign body = entry.content -%}
+{%- if body contains '<blockquote class="instagram-media"' -%}
+{%- assign before_embed = body | split: '<blockquote class="instagram-media"' | first -%}
+{%- assign after_embed = body | split: '</blockquote>' | last -%}
+{%- assign body = before_embed | append: after_embed -%}
+{%- endif -%}
+{%- assign text = body | replace: "</p>", "</p>
+" | replace: "</li>", "</li>
+" | replace: "</h2>", "</h2>
+" | replace: "</h3>", "</h3>
+" | strip_html | newline_to_br | split: "<br />" -%}
+{%- for line in text -%}
+{%- assign clean = line | strip -%}
+{%- if clean != "" %}
+{{ clean }}
+{%- endif -%}
+{%- endfor %}
+{%- endfor -%}
+{%- endfor %}

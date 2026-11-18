@@ -73,6 +73,13 @@ def main():
             if not asset.is_file() or asset.stat().st_size == 0:
                 missing.append(f"{path} : {reference}")
 
+    # Les fichiers texte destinés aux moteurs ne doivent pas contenir de Liquid
+    # resté brut (page lue avant d'avoir été rendue, par exemple).
+    for text_file in sorted(site.glob("llms*.txt")):
+        content = text_file.read_text(encoding="utf-8")
+        if "{%" in content or "{{" in content:
+            missing.append(f"{text_file.name} : balise Liquid non interprétée")
+
     if missing:
         print("\n".join(missing))
         return 1

@@ -100,4 +100,5 @@ Voir les [expositions personnelles]({{ '/cv/#expositions-personnelles' | absolut
 
 ## Fichiers techniques
 
+- Texte intégral des pages, en français et en anglais : {{ '/llms-full.txt' | absolute_url }}
 - Sitemap : {{ '/sitemap.xml' | absolute_url }}
