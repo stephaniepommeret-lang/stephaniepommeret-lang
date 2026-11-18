@@ -98,6 +98,8 @@ Ceci est un autre paragraphe (une ligne vide entre les deux).
 2. Renseignez sa largeur et sa hauteur réelles dans `_data/images.yml`. Si plusieurs tailles existent, ajoutez leurs chemins et largeurs dans `srcset`.
 3. Utilisez l’include ci-dessus dans le texte avec une description adaptée à la langue. Pour l’image principale d’un projet, indiquez le chemin dans `main_image` et le texte alternatif dans `main_image_alt`.
 4. Dans `image.path`, indiquez la version JPG destinée au partage et renseignez ses propres dimensions dans `image.width` et `image.height`.
+5. Lancez `python3 _scripts/og_images.py` : il prépare la vignette de partage (1200 × 630) utilisée par Facebook, Instagram et les messageries. Sans elle, l’image JPG est partagée telle quelle.
+6. Pour une exposition, si le lieu indiqué dans `schema.events` (champ `location`) est nouveau, ajoutez sa commune et son pays dans `_data/lieux.yml`.
 
 Voici l’entrée de l’image utilisée dans l’exemple.
 
