@@ -12,6 +12,7 @@ vendor/
 .DS_Store
 *.py
 !_scripts/verify_assets.py
+!_scripts/og_images.py
 *.pyc
 __pycache__/
 

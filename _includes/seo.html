@@ -14,6 +14,23 @@
     {%- capture publication -%}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />{%- endcapture -%}
     {%- assign metadata = metadata | remove: publication | replace: '<meta property="og:type" content="article" />', '<meta property="og:type" content="website" />' -%}
 {%- endif -%}
+{%- comment -%}
+  Image de partage : si _scripts/og_images.py a produit la carte 1200 × 630
+  correspondant à page.image, elle remplace l'image d'origine dans og:image
+  et twitter:image (les données structurées gardent l'image d'origine).
+{%- endcomment -%}
+{%- if page.image.path -%}
+    {%- assign og_name = page.image.path | split: "/" | last | split: "." | first -%}
+    {%- assign og_path = "/images/og/" | append: og_name | append: ".jpg" -%}
+    {%- assign og_card = site.static_files | where: "path", og_path | first -%}
+    {%- if og_card -%}
+        {%- assign original_url = page.image.path | absolute_url -%}
+        {%- assign card_url = og_path | absolute_url -%}
+        {%- capture original_height %}<meta property="og:image:height" content="{{ page.image.height }}" />{% endcapture -%}
+        {%- capture original_width %}<meta property="og:image:width" content="{{ page.image.width }}" />{% endcapture -%}
+        {%- assign metadata = metadata | replace: original_url, card_url | replace: original_height, '<meta property="og:image:height" content="630" />' | replace: original_width, '<meta property="og:image:width" content="1200" />' -%}
+    {%- endif -%}
+{%- endif -%}
 {{ metadata }}
 {%- if seo_parts.size == 2 -%}
     {{ seo_parts[1] | split: '</script>' | last }}
