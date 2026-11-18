@@ -29,8 +29,8 @@ schema:
 ---
 
 <div class="text-block">
-<h3>Performance dégustative - Casablanca, <a class="highlight-link" href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">Espace H2</a>
-</h3>
+<h2>Performance dégustative - Casablanca, <a class="highlight-link" href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">Espace H2</a>
+</h2>
 <p>
                     Conférence et exposition accueillies par Mohamed Rachdi à l'<a href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">espace H2</a> à
                     Casablanca.

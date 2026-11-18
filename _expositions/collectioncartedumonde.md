@@ -28,7 +28,7 @@ schema:
 ---
 
 <div class="text-block">
-<h3>Ma démarche artistique</h3>
+<h2>Ma démarche artistique</h2>
 <p>
                     Pour les anciens cartographes, la production d'une carte était l'œuvre d'une vie. Aujourd'hui, je
                     considère chaque carte comme une œuvre d'art.
@@ -61,7 +61,7 @@ schema:
 {% include image.html path="/images/collection_detail_2.avif" alt="Une personne travaille sur une carte du monde posée à plat" %}
 </div>
 <div class="text-block project-section">
-<h3>Carte en Zardozi faite en Inde à Lucknow</h3>
+<h2>Carte en Zardozi faite en Inde à Lucknow</h2>
 <div class="project-image-full" style="margin: 2rem 0;">
 {% include image.html path="/images/collection_inde.avif" alt="Carte du monde brodée en fil doré sur fond sombre" %}
 </div>

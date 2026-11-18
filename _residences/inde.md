@@ -29,27 +29,27 @@ schema:
 ---
 
 <div class="text-block project-section">
-<h3>Performance au Festival Sanatkada, à Lucknow</h3>
+<h2>Performance au Festival Sanatkada, à Lucknow</h2>
 <p><strong>Avec l'<a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank" rel="noopener noreferrer">Alliance
                             française de Lucknow</a> en partenariat avec l'<a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank" rel="noopener noreferrer">Institut français de New Delhi</a> et
                         l'ONG <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank" rel="noopener noreferrer">Sanatkada</a>
                         (2019)</strong></p>
-<h4 style="margin-top: 2rem;">La Carte du Monde en Lampes de Terre</h4>
+<h3 style="margin-top: 2rem;">La Carte du Monde en Lampes de Terre</h3>
 <p>J'ai eu cette idée lors d'une visite dans un village de Dewa avec l'équipe de Sanatkada.</p>
-<h4 style="margin-top: 1.5rem;">La fabrication</h4>
+<h3 style="margin-top: 1.5rem;">La fabrication</h3>
 <p>Les potiers de Dewa utilisent une argile locale mélangée avec de la cendre et du sable. Ils la
                     pétrissent avec leurs pieds, puis avec leurs mains. Après avoir enlevé tous les morceaux solides,
                     ils façonnent l'argile sur un tour de potier. Ce travail demande beaucoup de savoir-faire. Les
                     poteries sont ensuite cuites au sol, chauffées avec des bouses de vache séchées.</p>
-<h4 style="margin-top: 1.5rem;">Pourquoi cette carte ?</h4>
+<h3 style="margin-top: 1.5rem;">Pourquoi cette carte ?</h3>
 <p>J'ai choisi la projection de Peters parce qu'elle montre les vraies proportions des pays. La carte de
                     Mercator qu'on voit partout agrandit les pays du Nord et rétrécit les pays du Sud. En réalité, les
                     pays du Sud sont beaucoup plus grands.</p>
-<h4 style="margin-top: 1.5rem;">Le projet</h4>
+<h3 style="margin-top: 1.5rem;">Le projet</h3>
 <p>La carte est composée de centaines de petites lampes en terre, remplies d'huile de moutarde avec des
                     mèches. Le plus important n'est pas le résultat final, mais de créer cette œuvre tous ensemble. Les
                     gens proposent naturellement leur aide. Ce geste rappelle la fête des lumières célébrée en Inde.</p>
-<h4 style="margin-top: 1.5rem;">Le sens</h4>
+<h3 style="margin-top: 1.5rem;">Le sens</h3>
 <p>Ces lampes en terre sont naturelles, simples et fragiles, comme nous, les êtres humains. Mais elles
                     contiennent la lumière. La lumière est un symbole universel : elle représente la création, la
                     connaissance et la civilisation. Sans lumière, il n'y a pas de vie. Nous avons besoin de toutes les

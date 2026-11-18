@@ -34,7 +34,7 @@ schema:
 <strong>Cartes brodées et cousues, en wax et bazin, 120 × 80 cm</strong>
 </p>
 <br/>
-<h3>Carte du monde en patchwork de wax - São Tomé</h3>
+<h2>Carte du monde en patchwork de wax - São Tomé</h2>
 <p>
                     Invitée par l'<a class="highlight-link" href="https://ga.ambafrance.org/Alliance-Francaise-a-Sao-Tome-et-Principe-1640" target="_blank" rel="noopener noreferrer">Alliance Française de São Tomé</a> (golfe de Guinée),
                     j'ai collaboré avec des femmes

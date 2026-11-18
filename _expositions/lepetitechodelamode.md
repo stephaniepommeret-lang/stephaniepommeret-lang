@@ -29,7 +29,7 @@ schema:
 ---
 
 <div class="text-block project-section">
-<h4 style="margin-top: 2rem;">La résidence</h4>
+<h2 class="compact-heading" style="margin-top: 2rem;">La résidence</h2>
 <p>
                     Plusieurs semaines de résidence dans l’ancienne imprimerie du magazine <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank" rel="noopener noreferrer">Le Petit Écho de la Mode</a>, à Châtelaudren. Un lieu chargé d’histoires,
                     d’injonctions feutrées et de silences têtus. J’ai plongé dans ces pages jaunies où l’on parlait
@@ -88,7 +88,7 @@ schema:
 </div>
 </div>
 <div class="text-block project-section">
-<h4 style="margin-top: 2rem;">L'installation</h4>
+<h2 class="compact-heading" style="margin-top: 2rem;">L'installation</h2>
 <p>
                     Cette installation présente une cinquantaine de robes d'époque disposées comme un régiment
                     militaire, symbolisant la société patriarcale qui contraignait les femmes. L'œuvre fait référence à
@@ -106,7 +106,7 @@ schema:
 {% include image.html path="/images/petitecho_2.avif" alt="Vue d’ensemble des robes suspendues dans l’ancienne imprimerie" %}
 </div>
 <div class="text-block project-section">
-<h4 style="margin-top: 2rem;">Archéologie sociale</h4>
+<h2 class="compact-heading" style="margin-top: 2rem;">Archéologie sociale</h2>
 <p>
                     L'installation fonctionne comme une "archéologie sociale" qui exhume la mémoire des femmes ménagères
                     invisibilisées. Elle interroge les inégalités de genre persistantes et les stéréotypes, tout en

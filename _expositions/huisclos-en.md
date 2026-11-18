@@ -80,7 +80,7 @@ schema:
     </p>
 </div>
 <div class="text-block">
-    <h3 style="margin-top: 4rem;">Danced Performance: SWEET LURE - SWEET HOUR</h3>
+    <h2 style="margin-top: 4rem;">Danced Performance: SWEET LURE - SWEET HOUR</h2>
     <p>
         Sylvie Le Quéré, choreographer and dancer of the company <a class="highlight-link" href="https://www.ciegregoireandco.fr/" target="_blank" rel="noopener noreferrer">Grégoire and Co</a>, invites these women to set themselves in motion together, in dance to share, to reclaim through the body the transformation of pain becoming sweetness.
     </p>

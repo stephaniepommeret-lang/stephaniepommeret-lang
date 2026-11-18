@@ -29,14 +29,14 @@ image:
 </section>
 <section class="cv-content">
 <div class="cv-section">
-<h3 id="diplomes">Diplômes</h3>
+<h2 id="diplomes">Diplômes</h2>
 <ul class="cv-list">
 <li id="dnsep"><strong>2019</strong> DNSEP option art, grade Master, EESAB Lorient</li>
 <li id="licence-arts-plastiques"><strong>2017</strong> Licence Arts Plastiques, Université de Rennes</li>
 </ul>
 </div>
 <div class="cv-section">
-<h3 id="expositions-personnelles">Expositions personnelles</h3>
+<h2 id="expositions-personnelles">Expositions personnelles</h2>
 <ul class="cv-list">
 <li><strong>2026</strong> Le Fil, Zico House, Beyrouth (Liban)</li>
 <li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes</li>
@@ -76,7 +76,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Expositions collectives</h3>
+<h2>Expositions collectives</h2>
 <ul class="cv-list">
 <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do São Paulo
                         (Brésil)</li>
@@ -99,7 +99,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3 id="residences">Résidences</h3>
+<h2 id="residences">Résidences</h2>
 <ul class="cv-list">
 <li><strong>2026</strong> Zico House, Beyrouth (Liban), avec le soutien d’Artemed</li>
 <li><strong>2025</strong> Ploumexpo, Ploumagoar</li>
@@ -125,7 +125,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Collaborations &amp; Scénographie</h3>
+<h2>Collaborations &amp; Scénographie</h2>
 <ul class="cv-list">
 <li><strong>2023</strong> Performance Épines, avec Pierre Stéphan musicien et Pauline Sol Dourdin
                         danseuse et chorégraphe</li>
@@ -140,7 +140,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3 id="publications">Publications</h3>
+<h2 id="publications">Publications</h2>
 <ul class="cv-list">
 <li><strong>2026</strong> Huis Clos (article), TK21 (novembre)</li>
 <li><strong>2026</strong> Le Goût de l'eau (article), TK21 (août)</li>
@@ -153,13 +153,13 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3 id="court-metrage">Court-métrage</h3>
+<h2 id="court-metrage">Court-métrage</h2>
 <ul class="cv-list">
 <li><strong>2026</strong> La Tapisserie Bleue — projections : Festival Bobines de Femmes à Lanloup ; Département des Côtes-d’Armor ; Zico House, Beyrouth (Liban)</li>
 </ul>
 </div>
 <div class="cv-section">
-<h3>Prix et Bourses</h3>
+<h2>Prix et Bourses</h2>
 <ul class="cv-list">
 <li><strong>2025</strong> Bourses de création ADAGP, dotation Temps de recherche artistique</li>
 <li><strong>2022</strong> Aides à l'installation d'atelier DRAC</li>
@@ -168,7 +168,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Collections Publiques &amp; Soutiens</h3>
+<h2>Collections Publiques &amp; Soutiens</h2>
 <p>Ministère de la culture et de la communication, CNAP, DRAC de Bretagne, ADAGP, Académie des
                     Beaux-Arts, Région Bretagne, Conseil Départemental des Côtes d'Armor, Ambassades de France (Inde,
                     Gabon, Sao Tomé), Alliances Françaises, Instituts Français, Fondation de France.</p>

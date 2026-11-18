@@ -28,7 +28,7 @@ schema:
 ---
 
 <div class="text-block">
-    <h3>My artistic approach</h3>
+    <h2>My artistic approach</h2>
     <p>
         For the cartographers of the past, producing a map was the work of a lifetime. Today, I consider
         each map to be a work of art.
@@ -60,7 +60,7 @@ schema:
 </div>
 
 <div class="text-block project-section">
-    <h3>Zardozi Map made in India in Lucknow</h3>
+    <h2>Zardozi Map made in India in Lucknow</h2>
     
     <div class="project-image-full" style="margin: 2rem 0;">
         {% include image.html path="/images/collection_inde.avif" alt="World map embroidered in gold thread on a dark background" %}

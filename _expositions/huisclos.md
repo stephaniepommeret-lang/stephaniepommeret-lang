@@ -89,7 +89,7 @@ schema:
     </p>
 </div>
 <div class="text-block">
-    <h3 style="margin-top: 4rem;">Performance Dansée : DOUX LEURRE - DOUCE HEURE</h3>
+    <h2 style="margin-top: 4rem;">Performance Dansée : DOUX LEURRE - DOUCE HEURE</h2>
     <p>
         Sylvie Le Quéré, chorégraphe et danseuse de la compagnie <a class="highlight-link" href="https://www.ciegregoireandco.fr/" target="_blank" rel="noopener noreferrer">Grégoire and Co</a>, invite ces femmes à se
         mettre en mouvement ensemble, en danse pour partager, reconquérir par le corps la transformation de

@@ -31,14 +31,14 @@ image:
 
 <section class="cv-content">
     <div class="cv-section">
-        <h3>Education</h3>
+        <h2>Education</h2>
         <ul class="cv-list">
             <li><strong>2019</strong> DNSEP (art option, Master’s degree), EESAB Lorient</li>
             <li><strong>2017</strong> Bachelor’s degree in Visual Arts, Université de Rennes</li>
         </ul>
     </div>
     <div class="cv-section">
-        <h3>Solo Exhibitions</h3>
+        <h2>Solo Exhibitions</h2>
         <ul class="cv-list">
             <li><strong>2026</strong> Le Fil, Zico House, Beirut (Lebanon)</li>
             <li><strong>2026</strong> No Way Out, with Patricia Le Calvez — Town of Vincennes</li>
@@ -75,7 +75,7 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Collective Exhibitions</h3>
+        <h2>Collective Exhibitions</h2>
         <ul class="cv-list">
             <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do São Paulo (Brazil)</li>
             <li><strong>2024</strong> Bienalsur, Señas en el Paisaje, Centro Cultural do Banco do Rio de Janeiro (Brazil)</li>
@@ -94,7 +94,7 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Residencies</h3>
+        <h2>Residencies</h2>
         <ul class="cv-list">
             <li><strong>2026</strong> Zico House, Beirut (Lebanon), supported by Artemed</li>
             <li><strong>2025</strong> Ploumexpo, Ploumagoar</li>
@@ -117,7 +117,7 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Collaborations & Scenography</h3>
+        <h2>Collaborations & Scenography</h2>
         <ul class="cv-list">
             <li><strong>2023</strong> Thorns Performance, with Pierre Stéphan musician and Pauline Sol Dourdin dancer and choreographer</li>
             <li><strong>2022</strong> Acadie-Ressac, Set design for Pauline Guillerm's show, author and actress</li>
@@ -130,7 +130,7 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Publications</h3>
+        <h2>Publications</h2>
         <ul class="cv-list">
             <li><strong>2026</strong> Huis Clos (article), TK21 (November)</li>
             <li><strong>2026</strong> Le Goût de l'eau (article), TK21 (August)</li>
@@ -144,14 +144,14 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Short Film</h3>
+        <h2>Short Film</h2>
         <ul class="cv-list">
             <li><strong>2026</strong> La Tapisserie Bleue (The Blue Tapestry) — screenings: Bobines de Femmes festival, Lanloup; Côtes-d’Armor department; Zico House, Beirut (Lebanon)</li>
         </ul>
     </div>
 
     <div class="cv-section">
-        <h3>Grants & Awards</h3>
+        <h2>Grants & Awards</h2>
         <ul class="cv-list">
             <li><strong>2025</strong> ADAGP Creation Grants, Artistic Research Time endowment</li>
             <li><strong>2022</strong> DRAC Workshop Installation Aid</li>
@@ -160,7 +160,7 @@ image:
     </div>
 
     <div class="cv-section">
-        <h3>Public Collections & Support</h3>
+        <h2>Public Collections & Support</h2>
         <p>Ministry of Culture and Communication, CNAP, DRAC Brittany, ADAGP, Academy of Fine Arts, Brittany Region, Departmental Council of Côtes d'Armor, French Embassies (India, Gabon, Sao Tome), Alliances Françaises, French Institutes, Foundation of France.</p>
     </div>
 </section>

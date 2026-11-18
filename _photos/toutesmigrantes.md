@@ -83,7 +83,7 @@ schema:
 <p style="margin-top: 1rem;"><strong>Alain Ponsero</strong><br/>Conservateur<br/>Directeur de la réserve naturelle de la baie de Saint-Brieuc</p>
 </div>
 <div class="text-section" style="margin-top: 3rem;">
-<h3>Migration !</h3>
+<h2>Migration !</h2>
 <p>
                         Le terme parle des oiseaux comme des humains. On passe d’un lieu à l’autre. D’un pays à l’autre.
                         Pour les oiseaux ce n’est pas un voyage sans retour, au contraire c’est un cycle. Pour l’humain, le

@@ -32,7 +32,7 @@ schema:
 ---
 
 <div class="text-block">
-    <h3>"Champ d'expression" Residency</h3>
+    <h2>"Champ d'expression" Residency</h2>
     <p>
         Residency with "La Fourmi-e" association in Trémargat, hosted by Mathieu and Nolwenn Le Boedec-Castrec, "Les chèvres de Kergonan". And another one at Édouard Herriot College in Rostrenen.
     </p>

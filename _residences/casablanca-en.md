@@ -30,7 +30,7 @@ schema:
 ---
 
 <div class="text-block">
-    <h3>Tasting performance - Casablanca, <a class="highlight-link" href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">Espace H2</a></h3>
+    <h2>Tasting performance - Casablanca, <a class="highlight-link" href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">Espace H2</a></h2>
     <p>
         Conference and exhibition hosted by Mohamed Rachdi at <a href="https://h2-art.com/stephanie-pommeret-partage-de-carte/" target="_blank" rel="noopener noreferrer">Espace H2</a> in
         Casablanca.

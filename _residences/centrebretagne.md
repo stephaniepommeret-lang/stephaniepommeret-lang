@@ -31,7 +31,7 @@ schema:
 ---
 
 <div class="text-block">
-<h3>Champ d'expression</h3>
+<h2>Champ d'expression</h2>
 <p>
                     Stéphanie Pommeret en résidences avec l'association la Fourmi-e, une à la ferme, chez Mathieu et
                     Nolwenn Le Boedec-Castrec, « Les chèvres de Kergonan », Trémargat, Côtes d’Armor, et une autre au

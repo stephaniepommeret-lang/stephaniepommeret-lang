@@ -461,7 +461,17 @@ main {
     margin-top: var(--space-xl);
 }
 
-.project-section h4 {
+.project-content h2,
+.cv-section h2 {
+    font-size: 1.17em;
+}
+
+.project-content h3,
+.project-content .compact-heading {
+    font-size: 1em;
+}
+
+.project-section :is(h3, .compact-heading) {
     margin-block: var(--space-md) var(--space-xs);
 }
 
@@ -619,7 +629,7 @@ main {
     margin-bottom: 2rem;
 }
 
-.cv-section h3 {
+.cv-section h2 {
     font-family: var(--font-heading);
     border-bottom: 2px solid var(--line-color);
     padding-bottom: 0.5rem;
@@ -919,7 +929,7 @@ footer {
         margin-bottom: 6mm;
     }
 
-    .cv-section h3 {
+    .cv-section h2 {
         break-after: avoid;
         border-bottom-color: #bbb;
     }

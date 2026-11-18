@@ -29,15 +29,15 @@ schema:
 ---
 
 <div class="text-block project-section">
-    <h3>Performance at Sanatkada Festival, Lucknow</h3>
+    <h2>Performance at Sanatkada Festival, Lucknow</h2>
     <p>
         <strong>With the <a class="highlight-link" href="https://www.fondation-alliancefr.org/?p=39166" target="_blank" rel="noopener noreferrer">Alliance Française of Lucknow</a> in partnership with the <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Institut_fran%C3%A7ais_en_Inde" target="_blank" rel="noopener noreferrer">French Institute of New Delhi</a> and the NGO <a class="highlight-link" href="https://sanatkadatrust.com" target="_blank" rel="noopener noreferrer">Sanatkada</a> (2019)</strong>
     </p>
 
-    <h4 style="margin-top: 2rem;">The World Map Made of Clay Lamps</h4>
+    <h3 style="margin-top: 2rem;">The World Map Made of Clay Lamps</h3>
     <p>I had this idea while visiting a Dewa village with the Sanatkada team.</p>
 
-    <h4 style="margin-top: 1.5rem;">The Making</h4>
+    <h3 style="margin-top: 1.5rem;">The Making</h3>
     <p>
         Dewa potters use local clay mixed with ash and sand. They knead it with their feet,
         then with their hands. After removing all solid particles, they shape the clay on a potter's
@@ -45,21 +45,21 @@ schema:
         dried cow dung cakes.
     </p>
 
-    <h4 style="margin-top: 1.5rem;">Why This Map?</h4>
+    <h3 style="margin-top: 1.5rem;">Why This Map?</h3>
     <p>
         I chose the Peters projection because it shows the true proportions of countries. The
         Mercator map we see everywhere enlarges Northern countries and shrinks Southern countries. In
         reality, Southern countries are much larger.
     </p>
 
-    <h4 style="margin-top: 1.5rem;">The Project</h4>
+    <h3 style="margin-top: 1.5rem;">The Project</h3>
     <p>
         The map is made of hundreds of small clay lamps, filled with mustard oil and wicks.
         What matters most is not the final result, but creating this work together. People naturally
         offer their help. This gesture recalls the Festival of Lights celebrated in India.
     </p>
 
-    <h4 style="margin-top: 1.5rem;">The Meaning</h4>
+    <h3 style="margin-top: 1.5rem;">The Meaning</h3>
     <p>
         These clay lamps are natural, simple, and fragile, like us, human beings. But they
         contain light. Light is a universal symbol: it represents creation, knowledge, and civilization.

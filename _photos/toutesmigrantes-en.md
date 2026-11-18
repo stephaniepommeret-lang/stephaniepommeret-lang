@@ -83,7 +83,7 @@ schema:
     </div>
 
     <div class="text-section" style="margin-top: 3rem;">
-        <h3>Migration !</h3>
+        <h2>Migration !</h2>
         <p>
             Migration ! The term speaks of birds as well as humans. We go from one place to another. From
             one country to another. For the birds it is not a journey without return, on the contrary it is

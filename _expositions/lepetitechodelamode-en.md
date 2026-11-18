@@ -29,7 +29,7 @@ schema:
 ---
 
 <div class="text-block project-section">
-    <h4 style="margin-top: 2rem;">Residency at Le Petit Écho de la Mode – Châtelaudren</h4>
+    <h2 class="compact-heading" style="margin-top: 2rem;">Residency at Le Petit Écho de la Mode – Châtelaudren</h2>
     <p>
         Several weeks of residency in the former printing house of <a class="highlight-link" href="https://fr.wikipedia.org/wiki/Le_Petit_Écho_de_la_mode" target="_blank" rel="noopener noreferrer">Le Petit Écho de la Mode magazine</a>, in
         Châtelaudren. A place steeped in stories, soft-spoken injunctions, and stubborn silences.
@@ -89,7 +89,7 @@ schema:
 </div>
 
 <div class="text-block project-section">
-    <h4 style="margin-top: 2rem;">The installation</h4>
+    <h2 class="compact-heading" style="margin-top: 2rem;">The installation</h2>
     <p>
         This installation features around fifty period dresses arranged like a military regiment,
         symbolizing the patriarchal society that constrained women. The work refers to the historic action
@@ -109,7 +109,7 @@ schema:
 </div>
 
 <div class="text-block project-section">
-    <h4 style="margin-top: 2rem;">Social Archaeology</h4>
+    <h2 class="compact-heading" style="margin-top: 2rem;">Social Archaeology</h2>
     <p>
         The installation functions as a "social archaeology" that exhumes the memory of invisibilized
         housewives.
