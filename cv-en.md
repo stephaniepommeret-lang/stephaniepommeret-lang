@@ -30,10 +30,18 @@ image:
 
 <section class="cv-content">
     <div class="cv-section">
+        <h3>Education</h3>
+        <ul class="cv-list">
+            <li><strong>2019</strong> DNSEP (art option, Master’s degree), EESAB Lorient</li>
+            <li><strong>2017</strong> Bachelor’s degree in Visual Arts, Université de Rennes</li>
+        </ul>
+    </div>
+    <div class="cv-section">
         <h3>Solo Exhibitions</h3>
         <ul class="cv-list">
             <li><strong>2026</strong> Le Fil, Zico House, Beirut (Lebanon)</li>
             <li><strong>2026</strong> No Way Out, with Patricia Le Calvez — Town of Vincennes</li>
+            <li><strong>2026</strong> No Way Out, Le Marque Page bookshop, Quintin</li>
             <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
             <li><strong>2025</strong> All Migrants, Town Hall of Hillion</li>
             <li><strong>2024</strong> No Way Out, Prefecture and temporary exhibition pavilion of Saint-Brieuc</li>
@@ -123,6 +131,7 @@ image:
     <div class="cv-section">
         <h3>Publications</h3>
         <ul class="cv-list">
+            <li><strong>2026</strong> Huis Clos (article), TK21 (November)</li>
             <li><strong>2026</strong> Le Goût de l'eau (article), TK21 (August)</li>
             <li><strong>2023</strong> Huis clos followed by Tapisserie bleue, Goater editions</li>
             <li><strong>2023</strong> Bienalsur (South America)</li>
@@ -136,7 +145,7 @@ image:
     <div class="cv-section">
         <h3>Short Film</h3>
         <ul class="cv-list">
-            <li><strong>2026</strong> La Tapisserie Bleue (The Blue Tapestry)</li>
+            <li><strong>2026</strong> La Tapisserie Bleue (The Blue Tapestry) — screenings: Bobines de Femmes festival, Lanloup; Côtes-d’Armor department; Zico House, Beirut (Lebanon)</li>
         </ul>
     </div>
 

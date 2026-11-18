@@ -29,10 +29,18 @@ image:
 </section>
 <section class="cv-content">
 <div class="cv-section">
+<h3>Diplômes</h3>
+<ul class="cv-list">
+<li><strong>2019</strong> DNSEP option art, grade Master, EESAB Lorient</li>
+<li><strong>2017</strong> Licence Arts Plastiques, Université de Rennes</li>
+</ul>
+</div>
+<div class="cv-section">
 <h3>Expositions personnelles</h3>
 <ul class="cv-list">
 <li><strong>2026</strong> Le Fil, Zico House, Beyrouth (Liban)</li>
 <li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes</li>
+<li><strong>2026</strong> Huis Clos, Librairie Le Marque Page, Quintin</li>
 <li><strong>2025</strong> Se nourrir des liens du vivant, Ploumagoar</li>
 <li><strong>2025</strong> All Migrants, mairie d'Hillion</li>
 <li><strong>2024</strong> Huis Clos, Préfecture et pavillon des expositions temporaires de
@@ -134,6 +142,7 @@ image:
 <div class="cv-section">
 <h3>Publications</h3>
 <ul class="cv-list">
+<li><strong>2026</strong> Huis Clos (article), TK21 (novembre)</li>
 <li><strong>2026</strong> Le Goût de l'eau (article), TK21 (août)</li>
 <li><strong>2023</strong> Huis clos suivi de Tapisserie bleue, aux éditions Goater</li>
 <li><strong>2023</strong> Bienalsur (South America)</li>
@@ -146,7 +155,7 @@ image:
 <div class="cv-section">
 <h3>Court-métrage</h3>
 <ul class="cv-list">
-<li><strong>2026</strong> La Tapisserie Bleue</li>
+<li><strong>2026</strong> La Tapisserie Bleue — projections : Festival Bobines de Femmes à Lanloup ; Département des Côtes-d’Armor ; Zico House, Beyrouth (Liban)</li>
 </ul>
 </div>
 <div class="cv-section">
