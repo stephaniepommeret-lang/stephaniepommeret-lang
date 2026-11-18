@@ -1,0 +1,12 @@
+- id: dnsep
+  year: "2019"
+  institution: EESAB Lorient
+  name:
+    fr: DNSEP option art, grade Master
+    en: DNSEP (art option, Master’s degree)
+- id: licence-arts-plastiques
+  year: "2017"
+  institution: Université de Rennes
+  name:
+    fr: Licence Arts Plastiques
+    en: Bachelor’s degree in Visual Arts

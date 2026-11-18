@@ -30,6 +30,14 @@ schema:
       name: "Huis Clos"
       location: "Préfecture de Saint-Brieuc"
       start_date: "2024"
+    - type: ExhibitionEvent
+      name: "Huis Clos, avec Patricia Le Calvez"
+      location: "Ville de Vincennes"
+      start_date: "2026"
+    - type: ExhibitionEvent
+      name: "Huis Clos"
+      location: "Librairie Le Marque Page, Quintin"
+      start_date: "2026"
 ---
 
 <div class="text-block">

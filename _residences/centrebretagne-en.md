@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Centre Bretagne"
+seo_title: "Central Brittany residency"
 title_en: "Brittany Center"
 subtitle: "Residency"
 main_image: /images/centrebretagne_main.avif

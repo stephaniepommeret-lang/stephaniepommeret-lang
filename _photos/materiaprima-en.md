@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Materia Prima"
+seo_title: "Materia Prima — Photography series"
 subtitle: "Bodily Transcriptions — Photographic series"
 main_image: /images/materiaprima_1.avif
 lang: en

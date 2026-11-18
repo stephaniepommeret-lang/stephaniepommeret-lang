@@ -29,14 +29,14 @@ image:
 </section>
 <section class="cv-content">
 <div class="cv-section">
-<h3>Diplômes</h3>
+<h3 id="diplomes">Diplômes</h3>
 <ul class="cv-list">
-<li><strong>2019</strong> DNSEP option art, grade Master, EESAB Lorient</li>
-<li><strong>2017</strong> Licence Arts Plastiques, Université de Rennes</li>
+<li id="dnsep"><strong>2019</strong> DNSEP option art, grade Master, EESAB Lorient</li>
+<li id="licence-arts-plastiques"><strong>2017</strong> Licence Arts Plastiques, Université de Rennes</li>
 </ul>
 </div>
 <div class="cv-section">
-<h3>Expositions personnelles</h3>
+<h3 id="expositions-personnelles">Expositions personnelles</h3>
 <ul class="cv-list">
 <li><strong>2026</strong> Le Fil, Zico House, Beyrouth (Liban)</li>
 <li><strong>2026</strong> Huis Clos, avec Patricia Le Calvez — Ville de Vincennes</li>
@@ -99,7 +99,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Résidences</h3>
+<h3 id="residences">Résidences</h3>
 <ul class="cv-list">
 <li><strong>2026</strong> Zico House, Beyrouth (Liban), avec le soutien d’Artemed</li>
 <li><strong>2025</strong> Ploumexpo, Ploumagoar</li>
@@ -140,7 +140,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Publications</h3>
+<h3 id="publications">Publications</h3>
 <ul class="cv-list">
 <li><strong>2026</strong> Huis Clos (article), TK21 (novembre)</li>
 <li><strong>2026</strong> Le Goût de l'eau (article), TK21 (août)</li>
@@ -153,7 +153,7 @@ image:
 </ul>
 </div>
 <div class="cv-section">
-<h3>Court-métrage</h3>
+<h3 id="court-metrage">Court-métrage</h3>
 <ul class="cv-list">
 <li><strong>2026</strong> La Tapisserie Bleue — projections : Festival Bobines de Femmes à Lanloup ; Département des Côtes-d’Armor ; Zico House, Beyrouth (Liban)</li>
 </ul>

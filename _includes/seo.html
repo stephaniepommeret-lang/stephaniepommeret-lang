@@ -1,0 +1,20 @@
+{%- comment -%}
+  Conserver les métadonnées de jekyll-seo-tag. Le graphe de structured-data.html
+  remplace son JSON-LD générique, et les collections ne sont pas des articles.
+{%- endcomment -%}
+{%- if page.seo_title -%}
+    <title>{{ page.seo_title | escape }} | {{ site.title | escape }}</title>
+    {%- capture seo_tags -%}{% seo title=false %}{%- endcapture -%}
+{%- else -%}
+    {%- capture seo_tags -%}{% seo %}{%- endcapture -%}
+{%- endif -%}
+{%- assign seo_parts = seo_tags | split: '<script type="application/ld+json">' -%}
+{%- assign metadata = seo_parts | first -%}
+{%- if page.collection and page.date -%}
+    {%- capture publication -%}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />{%- endcapture -%}
+    {%- assign metadata = metadata | remove: publication | replace: '<meta property="og:type" content="article" />', '<meta property="og:type" content="website" />' -%}
+{%- endif -%}
+{{ metadata }}
+{%- if seo_parts.size == 2 -%}
+    {{ seo_parts[1] | split: '</script>' | last }}
+{%- endif -%}

@@ -30,6 +30,14 @@ schema:
       name: "Huis Clos"
       location: "Préfecture de Saint-Brieuc"
       start_date: "2024"
+    - type: ExhibitionEvent
+      name: "No Way Out, with Patricia Le Calvez"
+      location: "Town of Vincennes"
+      start_date: "2026"
+    - type: ExhibitionEvent
+      name: "No Way Out"
+      location: "Le Marque Page bookshop, Quintin"
+      start_date: "2026"
 ---
 
 <div class="text-block">

@@ -1,6 +1,7 @@
 ---
 layout: project
 title: "Casablanca"
+seo_title: "Casablanca residency"
 subtitle: "Residency"
 main_image: /images/casablanca_gateaux.avif
 lang: en

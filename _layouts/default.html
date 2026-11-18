@@ -46,12 +46,7 @@
     <link rel="stylesheet" href="{{ '/assets/swiper/11.2.10/swiper-bundle.min.css' | relative_url }}">
     {% endif %}
 
-    {%- comment -%}
-    {% seo %} produit title, description, canonical, Open Graph et Twitter Cards.
-    Son JSON-LD (incorrect pour ce site) est retiré par _plugins/strip-seo-tag-json-ld.rb
-    et remplacé par l'include ci-dessous.
-    {%- endcomment -%}
-    {% seo %}
+    {% include seo.html %}
     {% feed_meta %}
 
     {% if page.robots %}

@@ -36,6 +36,26 @@ sitemap: false
 - [Biographie et CV]({{ '/cv/' | absolute_url }}) — expositions, résidences, collaborations, publications, prix et soutiens
 - [Biography and CV (English)]({{ '/cv-en/' | absolute_url }})
 
+## Diplômes
+
+[Voir les diplômes dans le CV]({{ '/cv/#diplomes' | absolute_url }}).
+
+{% for diplome in site.data.diplomes %}- {{ diplome.year }} — [{{ diplome.name.fr }}]({{ '/cv/#' | append: diplome.id | absolute_url }}), {{ diplome.institution }}.
+{% endfor %}
+## Expositions et résidence en 2026
+
+Voir les [expositions personnelles]({{ '/cv/#expositions-personnelles' | absolute_url }}) et les [résidences]({{ '/cv/#residences' | absolute_url }}) dans le CV.
+
+- *Le Fil*, Zico House, Beyrouth (Liban).
+- [Huis Clos]({{ '/expositions/huisclos' | absolute_url }}), avec Patricia Le Calvez, Ville de Vincennes.
+- *Huis Clos*, Librairie Le Marque Page, Quintin.
+- Résidence à la Zico House, Beyrouth, avec le soutien d’Artemed.
+
+## Court-métrage et publications en 2026
+
+- [La Tapisserie Bleue]({{ '/cv/#court-metrage' | absolute_url }}) — court-métrage projeté au Festival Bobines de Femmes à Lanloup, au Département des Côtes-d’Armor et à la Zico House à Beyrouth.
+- *Le Goût de l’eau*, article dans TK21 en août 2026, et *Huis Clos*, article dans TK21 en novembre 2026. Voir les [publications dans le CV]({{ '/cv/#publications' | absolute_url }}).
+
 ## Séries photographiques
 
 - [Le Goût de l'eau]({{ '/photos/goutdeleau' | absolute_url }}) — doubles expositions, corps féminin, écoféminisme

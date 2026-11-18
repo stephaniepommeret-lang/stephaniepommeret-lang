@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Bio / CV
+seo_title: Biography and CV
 lang: en
 translation_key: cv
 description: "Biography and CV of Stéphanie Pommeret, a visual artist in Saint-Brieuc: exhibitions, residencies, collaborations, publications, grants and awards."
