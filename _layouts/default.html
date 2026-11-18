@@ -73,6 +73,31 @@
 
     <link rel="describedby" type="text/plain" href="{{ '/llms.txt' | absolute_url }}">
 
+    {%- comment -%}
+    Navigation plus rapide entre les pages du site (Chrome, Edge) : la page
+    visée est préchargée au survol ou à l'appui prolongé, puis prérendue au
+    clic. Rien n'est anticipé hors du site, ni pour les fichiers.
+    {%- endcomment %}
+    <script type="speculationrules">
+    {
+      "prefetch": [{
+        "where": { "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": ["/assets/*", "/images/*", "/*.xml", "/*.txt", "/*.pdf"] } },
+          { "not": { "selector_matches": "[target=_blank], [download]" } }
+        ] },
+        "eagerness": "moderate"
+      }],
+      "prerender": [{
+        "where": { "and": [
+          { "href_matches": "/*" },
+          { "not": { "href_matches": ["/assets/*", "/images/*", "/*.xml", "/*.txt", "/*.pdf"] } },
+          { "not": { "selector_matches": "[target=_blank], [download]" } }
+        ] },
+        "eagerness": "conservative"
+      }]
+    }
+    </script>
 
     {% unless page.robots contains "noindex" %}
     {% include structured-data.html %}
