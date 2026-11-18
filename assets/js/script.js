@@ -1,19 +1,50 @@
 // Galeries d'images (Swiper). Sans JavaScript, ou si Swiper ne se charge pas,
 // les images restent affichées les unes sous les autres (cf. _sass/site.scss).
+//
+// Toutes les galeries se trouvent sous l'image principale : Swiper (script et
+// CSS) n'est donc demandé qu'une fois la page chargée — l'image principale a
+// alors toute la bande passante — ou dès que le lecteur commence à défiler.
+const swiperAssets = document.currentScript ? document.currentScript.dataset : {};
+let swiperReady = null;
 
-// La CSS de Swiper ne sert qu'aux galeries initialisées : elle est chargée ici,
-// hors du chemin critique, et la galerie n'est montée qu'une fois la CSS prête.
-const swiperStylesheet = document.currentScript && document.currentScript.dataset.swiperCss;
+function loadSwiper() {
+    if (swiperReady) return swiperReady;
 
-function loadSwiperStyles() {
-    return new Promise(function (resolve) {
-        if (!swiperStylesheet) return resolve();
+    const stylesheet = new Promise(function (resolve) {
+        if (!swiperAssets.swiperCss) return resolve();
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = swiperStylesheet;
+        link.href = swiperAssets.swiperCss;
         link.addEventListener('load', resolve, { once: true });
         link.addEventListener('error', resolve, { once: true });
         document.head.appendChild(link);
+    });
+
+    const library = new Promise(function (resolve, reject) {
+        if (typeof Swiper !== 'undefined') return resolve();
+        if (!swiperAssets.swiperJs) return reject(new Error('chemin de Swiper absent'));
+        const script = document.createElement('script');
+        script.src = swiperAssets.swiperJs;
+        script.addEventListener('load', resolve, { once: true });
+        script.addEventListener('error', reject, { once: true });
+        document.head.appendChild(script);
+    });
+
+    swiperReady = Promise.all([stylesheet, library]);
+    return swiperReady;
+}
+
+function afterLoadOrFirstInteraction(callback) {
+    let started = false;
+    const start = function () {
+        if (started) return;
+        started = true;
+        callback();
+    };
+    if (document.readyState === 'complete') return start();
+    window.addEventListener('load', start, { once: true });
+    ['scroll', 'pointerdown', 'keydown'].forEach(function (type) {
+        window.addEventListener(type, start, { once: true, passive: true });
     });
 }
 
@@ -21,12 +52,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const galleryContainers = document.querySelectorAll('.gallery, .carousel-container');
     if (!galleryContainers.length) return;
 
-    if (typeof Swiper === 'undefined') {
-        console.error('Swiper.js non chargé : affichage statique conservé.');
-        return;
-    }
-
-    loadSwiperStyles().then(function () { initGalleries(galleryContainers); });
+    afterLoadOrFirstInteraction(function () {
+        loadSwiper()
+            .then(function () { initGalleries(galleryContainers); })
+            .catch(function () { console.error('Swiper non chargé : affichage statique conservé.'); });
+    });
 });
 
 function initGalleries(galleryContainers) {

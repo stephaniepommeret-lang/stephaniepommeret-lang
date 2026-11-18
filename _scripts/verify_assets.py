@@ -30,8 +30,9 @@ class Assets(HTMLParser):
             self.references.append(attrs["content"])
         if tag == "meta" and attrs.get("name") == "twitter:image":
             self.references.append(attrs["content"])
-        if attrs.get("data-swiper-css"):
-            self.references.append(attrs["data-swiper-css"])
+        for name in ("data-swiper-css", "data-swiper-js"):
+            if attrs.get(name):
+                self.references.append(attrs[name])
         self.in_style = tag == "style"
 
     def handle_endtag(self, tag):
