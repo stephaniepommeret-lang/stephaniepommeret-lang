@@ -94,6 +94,9 @@
 html {
     scrollbar-color: #b8b8b8 transparent;
     scrollbar-width: thin;
+    /* Pas d'agrandissement automatique du texte en paysage sur iOS. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -105,6 +108,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     caret-color: var(--accent-color);
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures;
 }
 
 img {
@@ -328,6 +333,14 @@ nav {
 
 .dropdown:is(:hover, :focus-within, .is-open)>.dropdown-content {
     display: block;
+    animation: dropdown-in var(--duration-fast) var(--ease-out);
+}
+
+@keyframes dropdown-in {
+    from {
+        opacity: 0;
+        transform: translateY(-0.25rem);
+    }
 }
 
 /* ------------------------------------------------------------------- Corps */
@@ -531,6 +544,7 @@ main {
     font-style: normal;
     line-height: 1.45;
     text-align: start;
+    text-wrap: pretty;
 }
 
 .hero-caption {
@@ -555,7 +569,9 @@ main {
     padding-bottom: 2rem;
 }
 
-.swiper-slide {
+/* Préfixe .swiper : l'emporte sur la CSS de Swiper, chargée après celle-ci,
+   pour que les images en portrait restent centrées dans la diapositive. */
+.swiper .swiper-slide {
     text-align: center;
     background: var(--bg-color);
     display: flex;
@@ -578,6 +594,14 @@ main {
     background: transparent;
     color: var(--accent-color);
     transform: scale(0.7);
+    transition:
+        color var(--duration-fast) var(--ease-out),
+        opacity var(--duration-fast) var(--ease-out);
+}
+
+.swiper-button-next:not(.swiper-button-disabled):hover,
+.swiper-button-prev:not(.swiper-button-disabled):hover {
+    opacity: 0.7;
 }
 
 .swiper-pagination-bullet {
@@ -585,6 +609,13 @@ main {
     height: 24px;
     padding: 8px;
     background-clip: content-box;
+    transition:
+        opacity var(--duration-fast) var(--ease-out),
+        background-color var(--duration-fast) var(--ease-out);
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+    opacity: 0.6;
 }
 
 .swiper-pagination-bullet-active {
@@ -868,6 +899,21 @@ footer {
         hyphens: none;
         -webkit-hyphens: none;
     }
+}
+
+/* ------------------------------------------- Transitions entre les pages */
+
+/* Fondu enchaîné bref entre deux pages du site (navigateurs compatibles ;
+   ailleurs, navigation normale). Désactivé si le mouvement est réduit. */
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 200ms;
 }
 
 /* ------------------------------------------------------- Mouvement réduit */
