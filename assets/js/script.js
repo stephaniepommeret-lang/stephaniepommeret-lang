@@ -1,15 +1,35 @@
-// La gestion des langues est statique, via les pages Jekyll.
-// Aucune redirection JS n'est nécessaire ici.
+// Galeries d'images (Swiper). Sans JavaScript, ou si Swiper ne se charge pas,
+// les images restent affichées les unes sous les autres (cf. _sass/site.scss).
+
+// La CSS de Swiper ne sert qu'aux galeries initialisées : elle est chargée ici,
+// hors du chemin critique, et la galerie n'est montée qu'une fois la CSS prête.
+const swiperStylesheet = document.currentScript && document.currentScript.dataset.swiperCss;
+
+function loadSwiperStyles() {
+    return new Promise(function (resolve) {
+        if (!swiperStylesheet) return resolve();
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = swiperStylesheet;
+        link.addEventListener('load', resolve, { once: true });
+        link.addEventListener('error', resolve, { once: true });
+        document.head.appendChild(link);
+    });
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const galleryContainers = document.querySelectorAll('.gallery, .carousel-container');
     if (!galleryContainers.length) return;
 
     if (typeof Swiper === 'undefined') {
-        // Sans Swiper, les images restent affichées les unes sous les autres (cf. CSS).
         console.error('Swiper.js non chargé : affichage statique conservé.');
         return;
     }
+
+    loadSwiperStyles().then(function () { initGalleries(galleryContainers); });
+});
+
+function initGalleries(galleryContainers) {
 
     const isEnglish = document.documentElement.lang === 'en';
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -76,4 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     });
-});
+}

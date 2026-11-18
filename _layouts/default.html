@@ -39,12 +39,12 @@
     <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/lato-400.woff2' | relative_url }}" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/playfair-display-normal.woff2' | relative_url }}" crossorigin>
 
-    <!-- Feuille de style -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-    {% if uses_swiper %}
-    <link rel="stylesheet" href="{{ '/assets/swiper/11.2.10/swiper-bundle.min.css' | relative_url }}">
-    {% endif %}
+    {%- comment -%}
+    Feuille de style intégrée (_sass/site.scss, ~4 Ko compressée) : aucune
+    requête ne bloque le premier rendu. La CSS de Swiper n'est utile qu'une
+    fois la galerie initialisée : assets/js/script.js la charge lui-même.
+    {%- endcomment %}
+    <style>{{ '@import "site";' | scssify }}</style>
 
     {% include seo.html %}
     {% feed_meta %}
@@ -92,7 +92,7 @@
 
     {% if uses_swiper %}
     <script src="{{ '/assets/swiper/11.2.10/swiper-bundle.min.js' | relative_url }}" defer></script>
-    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}" data-swiper-css="{{ '/assets/swiper/11.2.10/swiper-bundle.min.css' | relative_url }}" defer></script>
     {% endif %}
 </body>
 

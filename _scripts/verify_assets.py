@@ -28,6 +28,24 @@ class Assets(HTMLParser):
             self.references.append(attrs["href"])
         if tag == "meta" and attrs.get("property") in {"og:image", "twitter:image"}:
             self.references.append(attrs["content"])
+        if tag == "meta" and attrs.get("name") == "twitter:image":
+            self.references.append(attrs["content"])
+        if attrs.get("data-swiper-css"):
+            self.references.append(attrs["data-swiper-css"])
+        self.in_style = tag == "style"
+
+    def handle_endtag(self, tag):
+        if tag == "style":
+            self.in_style = False
+
+    def handle_data(self, data):
+        # Feuille de style intégrée : polices et images appelées par url().
+        if getattr(self, "in_style", False):
+            self.references.extend(
+                match.group(2)
+                for match in re.finditer(r"url\((['\"]?)([^'\")]+)\1\)", data)
+                if not match.group(2).startswith("data:")
+            )
 
 
 def main():
