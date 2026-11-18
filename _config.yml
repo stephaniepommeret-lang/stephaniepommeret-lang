@@ -80,6 +80,7 @@ exclude:
   - maroc_raw.html
   - README.md
   - GUIDE_EDITION.md
+  - assets/fonts/LISEZMOI.md
   # Les deux PDF sont actuellement vides (0 octet) : ne pas les publier ni les
   # soumettre au sitemap tant qu'ils n'ont pas été restaurés.
   - documents
