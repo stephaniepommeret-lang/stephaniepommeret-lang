@@ -1,0 +1,24 @@
+# Adresse des lieux cités dans les blocs `schema.events` des projets.
+# Clé : la chaîne `location` telle qu'elle figure dans le front matter (FR ou EN).
+# On ne renseigne que ce que la chaîne elle-même indique (commune, pays) ;
+# un lieu absent de ce fichier est publié avec son seul nom.
+# country : code ISO 3166-1 alpha-2.
+"Bonjour Minuit, Saint-Brieuc": { locality: "Saint-Brieuc", country: "FR" }
+"Châtelaudren-Plouagat": { locality: "Châtelaudren-Plouagat", country: "FR" }
+"Espace Victor Hugo, Ploufragan": { locality: "Ploufragan", country: "FR" }
+"Fès, Maroc": { locality: "Fès", country: "MA" }
+"Galerie de Binic-Étables-sur-Mer": { locality: "Binic-Étables-sur-Mer", country: "FR" }
+"H2 espace d'art contemporain, Casablanca": { locality: "Casablanca", country: "MA" }
+"La Galerie, Binic-Étables-sur-Mer": { locality: "Binic-Étables-sur-Mer", country: "FR" }
+"La halle, Paimpol": { locality: "Paimpol", country: "FR" }
+"La Passerelle, Saint-Brieuc": { locality: "Saint-Brieuc", country: "FR" }
+"Le Marque Page bookshop, Quintin": { locality: "Quintin", country: "FR" }
+"Librairie Le Marque Page, Quintin": { locality: "Quintin", country: "FR" }
+"Lucknow, Inde": { locality: "Lucknow", country: "IN" }
+"Mairie d'Hillion": { locality: "Hillion", country: "FR" }
+"Préfecture de Saint-Brieuc": { locality: "Saint-Brieuc", country: "FR" }
+"São Tomé": { country: "ST" }
+"Tétouan, Maroc": { locality: "Tétouan", country: "MA" }
+"Town of Vincennes": { locality: "Vincennes", country: "FR" }
+"Trémargat et Rostrenen": { country: "FR" }
+"Ville de Vincennes": { locality: "Vincennes", country: "FR" }

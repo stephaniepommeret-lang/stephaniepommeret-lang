@@ -20,6 +20,8 @@ author:
   url: "https://stephaniepommeret.com"
   alternate_names:
     - "Stephanie Pommeret"
+  # Portrait publié sur la page CV (données structurées de la personne).
+  image: /images/portrait-stephanie-pommeret.jpg
   job_title_fr: "Artiste plasticienne, photographe et poétesse"
   job_title_en: "Visual artist, photographer and poet"
   description_fr: "Stéphanie Pommeret est une artiste plasticienne, photographe et poétesse basée à Saint-Brieuc, en Bretagne."

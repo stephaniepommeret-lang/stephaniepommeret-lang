@@ -57,6 +57,39 @@ si un champ est absent du front matter, la propriété n'est pas émise.
 {%- if primary_image -%}{%- assign primary_image_url = primary_image | absolute_url -%}{%- endif -%}
 
 {%- assign work_type = page.schema.type | default: "VisualArtwork" -%}
+
+{%- comment -%}
+Images d'une page de projet (WebPage.image), relevées dans son contenu :
+chemin et texte alternatif tels qu'ils sont publiés. Les logos de
+partenaires et l'image principale (déjà décrite) sont écartés.
+{%- endcomment -%}
+{%- assign gallery_json = "" -%}
+{%- if is_project -%}
+  {%- assign main_image_url = page.main_image | relative_url -%}
+  {%- assign seen_images = "|" | append: main_image_url | append: "|" -%}
+  {%- assign img_chunks = content | split: "<img " -%}
+  {%- for chunk in img_chunks offset: 1 -%}
+    {%- assign img_tag = chunk | split: ">" | first -%}
+    {%- assign src_parts = img_tag | split: 'src="' -%}
+    {%- if src_parts.size < 2 -%}{%- continue -%}{%- endif -%}
+    {%- assign img_src = src_parts[1] | split: '"' | first -%}
+    {%- assign img_marker = "|" | append: img_src | append: "|" -%}
+    {%- if img_src contains "logo" or seen_images contains img_marker -%}{%- continue -%}{%- endif -%}
+    {%- assign seen_images = seen_images | append: img_src | append: "|" -%}
+    {%- assign alt_parts = img_tag | split: 'alt="' -%}
+    {%- assign img_alt = "" -%}
+    {%- if alt_parts.size > 1 -%}
+      {%- assign img_alt = alt_parts[1] | split: '"' | first | replace: "&#39;", "'" | replace: "&quot;", '"' | replace: "&amp;", "&" -%}
+    {%- endif -%}
+    {%- assign img_data = site.data.images[img_src] -%}
+    {%- capture image_json -%}
+        { "@type": "ImageObject", "contentUrl": {{ img_src | absolute_url | jsonify }}
+          {%- if img_alt != "" -%}, "caption": {{ img_alt | jsonify }}{%- endif -%}
+          {%- if img_data -%}, "width": {{ img_data.width }}, "height": {{ img_data.height }}{%- endif -%} }
+    {%- endcapture -%}
+    {%- assign gallery_json = gallery_json | append: ", " | append: image_json -%}
+  {%- endfor -%}
+{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,6 +109,9 @@ si un champ est absent du front matter, la propriété n'est pas émise.
       "name": {{ site.author.name | jsonify }},
       "alternateName": {{ site.author.alternate_names | jsonify }},
       "url": {{ site.author.url | jsonify }},
+      {%- if site.author.image %}
+      "image": {{ site.author.image | absolute_url | jsonify }},
+      {%- endif %}
       "jobTitle": {{ person_job | jsonify }},
       "description": {{ person_description | jsonify }},
       "alumniOf": [
@@ -125,6 +161,9 @@ si un champ est absent du front matter, la propriété n'est pas émise.
       {%- endif -%}
       {%- if primary_image -%},
       "primaryImageOfPage": { "@id": {{ image_id | jsonify }} }
+      {%- endif -%}
+      {%- if gallery_json != "" -%},
+      "image": [{%- if primary_image -%}{ "@id": {{ image_id | jsonify }} }{{ gallery_json }}{%- else -%}{{ gallery_json | remove_first: ", " }}{%- endif -%}]
       {%- endif -%}
       {%- if is_project or page_type == "ProfilePage" -%},
       "breadcrumb": { "@id": {{ breadcrumb_id | jsonify }} }
@@ -207,8 +246,19 @@ si un champ est absent du front matter, la propriété n'est pas émise.
       "@type": {{ event_type | jsonify }},
       "@id": {{ work_path | append: "#event-" | append: forloop.index | absolute_url | jsonify }},
       "name": {{ event.name | jsonify }}
-      {%- if event.location -%},
-      "location": { "@type": "Place", "name": {{ event.location | jsonify }} }
+      {%- if event.location -%}
+      {%- assign place = site.data.lieux[event.location] -%},
+      "location": {
+        "@type": "Place",
+        "name": {{ event.location | jsonify }}
+        {%- if place -%},
+        "address": {
+          "@type": "PostalAddress"
+          {%- if place.locality -%}, "addressLocality": {{ place.locality | jsonify }}{%- endif -%}
+          {%- if place.country -%}, "addressCountry": {{ place.country | jsonify }}{%- endif -%}
+        }
+        {%- endif -%}
+      }
       {%- endif -%}
       {%- if event.start_date -%},
       "startDate": {{ event.start_date | jsonify }}
